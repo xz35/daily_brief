@@ -73,15 +73,39 @@ def main():
         run_log.set("deals_found", len(all_deals))
         logger.info(f"  → {len(all_deals)} total deals")
 
+        # ── Step 3b: Load persistent memory ───────────────────────────
+        logger.info("Step 3b: Loading deal history and market context")
+        from deal_memory import load_deal_history, append_deals, save_deal_history
+        from market_context import (
+            load_market_context, format_prior_context,
+            save_market_context, extract_context_summary,
+        )
+        deal_history = load_deal_history()
+        context_entries = load_market_context()
+        prior_context = format_prior_context(context_entries)
+        logger.info(f"  → {len(deal_history)} prior deals, {len(context_entries)} days context")
+
         # ── Step 4: LLM synthesis ─────────────────────────────────────
         logger.info("Step 4: Synthesizing podcast script (2 Gemini calls)")
         from synthesizer import synthesize
-        script, word_count = synthesize(articles, all_deals, market_data=market_data)
+        script, word_count = synthesize(
+            articles, all_deals,
+            market_data=market_data,
+            prior_context=prior_context,
+            deal_history=deal_history,
+        )
         run_log.set("script_word_count", word_count)
         logger.info(f"  → {word_count} words")
 
-        # ── Step 4b: Email script archive ─────────────────────────────
-        logger.info("Step 4b: Sending script to email archive")
+        # ── Step 4b: Save persistent memory ───────────────────────────
+        logger.info("Step 4b: Saving deal history and market context")
+        updated_history = append_deals(all_deals, deal_history, date_str=today_str())
+        save_deal_history(updated_history)
+        context_summary = extract_context_summary(script)
+        save_market_context(today_str(), context_summary, context_entries)
+
+        # ── Step 4c: Email script archive ─────────────────────────────
+        logger.info("Step 4c: Sending script to email archive")
         from email_sender import send_daily_brief
         email_sent = send_daily_brief(script, word_count, date_str=today_str())
         run_log.set("email_sent", email_sent)

@@ -35,6 +35,7 @@ REQUEST_TIMEOUT = 15   # seconds per request
 MAX_RETRIES = 2        # retries on 503 with exponential backoff
 
 SUBMISSIONS_BASE = "https://data.sec.gov/submissions/CIK{}.json"
+COMPANY_FACTS_BASE = "https://data.sec.gov/api/xbrl/companyfacts/CIK{}.json"
 
 
 def fetch_deals(date=None):
@@ -214,6 +215,12 @@ def _process_filing(source):
         deal["accession_no"] = accession_no
         deal["filing_date"] = source.get("file_date", "")
         deal["source"] = "EDGAR FWP"
+        deal["cik"] = cik
+        # Enrich with EDGAR company facts (balance sheet context for synthesis)
+        time.sleep(REQUEST_DELAY)
+        company_facts = _fetch_company_facts(cik)
+        if company_facts:
+            deal["company_facts"] = company_facts
     return deal
 
 
@@ -663,3 +670,57 @@ def _first_match(text, patterns):
             if result:
                 return result
     return None
+
+
+# ── EDGAR Company Facts API ───────────────────────────────────────────────
+
+def _fetch_company_facts(cik):
+    """Fetch key balance sheet metrics from EDGAR company facts API.
+
+    Returns dict with total_debt_bn and/or revenue_bn (latest annual, USD billions).
+    Returns None on failure — always degrades gracefully.
+    """
+    try:
+        padded = str(cik).zfill(10)
+        url = COMPANY_FACTS_BASE.format(padded)
+        resp = requests.get(url, headers=HEADERS, timeout=10)
+        resp.raise_for_status()
+        gaap = resp.json().get("facts", {}).get("us-gaap", {})
+
+        result = {}
+
+        # Revenue — try multiple GAAP line items in priority order
+        for key in (
+            "Revenues",
+            "SalesRevenueNet",
+            "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "SalesRevenueGoodsNet",
+        ):
+            val = _latest_annual_value(gaap.get(key, {}))
+            if val is not None and val > 0:
+                result["revenue_bn"] = round(val / 1e9, 1)
+                break
+
+        # Total debt: long-term debt + current portion + short-term borrowings
+        ltd = _latest_annual_value(gaap.get("LongTermDebt", {})) or 0
+        ltd_current = _latest_annual_value(gaap.get("LongTermDebtCurrent", {})) or 0
+        stb = _latest_annual_value(gaap.get("ShortTermBorrowings", {})) or 0
+        total_debt = ltd + ltd_current + stb
+        if total_debt > 0:
+            result["total_debt_bn"] = round(total_debt / 1e9, 1)
+
+        return result if result else None
+
+    except Exception as e:
+        logger.debug(f"Company facts fetch failed for CIK {cik}: {e}")
+        return None
+
+
+def _latest_annual_value(concept):
+    """Extract the most recent annual (10-K/20-F) USD value from an XBRL concept."""
+    usd = concept.get("units", {}).get("USD", [])
+    annual = [v for v in usd if v.get("form") in ("10-K", "20-F", "10-K/A") and v.get("val", 0) != 0]
+    if not annual:
+        return None
+    annual.sort(key=lambda x: x.get("end", ""), reverse=True)
+    return annual[0]["val"]

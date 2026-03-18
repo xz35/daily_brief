@@ -37,6 +37,9 @@ RSS_FEEDS = [
     ("MarketWatch Real Estate", "https://feeds.content.dowjones.io/public/rss/mw_realestate"),
     # Economics blogs
     ("Marginal Revolution",     "https://marginalrevolution.com/feed"),
+    # Substack: high-signal macro/credit/rates commentary
+    ("Net Interest",            "https://netinterest.substack.com/feed"),    # Marc Rubinstein — financials, credit, banking with depth and wit
+    ("Fed Guy",                 "https://josephwang.substack.com/feed"),      # Joseph Wang — Fed operations, repo, Treasury market plumbing
 ]
 
 # Keywords scored against article title + summary.
@@ -111,7 +114,7 @@ GEMINI_MAX_TOKENS = 8192
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 # ── Google Cloud TTS ──────────────────────────────────────────────────────
-TTS_VOICE_NAME = "en-US-Neural2-D"    # Male. Change to en-US-Neural2-F for female.
+TTS_VOICE_NAME = "en-US-Neural2-F"    # Female. Neural2-D is male alternative. Journey-F is more natural but newer.
 TTS_LANGUAGE_CODE = "en-US"
 TTS_SPEAKING_RATE = 1.08              # Slightly faster than default
 TTS_PITCH = 0.0
@@ -132,5 +135,7 @@ EPISODES_DIR = "docs/episodes"
 FEED_PATH = "docs/feed.xml"
 PROMPTS_DIR = "prompts"
 LOGS_DIR = "logs"
+DEAL_HISTORY_PATH = "docs/deal_history.json"
+MARKET_CONTEXT_PATH = "docs/market_context.json"
 
 GITHUB_PAGES_BASE_URL = os.getenv("GITHUB_PAGES_BASE_URL", "")

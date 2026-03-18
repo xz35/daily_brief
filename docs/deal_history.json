@@ -1,0 +1,88 @@
+[
+  {
+    "date": "2026-03-18",
+    "issuer": "Augusta SpinCo Corporation",
+    "size": "$650 million",
+    "tenor": null,
+    "spread": "T+65 bps",
+    "coupon": "4.321%",
+    "ratings": null,
+    "cik": "2117848"
+  },
+  {
+    "date": "2026-03-18",
+    "issuer": "SFL Corporation Ltd.",
+    "size": "$100 Million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1289877"
+  },
+  {
+    "date": "2026-03-18",
+    "issuer": "Augusta SpinCo Corporation",
+    "size": "$650 million",
+    "tenor": null,
+    "spread": "T+65 bps",
+    "coupon": "4.321%",
+    "ratings": null,
+    "cik": "2111616"
+  },
+  {
+    "date": "2026-03-18",
+    "issuer": "Novartis Capital Corporation",
+    "size": null,
+    "tenor": null,
+    "spread": "T+45 bps",
+    "coupon": "4.100%",
+    "ratings": {
+      "sp": "Globa"
+    },
+    "cik": "1443411"
+  },
+  {
+    "date": "2026-03-18",
+    "issuer": "Emera US Finance, LLC",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "6.650%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1127248"
+  },
+  {
+    "date": "2026-03-18",
+    "issuer": "Hewlett Packard Enterprise Company",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.500%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1645590"
+  },
+  {
+    "date": "2026-03-18",
+    "issuer": "Augusta SpinCo Corporation",
+    "size": "$650 million",
+    "tenor": null,
+    "spread": "T+65 bps",
+    "coupon": "4.321%",
+    "ratings": null,
+    "cik": "1000697"
+  },
+  {
+    "date": "2026-03-18",
+    "issuer": "Augusta SpinCo Corporation",
+    "size": "$650 million",
+    "tenor": null,
+    "spread": "T+65 bps",
+    "coupon": "4.321%",
+    "ratings": null,
+    "cik": "1398777"
+  }
+]

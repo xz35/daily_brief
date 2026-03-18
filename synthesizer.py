@@ -23,22 +23,25 @@ from utils import today_str
 logger = logging.getLogger(__name__)
 
 
-def synthesize(articles, deals, market_data=None):
+def synthesize(articles, deals, market_data=None, prior_context="", deal_history=None):
     """Run both Gemini synthesis calls and assemble the full podcast script.
 
     Args:
-        articles:     list of article dicts from rss_scraper
-        deals:        list of deal dicts from edgar_fetcher / pr_scraper
-        market_data:  dict from fred_fetcher (optional — None degrades gracefully)
+        articles:       list of article dicts from rss_scraper
+        deals:          list of deal dicts from edgar_fetcher / pr_scraper
+        market_data:    dict from fred_fetcher (optional)
+        prior_context:  formatted string from market_context.py (optional)
+        deal_history:   list of prior deal entries from deal_memory.py (optional)
 
     Returns:
         tuple: (script_text: str, word_count: int)
     """
     logger.info(f"Synthesizing: {len(articles)} articles, {len(deals)} deals, "
-                f"market_data={'yes' if market_data else 'no'}")
+                f"market_data={'yes' if market_data else 'no'}, "
+                f"prior_context={'yes' if prior_context else 'no'}")
 
-    news_script = _call_market_news(articles, market_data)
-    deals_script = _call_new_issues(deals)
+    news_script = _call_market_news(articles, market_data, prior_context)
+    deals_script = _call_new_issues(deals, deal_history or [])
 
     full_script = _assemble_script(news_script, deals_script)
     word_count = len(full_script.split())
@@ -49,7 +52,7 @@ def synthesize(articles, deals, market_data=None):
 
 # ── Gemini calls ──────────────────────────────────────────────────────────
 
-def _call_market_news(articles, market_data=None):
+def _call_market_news(articles, market_data=None, prior_context=""):
     """Gemini call 1: market news → Segments 1, 2, 4."""
     prompt_template = _load_prompt("market_news_prompt.txt")
 
@@ -59,17 +62,18 @@ def _call_market_news(articles, market_data=None):
         date=today_str(),
         articles=articles_text,
         market_data=market_data_text,
+        prior_context=prior_context or "No prior context available (first episode or context file missing).",
     )
 
     logger.info("Gemini call 1: market news synthesis")
     return _generate(prompt, context="market_news")
 
 
-def _call_new_issues(deals):
+def _call_new_issues(deals, deal_history=None):
     """Gemini call 2: new issues → Segment 3."""
     prompt_template = _load_prompt("new_issues_prompt.txt")
 
-    deals_text = _format_deals(deals)
+    deals_text = _format_deals(deals, deal_history or [])
     prompt = prompt_template.format(deals=deals_text)
 
     logger.info("Gemini call 2: new issues synthesis")
@@ -224,10 +228,15 @@ def _format_articles(articles):
     return "\n".join(lines)
 
 
-def _format_deals(deals):
-    """Format deal list into a structured text block for the prompt."""
+def _format_deals(deals, deal_history=None):
+    """Format deal list into a structured text block for the prompt.
+
+    Includes company facts (balance sheet) and prior issuance history when available.
+    """
     if not deals:
         return "No IG bond deals recorded for the prior business day."
+
+    from deal_memory import format_issuer_history
 
     lines = []
     for i, d in enumerate(deals, 1):
@@ -256,6 +265,24 @@ def _format_deals(deals):
             lines.append(f"  Bookrunners: {bk_str}")
         if d.get("call_structure"):
             lines.append(f"  Call Structure: {d['call_structure']}")
+
+        # Company facts from EDGAR XBRL
+        cf = d.get("company_facts")
+        if cf:
+            facts_parts = []
+            if cf.get("revenue_bn") is not None:
+                facts_parts.append(f"Revenue: ${cf['revenue_bn']}B (latest annual)")
+            if cf.get("total_debt_bn") is not None:
+                facts_parts.append(f"Total Debt: ${cf['total_debt_bn']}B (latest annual)")
+            if facts_parts:
+                lines.append(f"  Balance Sheet: {' | '.join(facts_parts)}")
+
+        # Prior issuance history from deal memory
+        if deal_history:
+            history_text = format_issuer_history(d.get("issuer", ""), deal_history)
+            if history_text:
+                lines.append(history_text)
+
         lines.append("")
 
     return "\n".join(lines)
@@ -264,12 +291,27 @@ def _format_deals(deals):
 # ── Utilities ─────────────────────────────────────────────────────────────
 
 def _load_prompt(filename):
-    """Load a prompt template from the prompts/ directory."""
+    """Load a prompt template from env var (GitHub Actions) or file (local dev).
+
+    Env var names: MARKET_NEWS_PROMPT (for market_news_prompt.txt)
+                   NEW_ISSUES_PROMPT  (for new_issues_prompt.txt)
+    """
+    env_var_map = {
+        "market_news_prompt.txt": "MARKET_NEWS_PROMPT",
+        "new_issues_prompt.txt": "NEW_ISSUES_PROMPT",
+    }
+    env_var = env_var_map.get(filename)
+    if env_var:
+        value = os.getenv(env_var)
+        if value:
+            logger.info(f"Loaded prompt from env var {env_var}")
+            return value
+
     path = Path(PROMPTS_DIR) / filename
     if not path.exists():
         raise FileNotFoundError(
-            f"Prompt file not found: {path}. "
-            f"Expected at {path.resolve()}"
+            f"Prompt file not found: {path} and env var {env_var} not set. "
+            f"Set {env_var} as a GitHub Secret or create the file locally."
         )
     return path.read_text(encoding="utf-8")
 
