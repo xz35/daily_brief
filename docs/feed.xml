@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:itunes="http://www.itunes.com/dtunes/podcast/1.0" version="2.0">
+  <channel>
+    <title>Morning Audio Brief</title>
+    <description>Daily market briefing for a senior institutional systematic credit PM — macro, rates, credit, and IG new issues.</description>
+    <link>https://github.com</link>
+    <language>en-us</language>
+    <itunes:author>Morning Brief</itunes:author>
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:category text="Business" />
+  </channel>
+</rss>

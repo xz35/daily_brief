@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Fed holds rates steady, signals patience on cuts amid sticky inflation",
+    "source": "Reuters Markets",
+    "date": "2026-03-14T14:30:00+00:00",
+    "summary": "The Federal Reserve held its benchmark interest rate steady at 4.25-4.50 percent Wednesday, with Chair Powell signaling the central bank is in no hurry to cut as core PCE remains above the 2 percent target. The FOMC statement noted that inflation has moved closer to target but remained elevated, and that the labor market remains resilient.",
+    "url": "https://reuters.com/sample",
+    "score": 9
+  },
+  {
+    "title": "10-year Treasury yield climbs to 4.55% as strong jobs data dampens rate cut hopes",
+    "source": "WSJ Markets",
+    "date": "2026-03-14T13:00:00+00:00",
+    "summary": "The benchmark 10-year Treasury yield rose 8 basis points to 4.55 percent after February nonfarm payrolls came in at 275,000, well above the 200,000 consensus estimate. The two-year note yield, more sensitive to near-term rate expectations, jumped 10 basis points to 4.85 percent, steepening the inversion in the two-ten spread.",
+    "url": "https://wsj.com/sample",
+    "score": 8
+  },
+  {
+    "title": "Investment grade credit spreads widen slightly on rate volatility; HY holds firm",
+    "source": "Reuters Business",
+    "date": "2026-03-14T12:00:00+00:00",
+    "summary": "CDX IG widened 2 basis points to 58 basis points as rate volatility picked up following the jobs report, while CDX HY was largely unchanged at 325 basis points. Dealers noted that real money accounts were buyers of spread widening in the five-year part of the IG curve, viewing current levels as attractive relative to historical averages.",
+    "url": "https://reuters.com/sample2",
+    "score": 8
+  },
+  {
+    "title": "CPI preview: economists expect 0.3% monthly core, watch for shelter and services",
+    "source": "Calculated Risk",
+    "date": "2026-03-14T10:00:00+00:00",
+    "summary": "Ahead of Tuesday's CPI release, economists are forecasting a 0.3 percent monthly gain in core CPI, which would leave the year-over-year rate at 3.2 percent. The key variables to watch are shelter inflation, which has been slow to roll over, and services ex-housing, which the Fed has flagged as a key indicator of underlying inflation persistence.",
+    "url": "https://calculatedrisk.com/sample",
+    "score": 7
+  },
+  {
+    "title": "New York Fed: inflation expectations remain anchored but near-term uncertainty elevated",
+    "source": "NY Fed Liberty Street",
+    "date": "2026-03-14T09:00:00+00:00",
+    "summary": "The New York Fed's Survey of Consumer Expectations showed one-year ahead inflation expectations held at 3.0 percent in February, while three-year expectations remained anchored at 2.7 percent. However, the survey noted increased dispersion in near-term expectations, suggesting households are less certain about the inflation path over the next twelve months.",
+    "url": "https://newyorkfed.org/sample",
+    "score": 7
+  },
+  {
+    "title": "Commercial real estate stress deepens: office delinquencies hit 8.5% as loan maturities loom",
+    "source": "MarketWatch Real Estate",
+    "date": "2026-03-14T11:00:00+00:00",
+    "summary": "Office CMBS delinquency rates rose to 8.5 percent in February, the highest level since 2012, as a wave of loan maturities combined with elevated cap rates and weak fundamentals squeeze property owners. Analysts estimate $180 billion of commercial real estate loans will mature in 2026, with refinancing conditions far less favorable than when the loans originated.",
+    "url": "https://marketwatch.com/sample",
+    "score": 6
+  },
+  {
+    "title": "BLS: Job openings decline in January, but labor market remains historically tight",
+    "source": "BLS Economic Releases",
+    "date": "2026-03-14T10:30:00+00:00",
+    "summary": "The Bureau of Labor Statistics reported that job openings fell to 8.7 million in January, down from 9.0 million in December but still well above pre-pandemic levels. The quits rate held steady at 2.1 percent, suggesting workers remain confident in their ability to find new employment, which supports wages and services inflation.",
+    "url": "https://bls.gov/sample",
+    "score": 6
+  }
+]

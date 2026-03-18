@@ -1,0 +1,25 @@
+# Secrets — never commit these
+.env
+tts-service-account.json
+credentials.json
+token.json
+*.json.key
+
+# Logs — too noisy for git
+logs/*.log
+logs/*.json
+
+# Test output
+tests/sample_data/last_script_output.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.python-version
+
+# OS
+.DS_Store
+Thumbs.db

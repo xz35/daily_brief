@@ -1,0 +1,75 @@
+[
+  {
+    "issuer": "The Southern Company",
+    "size": "$1.3 billion",
+    "tenor": null,
+    "maturity": "April 1, 2058",
+    "coupon": "6.00%",
+    "spread": null,
+    "ratings": {
+      "moodys": "Baa2",
+      "sp": "BBB",
+      "fitch": "BBB-"
+    },
+    "use_of_proceeds": null,
+    "bookrunners": [
+      "Citigroup Global Markets Inc",
+      "J.P. Morgan Securities LLC",
+      "Mizuho Securities USA LLC",
+      "Morgan Stanley & Co. LLC",
+      "U.S. Bancorp Investments, Inc"
+    ],
+    "call_structure": "Redeemable on any day 90 days prior to the first Interest Reset Date (April 1, 2033) and on any Interest Payment Date thereafter, at 100% of principal.",
+    "accession_no": "0000092122-26-000014",
+    "filing_date": "2026-03-16",
+    "source": "EDGAR FWP",
+    "_notes": "Fixed-to-Fixed Reset Rate Junior Subordinated Notes due 2058. No spread-to-treasury (hybrid capital). Baa2/BBB/BBB- = IG."
+  },
+  {
+    "issuer": "San Diego Gas & Electric Company",
+    "size": "$625 million",
+    "tenor": null,
+    "maturity": "March 15, 2036",
+    "coupon": "5.200%",
+    "spread": "T+100 bps",
+    "ratings": {
+      "moodys": "A1",
+      "sp": "A",
+      "fitch": "A"
+    },
+    "use_of_proceeds": null,
+    "bookrunners": [
+      "BofA Securities, Inc",
+      "Goldman Sachs & Co. LLC",
+      "RBC Capital Markets, LLC",
+      "Truist Securities, Inc",
+      "Academy Securities, Inc",
+      "U.S. Bancorp Investments, Inc"
+    ],
+    "call_structure": "Make-whole call at Treasury Rate +15 bps prior to December 15, 2035. Par call on/after December 15, 2035.",
+    "accession_no": "0001193125-26-108370",
+    "filing_date": "2026-03-16",
+    "source": "EDGAR FWP",
+    "_notes": "First Mortgage Bonds, Series DDDD, 10-year. Dual-tranche offering (Series EEEE also priced: $475M 30-yr 5.950% T+112 bps). Parser captures first tranche only."
+  },
+  {
+    "issuer": "Apple Inc.",
+    "size": "$2.0 billion",
+    "tenor": "10-year",
+    "maturity": "March 15, 2036",
+    "coupon": "4.875%",
+    "spread": "T+85 bps",
+    "ratings": {
+      "moodys": "Aaa",
+      "sp": "AA+",
+      "fitch": "AA+"
+    },
+    "use_of_proceeds": "General corporate purposes, including share repurchases and dividend payments.",
+    "bookrunners": ["Goldman Sachs", "JPMorgan", "BofA Securities", "Citigroup"],
+    "call_structure": "Make-whole call at T+10 bps, par call three months prior to maturity",
+    "filing_date": "2026-03-14",
+    "accession_no": "0000320193-26-000001",
+    "source": "EDGAR FWP",
+    "_notes": "Synthetic sample — not a real filing. Used for synthesizer tests."
+  }
+]

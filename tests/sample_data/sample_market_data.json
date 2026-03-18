@@ -1,0 +1,44 @@
+{
+  "as_of": "2026-03-16",
+  "ig_oas": {
+    "value": 93.0,
+    "prev": 96.1,
+    "change": -3.1,
+    "label": "IG OAS",
+    "unit": "bps",
+    "date": "2026-03-16"
+  },
+  "hy_oas": {
+    "value": 310.5,
+    "prev": 318.2,
+    "change": -7.7,
+    "label": "HY OAS",
+    "unit": "bps",
+    "date": "2026-03-16"
+  },
+  "bbb_oas": {
+    "value": 112.0,
+    "prev": 116.5,
+    "change": -4.5,
+    "label": "BBB OAS",
+    "unit": "bps",
+    "date": "2026-03-16"
+  },
+  "t10y": {
+    "value": 4.23,
+    "prev": 4.31,
+    "change": -0.08,
+    "label": "10yr Treasury",
+    "unit": "%",
+    "date": "2026-03-16"
+  },
+  "t2y": {
+    "value": 4.05,
+    "prev": 4.15,
+    "change": -0.10,
+    "label": "2yr Treasury",
+    "unit": "%",
+    "date": "2026-03-16"
+  },
+  "curve_2s10s": 18
+}
