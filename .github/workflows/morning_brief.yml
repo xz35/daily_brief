@@ -32,8 +32,10 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GOOGLE_APPLICATION_CREDENTIALS_JSON: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_JSON }}
-          GITHUB_PAGES_BASE_URL: ${{ secrets.GITHUB_PAGES_BASE_URL }}
+          GITHUB_PAGES_BASE_URL: ${{ secrets.PAGES_BASE_URL }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: python main.py
 
       - name: Commit and push episode files
