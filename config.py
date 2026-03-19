@@ -40,6 +40,11 @@ RSS_FEEDS = [
     # Substack: high-signal macro/credit/rates commentary
     ("Net Interest",            "https://netinterest.substack.com/feed"),    # Marc Rubinstein — financials, credit, banking with depth and wit
     ("Fed Guy",                 "https://josephwang.substack.com/feed"),      # Joseph Wang — Fed operations, repo, Treasury market plumbing
+    # General news
+    ("NYT Economy",             "https://rss.nytimes.com/services/xml/rss/nyt/Economy.xml"),
+    # Reuters: DNS failure (confirmed dead March 2026, re-tested March 2026 — still dead)
+    # WSJ: DNS/auth failure
+    # AP: XML malformation
 ]
 
 # Keywords scored against article title + summary.
