@@ -32,6 +32,7 @@ jobs:
 
       - name: Run pipeline
         env:
+          TZ: America/Los_Angeles
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GOOGLE_APPLICATION_CREDENTIALS_JSON: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_JSON }}
           GITHUB_PAGES_BASE_URL: ${{ secrets.PAGES_BASE_URL }}
