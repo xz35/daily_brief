@@ -84,5 +84,38 @@
     "coupon": "4.321%",
     "ratings": null,
     "cik": "1398777"
+  },
+  {
+    "date": "2026-03-19",
+    "issuer": "Augusta SpinCo Corporation",
+    "size": "$650 million",
+    "tenor": null,
+    "spread": "T+65 bps",
+    "coupon": "4.321%",
+    "ratings": null,
+    "cik": "2111613"
+  },
+  {
+    "date": "2026-03-19",
+    "issuer": "NextEra Energy Capital Holdings, Inc.",
+    "size": "$600 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "6.500%",
+    "ratings": {
+      "sp": "Globa",
+      "fitch": "Ratin"
+    },
+    "cik": "794447"
+  },
+  {
+    "date": "2026-03-19",
+    "issuer": "Augusta SpinCo Corporation",
+    "size": "$650 million",
+    "tenor": null,
+    "spread": "T+65 bps",
+    "coupon": "4.321%",
+    "ratings": null,
+    "cik": "1122571"
   }
 ]
