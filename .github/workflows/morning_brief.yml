@@ -26,7 +26,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Install ffmpeg (required by pydub for MP3 handling)
-        run: sudo apt-get install -y ffmpeg
+        run: sudo apt-get install -y --fix-missing ffmpeg
 
       - name: Run pipeline
         env:
