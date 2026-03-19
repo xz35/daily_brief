@@ -36,6 +36,8 @@ jobs:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
           GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          MARKET_NEWS_PROMPT: ${{ secrets.MARKET_NEWS_PROMPT }}
+          NEW_ISSUES_PROMPT: ${{ secrets.NEW_ISSUES_PROMPT }}
         run: python main.py
 
       - name: Commit and push episode files
