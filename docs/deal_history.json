@@ -117,5 +117,31 @@
     "coupon": "4.321%",
     "ratings": null,
     "cik": "1122571"
+  },
+  {
+    "date": "2026-03-20",
+    "issuer": "credit",
+    "size": "$1.75 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "15%",
+    "ratings": {
+      "sp": "or",
+      "fitch": "and"
+    },
+    "cik": "1439697"
+  },
+  {
+    "date": "2026-03-20",
+    "issuer": "VW Credit, Inc., VW Credit Leasing, Ltd.",
+    "size": "$1.75 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "1.00%",
+    "ratings": {
+      "sp": "Globa",
+      "fitch": "Ratin"
+    },
+    "cik": "1182534"
   }
 ]
