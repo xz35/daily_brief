@@ -219,7 +219,7 @@ def _episode_url(filename):
 def _rfc2822_date(date_str):
     """Convert YYYY-MM-DD to RFC 2822 date string required by RSS spec."""
     dt = datetime.strptime(date_str, "%Y-%m-%d")
-    return dt.strftime("%a, %d %b %Y 06:00:00 +0000")
+    return dt.strftime("%a, %d %b %Y 12:00:00 +0000")
 
 
 def _format_duration(seconds):
