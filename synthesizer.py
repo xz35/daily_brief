@@ -23,28 +23,33 @@ from utils import today_str
 logger = logging.getLogger(__name__)
 
 
-def synthesize(articles, deals, market_data=None, prior_context="", deal_history=None):
-    """Run both Gemini synthesis calls and assemble the full podcast script.
+def synthesize(articles, deals, market_data=None, prior_context="", deal_history=None,
+               research_emails=None):
+    """Run Gemini synthesis calls and assemble the full podcast script.
 
     Args:
-        articles:       list of article dicts from rss_scraper
-        deals:          list of deal dicts from edgar_fetcher / pr_scraper
-        market_data:    dict from fred_fetcher (optional)
-        prior_context:  formatted string from market_context.py (optional)
-        deal_history:   list of prior deal entries from deal_memory.py (optional)
+        articles:         list of article dicts from rss_scraper
+        deals:            list of deal dicts from edgar_fetcher / pr_scraper
+        market_data:      dict from fred_fetcher (optional)
+        prior_context:    formatted string from market_context.py (optional)
+        deal_history:     list of prior deal entries from deal_memory.py (optional)
+        research_emails:  list of {subject, body} dicts from email_fetcher (optional)
 
     Returns:
         tuple: (script_text: str, word_count: int)
     """
+    research_emails = research_emails or []
     logger.info(f"Synthesizing: {len(articles)} articles, {len(deals)} deals, "
                 f"market_data={'yes' if market_data else 'no'}, "
-                f"prior_context={'yes' if prior_context else 'no'}")
+                f"prior_context={'yes' if prior_context else 'no'}, "
+                f"research_emails={len(research_emails)}")
 
-    news_script = _call_market_news(articles, market_data, prior_context)
-    deals_script = _call_new_issues(deals, deal_history or [])
+    news_script     = _call_market_news(articles, market_data, prior_context)
+    deals_script    = _call_new_issues(deals, deal_history or [])
+    research_script = _call_research_digest(research_emails) if research_emails else ""
 
-    full_script = _assemble_script(news_script, deals_script)
-    word_count = len(full_script.split())
+    full_script = _assemble_script(news_script, deals_script, research_script)
+    word_count  = len(full_script.split())
 
     logger.info(f"Script assembled: {word_count} words")
     return full_script, word_count
@@ -80,6 +85,19 @@ def _call_new_issues(deals, deal_history=None):
     return _generate(prompt, context="new_issues")
 
 
+def _call_research_digest(research_emails):
+    """Gemini call 3 (optional): research email digest → Segment 5.
+
+    Only called when research_emails is non-empty.
+    """
+    prompt_template = _load_prompt("research_digest_prompt.txt")
+    reports_text    = _format_research_emails(research_emails)
+    prompt          = prompt_template.format(reports=reports_text)
+
+    logger.info(f"Gemini call 3: research digest ({len(research_emails)} report(s))")
+    return _generate(prompt, context="research_digest")
+
+
 def _generate(prompt, context=""):
     """Call Gemini and return generated text. Returns fallback string on failure."""
     try:
@@ -102,7 +120,7 @@ def _generate(prompt, context=""):
 
 # ── Script assembly ───────────────────────────────────────────────────────
 
-def _assemble_script(news_script, deals_script):
+def _assemble_script(news_script, deals_script, research_script=""):
     """Combine market news and new issues scripts into a single podcast script.
 
     The market_news_prompt produces a single output containing:
@@ -166,6 +184,23 @@ def _assemble_script(news_script, deals_script):
         else:
             script = news_script + new_issues_header + deals_script
 
+    # Insert research digest before the outro (last short paragraph), if present
+    if research_script:
+        research_header = "\n\nBefore we close, a look at some research that came across the desk.\n\n"
+        research_footer = "\n\n"
+        paragraphs = script.strip().split("\n\n")
+        # Treat the last paragraph as the outro if it's short (< 200 chars)
+        if len(paragraphs) > 1 and len(paragraphs[-1].strip()) < 200:
+            script = (
+                "\n\n".join(paragraphs[:-1]).rstrip()
+                + research_header
+                + research_script
+                + research_footer
+                + paragraphs[-1].strip()
+            )
+        else:
+            script = script.rstrip() + research_header + research_script
+
     return script.strip()
 
 
@@ -205,11 +240,17 @@ def _format_market_data(market_data):
                 f"({_change_str(d['change'], d['unit'])})"
             )
 
-    # Curve slope
+    # Curve slope (simple)
     slope = market_data.get("curve_2s10s")
     if slope is not None:
         sign = "+" if slope >= 0 else ""
         lines.append(f"  2s/10s curve: {sign}{slope} bps")
+
+    # Full curve analytics (shape, spreads, trends) — pre-computed by curve_history.py
+    curve_analytics = market_data.get("curve_analytics")
+    if curve_analytics:
+        lines.append("")
+        lines.append(curve_analytics)
 
     return "\n".join(lines)
 
@@ -288,17 +329,33 @@ def _format_deals(deals, deal_history=None):
     return "\n".join(lines)
 
 
+def _format_research_emails(research_emails):
+    """Format research email list into a numbered block for the prompt."""
+    if not research_emails:
+        return "No research reports provided."
+    lines = []
+    for i, r in enumerate(research_emails, 1):
+        lines.append(f"REPORT {i}:")
+        if r.get("subject"):
+            lines.append(f"Subject: {r['subject']}")
+        lines.append(r.get("body", "").strip())
+        lines.append("")
+    return "\n".join(lines)
+
+
 # ── Utilities ─────────────────────────────────────────────────────────────
 
 def _load_prompt(filename):
     """Load a prompt template from env var (GitHub Actions) or file (local dev).
 
-    Env var names: MARKET_NEWS_PROMPT (for market_news_prompt.txt)
-                   NEW_ISSUES_PROMPT  (for new_issues_prompt.txt)
+    Env var names: MARKET_NEWS_PROMPT      (for market_news_prompt.txt)
+                   NEW_ISSUES_PROMPT       (for new_issues_prompt.txt)
+                   RESEARCH_DIGEST_PROMPT  (for research_digest_prompt.txt)
     """
     env_var_map = {
-        "market_news_prompt.txt": "MARKET_NEWS_PROMPT",
-        "new_issues_prompt.txt": "NEW_ISSUES_PROMPT",
+        "market_news_prompt.txt":    "MARKET_NEWS_PROMPT",
+        "new_issues_prompt.txt":     "NEW_ISSUES_PROMPT",
+        "research_digest_prompt.txt":"RESEARCH_DIGEST_PROMPT",
     }
     env_var = env_var_map.get(filename)
     if env_var:

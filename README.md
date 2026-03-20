@@ -1,23 +1,33 @@
 # Morning Audio Brief
 
-Automated daily podcast delivered every weekday morning. Covers macro and credit market news, and a detailed prior-day investment grade bond new issues report.
+Automated daily podcast delivered every weekday morning at 5am PT. Covers macro and credit market news, Treasury yield curve analysis, and a detailed prior-day investment grade bond new issues report.
 
-Runs on GitHub Actions at 6am PT. Hosted on GitHub Pages. Cost: $0.
+Runs on GitHub Actions. Hosted on GitHub Pages. Cost: $0.
 
-## Setup
+## Podcast Feed
 
-See `PROGRESS.md` in the parent directory for the full setup checklist.
+`https://xz35.github.io/daily_brief/feed.xml`
 
-Required secrets (add to GitHub repo Settings → Secrets → Actions):
-- `GEMINI_API_KEY`
-- `GOOGLE_APPLICATION_CREDENTIALS_JSON`
-- `GITHUB_PAGES_BASE_URL`
+## GitHub Secrets Required
+
+Add these in repo Settings → Secrets and variables → Actions:
+
+| Secret | Description |
+|--------|-------------|
+| `GEMINI_API_KEY` | From billing-free Google AI Studio (aistudio.google.com) |
+| `GOOGLE_APPLICATION_CREDENTIALS_JSON` | Full JSON of TTS service account key |
+| `PAGES_BASE_URL` | `https://xz35.github.io/daily_brief` |
+| `FRED_API_KEY` | Free key from fred.stlouisfed.org |
+| `GMAIL_ADDRESS` | xdailybrief@gmail.com |
+| `GMAIL_APP_PASSWORD` | 16-char Gmail app password |
+| `MARKET_NEWS_PROMPT` | Full text of market news prompt (kept private) |
+| `NEW_ISSUES_PROMPT` | Full text of new issues prompt (kept private) |
 
 ## Local Development
 
 ```bash
 cp .env.example .env
-# Fill in your credentials in .env
+# Fill in credentials in .env
 
 pip install -r requirements.txt
 
@@ -33,7 +43,8 @@ python main.py --skip-tts
 python main.py
 ```
 
-## Podcast Feed
+## Notes
 
-Subscribe in your podcast app using the feed URL:
-`https://[yourusername].github.io/morning-brief/feed.xml`
+- Two Google accounts required: billing-free AI Studio for Gemini, billing-enabled GCP for TTS
+- Prompts are gitignored and stored as GitHub Secrets — update the Secrets when changing prompts
+- See PROGRESS.md and IDEAS.md (parent directory) for full project context

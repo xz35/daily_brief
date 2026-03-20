@@ -57,6 +57,27 @@ def main():
         else:
             logger.info("  → FRED data unavailable (key not set or fetch failed)")
 
+        # ── Step 1c: Yield curve analytics ────────────────────────────
+        logger.info("Step 1c: Computing yield curve analytics")
+        from curve_history import load_curve_history, compute_curve_analytics, save_curve_snapshot
+        curve_history_data = load_curve_history()
+        if market_data and market_data.get("full_curve"):
+            curve_analytics = compute_curve_analytics(market_data["full_curve"], curve_history_data)
+            if curve_analytics:
+                market_data["curve_analytics"] = curve_analytics
+                logger.info(f"  → Curve analytics computed ({len(curve_history_data)} historical snapshots)")
+            else:
+                logger.info("  → Curve analytics skipped (insufficient data)")
+        else:
+            logger.info("  → Curve analytics skipped (no curve data)")
+
+        # ── Step 1d: Fetch research emails ────────────────────────────
+        logger.info("Step 1d: Fetching forwarded research emails")
+        from email_fetcher import fetch_research_emails
+        research_emails = fetch_research_emails()
+        run_log.set("research_reports_found", len(research_emails))
+        logger.info(f"  → {len(research_emails)} research report(s)")
+
         # ── Step 2: Fetch EDGAR new issues ────────────────────────────
         logger.info("Step 2: Fetching EDGAR FWP filings")
         from edgar_fetcher import fetch_deals
@@ -93,16 +114,19 @@ def main():
             market_data=market_data,
             prior_context=prior_context,
             deal_history=deal_history,
+            research_emails=research_emails,
         )
         run_log.set("script_word_count", word_count)
         logger.info(f"  → {word_count} words")
 
         # ── Step 4b: Save persistent memory ───────────────────────────
-        logger.info("Step 4b: Saving deal history and market context")
+        logger.info("Step 4b: Saving deal history, market context, and curve snapshot")
         updated_history = append_deals(all_deals, deal_history, date_str=today_str())
         save_deal_history(updated_history)
         context_summary = extract_context_summary(script)
         save_market_context(today_str(), context_summary, context_entries)
+        if market_data and market_data.get("full_curve"):
+            save_curve_snapshot(today_str(), market_data["full_curve"], curve_history_data)
 
         # ── Step 4c: Email script archive ─────────────────────────────
         logger.info("Step 4c: Sending script to email archive")

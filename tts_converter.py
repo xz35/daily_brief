@@ -41,6 +41,7 @@ def convert_to_mp3(script, output_date=None):
     output_date = output_date or today_str()
     _setup_credentials()
 
+    script = _normalize_for_tts(script)
     chunks = _split_into_chunks(script)
     logger.info(f"TTS: {len(script)} chars split into {len(chunks)} chunks")
 
@@ -95,6 +96,79 @@ def _setup_credentials():
             "  GOOGLE_APPLICATION_CREDENTIALS (local dev, path to JSON file)\n"
             "  GOOGLE_APPLICATION_CREDENTIALS_JSON (GitHub Actions, JSON contents)"
         )
+
+
+# ── TTS text normalization ────────────────────────────────────────────────
+
+def _normalize_for_tts(text):
+    """Pre-process script text to fix TTS pronunciation of financial abbreviations.
+
+    Apply longer/more-specific patterns first to avoid partial matches.
+    E.g. BBB+ must be substituted before BBB, AA- before AA, etc.
+    """
+    substitutions = [
+        # Triple-letter ratings (with modifiers first)
+        (r'\bAAA\b',   'triple-A'),
+        (r'\bBBB\+',   'triple-B plus'),
+        (r'\bBBB-',    'triple-B minus'),
+        (r'\bBBB\b',   'triple-B'),
+        (r'\bCCC\+',   'triple-C plus'),
+        (r'\bCCC-',    'triple-C minus'),
+        (r'\bCCC\b',   'triple-C'),
+        # Double-letter ratings
+        (r'\bAA\+',    'double-A plus'),
+        (r'\bAA-',     'double-A minus'),
+        (r'\bAA\b',    'double-A'),
+        (r'\bBB\+',    'double-B plus'),
+        (r'\bBB-',     'double-B minus'),
+        (r'\bBB\b',    'double-B'),
+        (r'\bCC\b',    'double-C'),
+        # Single-letter with modifier only (plain "A" is too ambiguous)
+        (r'\bA\+\b',   'single-A plus'),
+        (r'\bA-\b',    'single-A minus'),
+        # Curve shorthand
+        (r'\b2s10s\b', 'twos-tens'),
+        (r'\b2s/10s\b','twos-tens'),
+        (r'\b3m10y\b', 'three-month ten-year'),
+        (r'\b5s30s\b', 'fives-thirties'),
+        # Common abbreviations
+        (r'\bbps\b',   'basis points'),
+        (r'\bWoW\b',   'week over week'),
+        (r'\bYoY\b',   'year over year'),
+    ]
+    for pattern, replacement in substitutions:
+        text = re.sub(pattern, replacement, text)
+
+    # Convert integers before "basis points" to spoken words
+    # e.g. "176 basis points" → "one hundred seventy-six basis points"
+    text = re.sub(
+        r'\b(\d{1,3}) basis points',
+        lambda m: f"{_int_to_words(int(m.group(1)))} basis points",
+        text,
+    )
+
+    return text
+
+
+def _int_to_words(n):
+    """Convert integer 0–999 to spoken English words."""
+    if n == 0:
+        return 'zero'
+    ones = [
+        '', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine',
+        'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen',
+        'seventeen', 'eighteen', 'nineteen',
+    ]
+    tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
+    if n < 20:
+        return ones[n]
+    if n < 100:
+        return tens[n // 10] + (f'-{ones[n % 10]}' if n % 10 else '')
+    hundreds = ones[n // 100] + ' hundred'
+    remainder = n % 100
+    if remainder == 0:
+        return hundreds
+    return hundreds + ' ' + _int_to_words(remainder)
 
 
 # ── Text chunking ─────────────────────────────────────────────────────────

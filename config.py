@@ -142,5 +142,6 @@ PROMPTS_DIR = "prompts"
 LOGS_DIR = "logs"
 DEAL_HISTORY_PATH = "docs/deal_history.json"
 MARKET_CONTEXT_PATH = "docs/market_context.json"
+CURVE_HISTORY_PATH = "docs/curve_history.json"
 
 GITHUB_PAGES_BASE_URL = os.getenv("GITHUB_PAGES_BASE_URL", "")

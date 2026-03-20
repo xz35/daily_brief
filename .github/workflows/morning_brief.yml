@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout repo
@@ -41,6 +43,8 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           MARKET_NEWS_PROMPT: ${{ secrets.MARKET_NEWS_PROMPT }}
           NEW_ISSUES_PROMPT: ${{ secrets.NEW_ISSUES_PROMPT }}
+          RESEARCH_DIGEST_PROMPT: ${{ secrets.RESEARCH_DIGEST_PROMPT }}
+          RESEARCH_SENDER_WHITELIST: ${{ secrets.RESEARCH_SENDER_WHITELIST }}
         run: python main.py
 
       - name: Commit and push episode files

@@ -41,6 +41,22 @@ FRED_SERIES = {
     "t2y":     ("DGS2",         "2yr Treasury",  "%"), # 2-Year Constant Maturity
 }
 
+# Full Treasury curve for shape/trend analysis. Stored in curve_history.json.
+# We fetch these separately and pass to curve_history.compute_curve_analytics().
+CURVE_SERIES = {
+    "DGS1MO": "1-Month Treasury",
+    "DGS3MO": "3-Month Treasury",
+    "DGS6MO": "6-Month Treasury",
+    "DGS1":   "1-Year Treasury",
+    "DGS2":   "2-Year Treasury",   # overlaps with FRED_SERIES t2y
+    "DGS3":   "3-Year Treasury",
+    "DGS5":   "5-Year Treasury",
+    "DGS7":   "7-Year Treasury",
+    "DGS10":  "10-Year Treasury",  # overlaps with FRED_SERIES t10y
+    "DGS20":  "20-Year Treasury",
+    "DGS30":  "30-Year Treasury",
+}
+
 # How many trading days back to look for the "prior week" comparison.
 # 7 calendar days reliably captures 5 trading days for WoW change.
 LOOKBACK_DAYS = 7
@@ -114,14 +130,31 @@ def fetch_market_data():
         slope = round((result["t10y"]["value"] - result["t2y"]["value"]) * 100)
         result["curve_2s10s"] = slope
 
+    # Full yield curve snapshot for curve_history.py analysis
+    result["full_curve"] = _fetch_full_curve(api_key)
+
     result["as_of"] = earliest_date or "unknown"
     logger.info(f"FRED: market data fetched as of {result['as_of']} "
                 f"(IG OAS={result.get('ig_oas', {}).get('value')} bps, "
-                f"10yr={result.get('t10y', {}).get('value')}%)")
+                f"10yr={result.get('t10y', {}).get('value')}%, "
+                f"curve points={len(result.get('full_curve') or {})})")
     return result
 
 
 # ── FRED API internals ─────────────────────────────────────────────────────
+
+def _fetch_full_curve(api_key):
+    """Fetch all Treasury curve points. Returns {series_id: float} or {}."""
+    curve = {}
+    for series_id in CURVE_SERIES:
+        obs = _fetch_series(api_key, series_id, limit=3)
+        if obs:
+            try:
+                curve[series_id] = float(obs[0]["value"])
+            except (ValueError, TypeError):
+                pass
+    return curve or None
+
 
 def _fetch_series(api_key, series_id, limit=15):
     """Fetch recent observations for a FRED series. Returns list sorted newest-first."""
