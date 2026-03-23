@@ -2,9 +2,9 @@ name: Morning Audio Brief
 
 on:
   schedule:
-    # 5:00am PT (12:00 UTC) — daylight saving time (March–November)
-    # Change to '0 13 * * 1-5' during standard time (November–March)
-    - cron: '0 12 * * 1-5'
+    # 4:50am PT (12:00 UTC) — daylight saving time (March–November)
+    # Change to '50 12 * * 1-5' during standard time (November–March)
+    - cron: '50 11 * * 1-5'
   workflow_dispatch:   # Allow manual trigger from GitHub Actions tab for testing
 
 jobs:
