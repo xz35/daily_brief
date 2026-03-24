@@ -143,5 +143,66 @@
       "fitch": "Ratin"
     },
     "cik": "1182534"
+  },
+  {
+    "date": "2026-03-24",
+    "issuer": "Emera US Finance, LLC",
+    "size": null,
+    "tenor": null,
+    "spread": "T+15 bps",
+    "coupon": "4.500%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1690036"
+  },
+  {
+    "date": "2026-03-24",
+    "issuer": "calling J.P. Morgan Securities LLC",
+    "size": "$300 million",
+    "tenor": null,
+    "spread": "T+15 bps",
+    "coupon": "4.650%",
+    "ratings": {
+      "moodys": "A3",
+      "sp": "BBB+"
+    },
+    "cik": "75594"
+  },
+  {
+    "date": "2026-03-24",
+    "issuer": "Emera US Finance, LLC",
+    "size": null,
+    "tenor": null,
+    "spread": "T+15 bps",
+    "coupon": "4.500%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1127248"
+  },
+  {
+    "date": "2026-03-24",
+    "issuer": "Emera US Finance, LLC",
+    "size": null,
+    "tenor": null,
+    "spread": "T+15 bps",
+    "coupon": "4.500%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "2112303"
+  },
+  {
+    "date": "2026-03-24",
+    "issuer": "The Progressive Corporation",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.60%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "80661"
   }
 ]
