@@ -9,6 +9,15 @@
     <itunes:explicit>no</itunes:explicit>
     <itunes:category text="Business" />
     <item>
+      <title>Morning Brief — 2026-03-25</title>
+      <description>Daily market briefing for 2026-03-25. Macro, rates, credit, and IG new issues.</description>
+      <pubDate>Wed, 25 Mar 2026 12:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://xz35.github.io/daily_brief/episodes/2026-03-25.mp3</guid>
+      <enclosure url="https://xz35.github.io/daily_brief/episodes/2026-03-25.mp3" length="13129389" type="audio/mpeg" />
+      <itunes:duration>00:13:40</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
       <title>Morning Brief — 2026-03-18</title>
       <description>Daily market briefing for 2026-03-18. Macro, rates, credit, and IG new issues.</description>
       <pubDate>Wed, 18 Mar 2026 06:00:00 +0000</pubDate>

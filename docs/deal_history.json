@@ -204,5 +204,37 @@
       "sp": "Fitch"
     },
     "cik": "80661"
+  },
+  {
+    "date": "2026-03-25",
+    "issuer": "Enbridge Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": "T+15 bps",
+    "coupon": "4.850%",
+    "ratings": null,
+    "cik": "895728"
+  },
+  {
+    "date": "2026-03-25",
+    "issuer": "Amphenol Technologies Holding GmbH",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "3.625%",
+    "ratings": null,
+    "cik": "2114624"
+  },
+  {
+    "date": "2026-03-25",
+    "issuer": "Services. Citibank, N.A.",
+    "size": "$14.4 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.137%",
+    "ratings": {
+      "fitch": "Ratin"
+    },
+    "cik": "1654238"
   }
 ]
