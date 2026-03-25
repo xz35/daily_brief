@@ -136,9 +136,14 @@ def _normalize_for_tts(text):
         (r'\bWoW\b',   'week over week'),
         (r'\bYoY\b',   'year over year'),
     ]
-    # Decimal point: "0.9" → "zero point nine", "4.23" → "four point two three"
-    # Applied after substitutions so it doesn't interfere with rating patterns
-    text = re.sub(r'(\d)\.(\d)', r'\1 point \2', text)
+    # Decimal point: space out each digit after the decimal so TTS reads them
+    # individually. "4.235" → "4 point 2 3 5" → "four point two three five"
+    # "0.9" → "0 point 9" → "zero point nine"
+    text = re.sub(
+        r'\b(\d+)\.(\d+)\b',
+        lambda m: m.group(1) + ' point ' + ' '.join(m.group(2)),
+        text,
+    )
     for pattern, replacement in substitutions:
         text = re.sub(pattern, replacement, text)
 
