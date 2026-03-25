@@ -88,6 +88,9 @@ def _update_feed(date, episode_url, mp3_size, duration_seconds):
         root, channel = _create_empty_feed()
         tree = ET.ElementTree(root)
 
+    # Upsert channel-level image tags (safe to run on every update)
+    _upsert_channel_image(channel)
+
     # Remove any existing entry for this date (idempotent re-runs)
     for item in channel.findall("item"):
         guid = item.findtext("guid")
@@ -136,7 +139,56 @@ def _create_empty_feed():
     ET.SubElement(channel, f"{{{ITUNES_NS}}}explicit").text = "no"
     ET.SubElement(channel, f"{{{ITUNES_NS}}}category", text="Business")
 
+    # Add Logo
+    image_url = f"{GITHUB_PAGES_BASE_URL.rstrip('/')}/logo.png"
+    itunes_image = ET.SubElement(channel, f"{{{ITUNES_NS}}}image")
+    itunes_image.set("href", image_url)
+    
+    image = ET.SubElement(channel, "image")
+    ET.SubElement(image, "url").text = image_url
+    ET.SubElement(image, "title").text = PODCAST_TITLE
+    ET.SubElement(image, "link").text = GITHUB_PAGES_BASE_URL or "https://github.com"
+
     return root, channel
+
+
+def _upsert_channel_image(channel):
+    """Add or update <itunes:image> and <image> tags in the channel header.
+
+    Tags are inserted before the first <item> so they appear in the channel
+    metadata block — Apple Podcasts ignores image tags placed after items.
+    """
+    if not GITHUB_PAGES_BASE_URL:
+        return
+    image_url = f"{GITHUB_PAGES_BASE_URL.rstrip('/')}/logo.png"
+
+    # Find insertion point: just before the first <item>
+    children = list(channel)
+    items = channel.findall("item")
+    insert_at = children.index(items[0]) if items else len(children)
+
+    # itunes:image — used by Apple Podcasts and most modern apps
+    itunes_image = channel.find(f"{{{ITUNES_NS}}}image")
+    if itunes_image is None:
+        itunes_image = ET.Element(f"{{{ITUNES_NS}}}image")
+        channel.insert(insert_at, itunes_image)
+    itunes_image.set("href", image_url)
+
+    # RSS 2.0 <image> — fallback for older clients
+    image = channel.find("image")
+    if image is None:
+        image    = ET.Element("image")
+        url_el   = ET.SubElement(image, "url")
+        title_el = ET.SubElement(image, "title")
+        link_el  = ET.SubElement(image, "link")
+        channel.insert(insert_at, image)
+    else:
+        url_el   = image.find("url")   or ET.SubElement(image, "url")
+        title_el = image.find("title") or ET.SubElement(image, "title")
+        link_el  = image.find("link")  or ET.SubElement(image, "link")
+    url_el.text   = image_url
+    title_el.text = PODCAST_TITLE
+    link_el.text  = GITHUB_PAGES_BASE_URL or "https://github.com"
 
 
 def _sort_items_newest_first(channel):

@@ -8,6 +8,12 @@
     <itunes:author>Morning Brief</itunes:author>
     <itunes:explicit>no</itunes:explicit>
     <itunes:category text="Business" />
+    <image>
+      <url>https://xz35.github.io/daily_brief/logo.png</url>
+      <title>Morning Audio Brief</title>
+      <link>https://xz35.github.io/daily_brief</link>
+    </image>
+    <itunes:image href="https://xz35.github.io/daily_brief/logo.png" />
     <item>
       <title>Morning Brief — 2026-03-25</title>
       <description>Daily market briefing for 2026-03-25. Macro, rates, credit, and IG new issues.</description>
