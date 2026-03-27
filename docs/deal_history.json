@@ -248,5 +248,15 @@
       "sp": "Globa"
     },
     "cik": "733099"
+  },
+  {
+    "date": "2026-03-27",
+    "issuer": "Exxon Mobil Corporation",
+    "size": "$169 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "34088"
   }
 ]
