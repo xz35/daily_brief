@@ -258,5 +258,15 @@
     "coupon": null,
     "ratings": null,
     "cik": "34088"
+  },
+  {
+    "date": "2026-03-30",
+    "issuer": "Main Street Capital Corporation",
+    "size": "$200 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "6.950%",
+    "ratings": null,
+    "cik": "1396440"
   }
 ]
