@@ -268,5 +268,17 @@
     "coupon": "6.950%",
     "ratings": null,
     "cik": "1396440"
+  },
+  {
+    "date": "2026-03-31",
+    "issuer": "Realty Income Corporation",
+    "size": "$800 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.750%",
+    "ratings": {
+      "sp": "Globa"
+    },
+    "cik": "726728"
   }
 ]
