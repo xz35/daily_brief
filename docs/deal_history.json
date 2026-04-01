@@ -280,5 +280,15 @@
       "sp": "Globa"
     },
     "cik": "726728"
+  },
+  {
+    "date": "2026-04-01",
+    "issuer": "Jefferies Financial Group Inc.",
+    "size": "$5 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "6.25%",
+    "ratings": null,
+    "cik": "96223"
   }
 ]
