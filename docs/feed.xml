@@ -27,17 +27,11 @@
       <url>https://xz35.github.io/daily_brief/logo.png</url>
       <title>Morning Audio Brief</title>
       <link>https://xz35.github.io/daily_brief</link>
+      <url>https://xz35.github.io/daily_brief/logo.png</url>
+      <title>Morning Audio Brief</title>
+      <link>https://xz35.github.io/daily_brief</link>
     </image>
     <itunes:image href="https://xz35.github.io/daily_brief/logo.png" />
-    <item>
-      <title>Morning Brief — 2026-03-25</title>
-      <description>Daily market briefing for 2026-03-25. Macro, rates, credit, and IG new issues.</description>
-      <pubDate>Wed, 25 Mar 2026 12:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://xz35.github.io/daily_brief/episodes/2026-03-25.mp3</guid>
-      <enclosure url="https://xz35.github.io/daily_brief/episodes/2026-03-25.mp3" length="13129389" type="audio/mpeg" />
-      <itunes:duration>00:13:40</itunes:duration>
-      <itunes:explicit>no</itunes:explicit>
-    </item>
     <item>
       <title>Morning Brief — 2026-04-01</title>
       <description>Daily market briefing for 2026-04-01. Macro, rates, credit, and IG new issues.</description>
@@ -63,6 +57,15 @@
       <guid isPermaLink="false">https://xz35.github.io/daily_brief/episodes/2026-03-26.mp3</guid>
       <enclosure url="https://xz35.github.io/daily_brief/episodes/2026-03-26.mp3" length="9856557" type="audio/mpeg" />
       <itunes:duration>00:10:15</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title>Morning Brief — 2026-04-02</title>
+      <description>Daily market briefing for 2026-04-02. Macro, rates, credit, and IG new issues.</description>
+      <pubDate>Thu, 02 Apr 2026 12:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://xz35.github.io/daily_brief/episodes/2026-04-02.mp3</guid>
+      <enclosure url="https://xz35.github.io/daily_brief/episodes/2026-04-02.mp3" length="4142253" type="audio/mpeg" />
+      <itunes:duration>00:04:18</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
     </item>
     <item>

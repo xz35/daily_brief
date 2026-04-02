@@ -290,5 +290,25 @@
     "coupon": "6.25%",
     "ratings": null,
     "cik": "96223"
+  },
+  {
+    "date": "2026-04-02",
+    "issuer": "Jefferies Financial Group Inc.",
+    "size": "$1.01 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "6.00%",
+    "ratings": null,
+    "cik": "96223"
+  },
+  {
+    "date": "2026-04-02",
+    "issuer": "Public Storage Ope",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+15 bps",
+    "coupon": "5.000%",
+    "ratings": null,
+    "cik": "1393311"
   }
 ]
