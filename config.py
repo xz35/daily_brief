@@ -119,7 +119,7 @@ GEMINI_MAX_TOKENS = 8192
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 # ── Google Cloud TTS ──────────────────────────────────────────────────────
-TTS_VOICE_NAME = "en-US-Journey-F"    # Female, conversational. Neural2-F is fallback if Journey is unavailable.
+TTS_VOICE_NAME = "en-US-Studio-O"     # Female, high-fidelity studio narration — optimized for long-form content.
 TTS_LANGUAGE_CODE = "en-US"
 TTS_SPEAKING_RATE = 1.08              # Slightly faster than default
 TTS_PITCH = 0.0

@@ -32,13 +32,15 @@ FRED_BASE_URL = "https://api.stlouisfed.org/fred/series/observations"
 REQUEST_TIMEOUT = 10
 
 # Key bond market series — the minimal set needed for daily credit commentary.
-# All BofA/ICE index series are in basis points (OAS over comparable Treasury).
+# IMPORTANT: BofA/ICE OAS series (BAMLC*) are reported by FRED in PERCENT, not basis points.
+# e.g. BAMLC0A0CM = 0.90 means 90 bps. We multiply by 100 on ingest.
+# Treasury yield series (DGS*) are also in percent and are kept as-is (reported as %, not bps).
 FRED_SERIES = {
-    "ig_oas":  ("BAMLC0A0CM",   "IG OAS",   "bps"),   # ICE BofA US Corporate Master
-    "hy_oas":  ("BAMLH0A0HYM2", "HY OAS",   "bps"),   # ICE BofA US High Yield
-    "bbb_oas": ("BAMLC0A4CBBB", "BBB OAS",  "bps"),   # ICE BofA BBB Corporate
-    "t10y":    ("DGS10",        "10yr Treasury", "%"), # 10-Year Constant Maturity
-    "t2y":     ("DGS2",         "2yr Treasury",  "%"), # 2-Year Constant Maturity
+    "ig_oas":  ("BAMLC0A0CM",   "IG OAS",   "bps", True),    # ICE BofA US Corporate Master — multiply ×100
+    "hy_oas":  ("BAMLH0A0HYM2", "HY OAS",   "bps", True),    # ICE BofA US High Yield — multiply ×100
+    "bbb_oas": ("BAMLC0A4CBBB", "BBB OAS",  "bps", True),    # ICE BofA BBB Corporate — multiply ×100
+    "t10y":    ("DGS10",        "10yr Treasury", "%", False), # 10-Year Constant Maturity — keep as %
+    "t2y":     ("DGS2",         "2yr Treasury",  "%", False), # 2-Year Constant Maturity — keep as %
 }
 
 # Full Treasury curve for shape/trend analysis. Stored in curve_history.json.
@@ -89,7 +91,7 @@ def fetch_market_data():
     result = {}
     earliest_date = None
 
-    for key, (series_id, label, unit) in FRED_SERIES.items():
+    for key, (series_id, label, unit, multiply_100) in FRED_SERIES.items():
         obs = _fetch_series(api_key, series_id)
         if obs is None:
             logger.warning(f"FRED: failed to fetch {series_id} ({label})")
@@ -104,7 +106,14 @@ def fetch_market_data():
         try:
             current_val = float(current["value"])
             prev_val    = float(prev["value"]) if prev else None
-            change      = round(current_val - prev_val, 2) if prev_val is not None else None
+
+            # BofA OAS series are reported in percent by FRED (0.90 = 90 bps).
+            # Convert to basis points so the LLM sees real bps numbers.
+            if multiply_100:
+                current_val = round(current_val * 100, 1)
+                prev_val    = round(prev_val * 100, 1) if prev_val is not None else None
+
+            change = round(current_val - prev_val, 1) if prev_val is not None else None
 
             result[key] = {
                 "value":  current_val,
