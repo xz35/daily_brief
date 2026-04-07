@@ -310,5 +310,17 @@
     "coupon": "5.000%",
     "ratings": null,
     "cik": "1393311"
+  },
+  {
+    "date": "2026-04-07",
+    "issuer": "Marvell Technology, Inc. Anticipated",
+    "size": "$1 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.300%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1835632"
   }
 ]
