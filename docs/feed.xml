@@ -45,6 +45,9 @@
       <url>https://xz35.github.io/daily_brief/logo.png</url>
       <title>Morning Audio Brief</title>
       <link>https://xz35.github.io/daily_brief</link>
+      <url>https://xz35.github.io/daily_brief/logo.png</url>
+      <title>Morning Audio Brief</title>
+      <link>https://xz35.github.io/daily_brief</link>
     </image>
     <itunes:image href="https://xz35.github.io/daily_brief/logo.png" />
     <item>
@@ -75,21 +78,21 @@
       <itunes:explicit>no</itunes:explicit>
     </item>
     <item>
-      <title>Morning Brief — 2026-04-02</title>
-      <description>Daily market briefing for 2026-04-02. Macro, rates, credit, and IG new issues.</description>
-      <pubDate>Thu, 02 Apr 2026 12:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://xz35.github.io/daily_brief/episodes/2026-04-02.mp3</guid>
-      <enclosure url="https://xz35.github.io/daily_brief/episodes/2026-04-02.mp3" length="4142253" type="audio/mpeg" />
-      <itunes:duration>00:04:18</itunes:duration>
-      <itunes:explicit>no</itunes:explicit>
-    </item>
-    <item>
       <title>Morning Brief — 2026-04-06</title>
       <description>Daily market briefing for 2026-04-06. Macro, rates, credit, and IG new issues.</description>
       <pubDate>Mon, 06 Apr 2026 12:00:00 +0000</pubDate>
       <guid isPermaLink="false">https://xz35.github.io/daily_brief/episodes/2026-04-06.mp3</guid>
       <enclosure url="https://xz35.github.io/daily_brief/episodes/2026-04-06.mp3" length="6091053" type="audio/mpeg" />
       <itunes:duration>00:06:20</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title>Morning Brief — 2026-04-10</title>
+      <description>Daily market briefing for 2026-04-10. Macro, rates, credit, and IG new issues.</description>
+      <pubDate>Fri, 10 Apr 2026 12:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://xz35.github.io/daily_brief/episodes/2026-04-10.mp3</guid>
+      <enclosure url="https://xz35.github.io/daily_brief/episodes/2026-04-10.mp3" length="592941" type="audio/mpeg" />
+      <itunes:duration>00:00:36</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
     </item>
     <item>
