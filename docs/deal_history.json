@@ -345,5 +345,25 @@
     "coupon": null,
     "ratings": null,
     "cik": "40704"
+  },
+  {
+    "date": "2026-04-13",
+    "issuer": "Berkshire Hathaway Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "2.077%",
+    "ratings": null,
+    "cik": "1067983"
+  },
+  {
+    "date": "2026-04-13",
+    "issuer": "merger to AmeriCredit Service Center Ltd.",
+    "size": "$71 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "3.923%",
+    "ratings": null,
+    "cik": "1347185"
   }
 ]
