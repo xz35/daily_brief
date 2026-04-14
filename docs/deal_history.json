@@ -365,5 +365,27 @@
     "coupon": "3.923%",
     "ratings": null,
     "cik": "1347185"
+  },
+  {
+    "date": "2026-04-14",
+    "issuer": "Blue Owl Capital Corporation",
+    "size": "$400 million",
+    "tenor": null,
+    "spread": "T+270 bps",
+    "coupon": "6.450%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1655888"
+  },
+  {
+    "date": "2026-04-14",
+    "issuer": "Asian Infrastructure Investment Bank",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1733112"
   }
 ]
