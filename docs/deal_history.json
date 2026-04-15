@@ -387,5 +387,50 @@
     "coupon": null,
     "ratings": null,
     "cik": "1733112"
+  },
+  {
+    "date": "2026-04-15",
+    "issuer": "T1 Energy Inc.",
+    "size": "$125.0 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1992243"
+  },
+  {
+    "date": "2026-04-15",
+    "issuer": "Federative Republic of Brazil. Title of",
+    "size": "$74.1 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "9.13%",
+    "ratings": {
+      "fitch": "have"
+    },
+    "cik": "205317"
+  },
+  {
+    "date": "2026-04-15",
+    "issuer": "Berkshire Hathaway Inc. LEI 5493000C01ZX7D35SD85",
+    "size": "$22.7 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "2.077%",
+    "ratings": null,
+    "cik": "1067983"
+  },
+  {
+    "date": "2026-04-15",
+    "issuer": "Brookfield Asset Management Ltd.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.832%",
+    "ratings": {
+      "sp": "Globa",
+      "fitch": "Ratin"
+    },
+    "cik": "1937926"
   }
 ]
