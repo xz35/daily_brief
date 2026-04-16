@@ -432,5 +432,37 @@
       "fitch": "Ratin"
     },
     "cik": "1937926"
+  },
+  {
+    "date": "2026-04-16",
+    "issuer": "calling Citigroup Global Markets Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "6.125%",
+    "ratings": null,
+    "cik": "99070"
+  },
+  {
+    "date": "2026-04-16",
+    "issuer": "Federative Republic Of Brazil",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.875%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "205317"
+  },
+  {
+    "date": "2026-04-16",
+    "issuer": "shall select the United States Treasury",
+    "size": "$1.5 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1000275"
   }
 ]
