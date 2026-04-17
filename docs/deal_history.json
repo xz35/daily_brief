@@ -464,5 +464,37 @@
     "coupon": null,
     "ratings": null,
     "cik": "1000275"
+  },
+  {
+    "date": "2026-04-17",
+    "issuer": "European Investment Bank Issuer",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "3.750%",
+    "ratings": null,
+    "cik": "33745"
+  },
+  {
+    "date": "2026-04-17",
+    "issuer": "calling BMO Capital Markets Corp.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.050%",
+    "ratings": {
+      "fitch": "AA-"
+    },
+    "cik": "836136"
+  },
+  {
+    "date": "2026-04-17",
+    "issuer": "rating acceptable to the",
+    "size": "$1.75 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "1.00%",
+    "ratings": null,
+    "cik": "1126530"
   }
 ]
