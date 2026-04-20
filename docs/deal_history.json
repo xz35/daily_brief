@@ -496,5 +496,75 @@
     "coupon": "1.00%",
     "ratings": null,
     "cik": "1126530"
+  },
+  {
+    "date": "2026-04-20",
+    "issuer": "Federative Republic of Brazil. Title of",
+    "size": "$74.1 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.000%",
+    "ratings": {
+      "fitch": "have"
+    },
+    "cik": "205317"
+  },
+  {
+    "date": "2026-04-20",
+    "issuer": "Asian Infrastructure Investment Bank",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "3.875%",
+    "ratings": null,
+    "cik": "1733112"
+  },
+  {
+    "date": "2026-04-20",
+    "issuer": "Bank of America Corporation",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.489%",
+    "ratings": null,
+    "cik": "70858"
+  },
+  {
+    "date": "2026-04-20",
+    "issuer": "Toronto Dominion Bank",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.866%",
+    "ratings": {
+      "fitch": "Ratin"
+    },
+    "cik": "947263"
+  },
+  {
+    "date": "2026-04-20",
+    "issuer": "THE BANK OF NEW YORK MELLON CORPORATION",
+    "size": "$750 million",
+    "tenor": null,
+    "spread": "T+78 bps",
+    "coupon": "5.085%",
+    "ratings": {
+      "sp": "FITCH",
+      "fitch": "DBRS"
+    },
+    "cik": "1390777"
+  },
+  {
+    "date": "2026-04-20",
+    "issuer": "M&T Bank Corporation Issuer",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+138 bps",
+    "coupon": "5.295%",
+    "ratings": {
+      "sp": "Fitch",
+      "fitch": "DBRS"
+    },
+    "cik": "36270"
   }
 ]
