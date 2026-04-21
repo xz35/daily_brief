@@ -566,5 +566,15 @@
       "fitch": "DBRS"
     },
     "cik": "36270"
+  },
+  {
+    "date": "2026-04-21",
+    "issuer": "Prologis, L.P. Expected",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+57 bps",
+    "coupon": "4.250%",
+    "ratings": null,
+    "cik": "1045610"
   }
 ]
