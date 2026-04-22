@@ -69,8 +69,20 @@
       <url>https://xz35.github.io/daily_brief/logo.png</url>
       <title>Morning Audio Brief</title>
       <link>https://xz35.github.io/daily_brief</link>
+      <url>https://xz35.github.io/daily_brief/logo.png</url>
+      <title>Morning Audio Brief</title>
+      <link>https://xz35.github.io/daily_brief</link>
     </image>
     <itunes:image href="https://xz35.github.io/daily_brief/logo.png" />
+    <item>
+      <title>Morning Brief — 2026-04-22</title>
+      <description>Daily market briefing for 2026-04-22. Macro, rates, credit, and IG new issues.</description>
+      <pubDate>Wed, 22 Apr 2026 12:00:00 +0000</pubDate>
+      <guid isPermaLink="false">https://xz35.github.io/daily_brief/episodes/2026-04-22.mp3</guid>
+      <enclosure url="https://xz35.github.io/daily_brief/episodes/2026-04-22.mp3" length="2471469" type="audio/mpeg" />
+      <itunes:duration>00:02:34</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
     <item>
       <title>Morning Brief — 2026-04-15</title>
       <description>Daily market briefing for 2026-04-15. Macro, rates, credit, and IG new issues.</description>
@@ -87,15 +99,6 @@
       <guid isPermaLink="false">https://xz35.github.io/daily_brief/episodes/2026-04-21.mp3</guid>
       <enclosure url="https://xz35.github.io/daily_brief/episodes/2026-04-21.mp3" length="6218157" type="audio/mpeg" />
       <itunes:duration>00:06:28</itunes:duration>
-      <itunes:explicit>no</itunes:explicit>
-    </item>
-    <item>
-      <title>Morning Brief — 2026-04-14</title>
-      <description>Daily market briefing for 2026-04-14. Macro, rates, credit, and IG new issues.</description>
-      <pubDate>Tue, 14 Apr 2026 12:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://xz35.github.io/daily_brief/episodes/2026-04-14.mp3</guid>
-      <enclosure url="https://xz35.github.io/daily_brief/episodes/2026-04-14.mp3" length="7941165" type="audio/mpeg" />
-      <itunes:duration>00:08:16</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
     </item>
     <item>
