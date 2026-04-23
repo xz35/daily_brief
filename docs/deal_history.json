@@ -586,5 +586,27 @@
     "coupon": "4.250%",
     "ratings": null,
     "cik": "1045610"
+  },
+  {
+    "date": "2026-04-23",
+    "issuer": "Blackstone Private Credit Fund",
+    "size": "$850 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.950%",
+    "ratings": null,
+    "cik": "1803498"
+  },
+  {
+    "date": "2026-04-23",
+    "issuer": "State Street Corporation",
+    "size": "$700 million",
+    "tenor": null,
+    "spread": "T+80 bps",
+    "coupon": "5.094%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "93751"
   }
 ]
