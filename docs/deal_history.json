@@ -608,5 +608,42 @@
       "sp": "Fitch"
     },
     "cik": "93751"
+  },
+  {
+    "date": "2026-04-24",
+    "issuer": "AT&T Inc.",
+    "size": "$750 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.750%",
+    "ratings": {
+      "sp": "BBB",
+      "fitch": "BBB+"
+    },
+    "cik": "732717"
+  },
+  {
+    "date": "2026-04-24",
+    "issuer": "John Deere Capital Corporation Expected",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+45 bps",
+    "coupon": "4.375%",
+    "ratings": {
+      "fitch": "Ratin"
+    },
+    "cik": "27673"
+  },
+  {
+    "date": "2026-04-24",
+    "issuer": "Jefferies Financial Group Inc.",
+    "size": "$1.1 billion",
+    "tenor": null,
+    "spread": "T+135 bps",
+    "coupon": "5.125%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "96223"
   }
 ]
