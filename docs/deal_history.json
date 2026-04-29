@@ -645,5 +645,55 @@
       "sp": "Fitch"
     },
     "cik": "96223"
+  },
+  {
+    "date": "2026-04-29",
+    "issuer": "Intel Corporation",
+    "size": null,
+    "tenor": null,
+    "spread": "T+75 bps",
+    "coupon": "4.650%",
+    "ratings": null,
+    "cik": "50863"
+  },
+  {
+    "date": "2026-04-29",
+    "issuer": "Philip Morris International Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.125%",
+    "ratings": null,
+    "cik": "1413329"
+  },
+  {
+    "date": "2026-04-29",
+    "issuer": "HCA Inc. Aggregate",
+    "size": "$1 billion",
+    "tenor": null,
+    "spread": "T+78 bps",
+    "coupon": "4.700%",
+    "ratings": null,
+    "cik": "860730"
+  },
+  {
+    "date": "2026-04-29",
+    "issuer": "Walmart Inc.",
+    "size": "$350 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.000%",
+    "ratings": null,
+    "cik": "104169"
+  },
+  {
+    "date": "2026-04-29",
+    "issuer": "HCA Inc. Aggregate",
+    "size": "$1 billion",
+    "tenor": null,
+    "spread": "T+78 bps",
+    "coupon": "4.700%",
+    "ratings": null,
+    "cik": "1526688"
   }
 ]
