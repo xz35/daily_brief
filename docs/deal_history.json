@@ -695,5 +695,55 @@
     "coupon": "4.700%",
     "ratings": null,
     "cik": "1526688"
+  },
+  {
+    "date": "2026-05-01",
+    "issuer": "Meta Platforms, Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.550%",
+    "ratings": null,
+    "cik": "1326801"
+  },
+  {
+    "date": "2026-05-01",
+    "issuer": "contacting J.P. Morgan Securities LLC",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+55 bps",
+    "coupon": "4.550%",
+    "ratings": null,
+    "cik": "87347"
+  },
+  {
+    "date": "2026-05-01",
+    "issuer": "Ford Credit Floorplan Corporation Ford Credit Floorplan LLC",
+    "size": "$600 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1061198"
+  },
+  {
+    "date": "2026-05-01",
+    "issuer": "Ford Credit Floorplan Corporation Ford Credit Floorplan LLC",
+    "size": "$600 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "872471"
+  },
+  {
+    "date": "2026-05-01",
+    "issuer": "Ford Credit Floorplan Corporation Ford Credit Floorplan LLC",
+    "size": "$600 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1159408"
   }
 ]
