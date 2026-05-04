@@ -745,5 +745,29 @@
     "coupon": null,
     "ratings": null,
     "cik": "1159408"
+  },
+  {
+    "date": "2026-05-04",
+    "issuer": "Equinix Canada Financing Ltd.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "3.950%",
+    "ratings": {
+      "sp": "BBB+"
+    },
+    "cik": "2096003"
+  },
+  {
+    "date": "2026-05-04",
+    "issuer": "Equinix Canada Financing Ltd.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "3.950%",
+    "ratings": {
+      "sp": "BBB+"
+    },
+    "cik": "1101239"
   }
 ]
