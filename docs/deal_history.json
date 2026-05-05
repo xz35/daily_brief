@@ -769,5 +769,62 @@
       "sp": "BBB+"
     },
     "cik": "1101239"
+  },
+  {
+    "date": "2026-05-05",
+    "issuer": "Automatic Data Processing, Inc. Title of",
+    "size": "$1 billion",
+    "tenor": null,
+    "spread": "T+65 bps",
+    "coupon": "5.000%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "8670"
+  },
+  {
+    "date": "2026-05-05",
+    "issuer": "Otis Worldwide Corporation",
+    "size": "$700 million",
+    "tenor": null,
+    "spread": "T+50 bps",
+    "coupon": "4.488%",
+    "ratings": null,
+    "cik": "1781335"
+  },
+  {
+    "date": "2026-05-05",
+    "issuer": "Southern California Edison Company",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.95%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "92103"
+  },
+  {
+    "date": "2026-05-05",
+    "issuer": "Constellation Brands, Inc.",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.850%",
+    "ratings": null,
+    "cik": "16918"
+  },
+  {
+    "date": "2026-05-05",
+    "issuer": "Broadridge Financial Solutions, Inc.",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+135 bps",
+    "coupon": "5.750%",
+    "ratings": {
+      "sp": "BBB",
+      "fitch": "BBB+"
+    },
+    "cik": "1383312"
   }
 ]
