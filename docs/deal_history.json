@@ -290,5 +290,566 @@
     "coupon": "6.25%",
     "ratings": null,
     "cik": "96223"
+  },
+  {
+    "date": "2026-04-02",
+    "issuer": "Jefferies Financial Group Inc.",
+    "size": "$1.01 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "6.00%",
+    "ratings": null,
+    "cik": "96223"
+  },
+  {
+    "date": "2026-04-02",
+    "issuer": "Public Storage Ope",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+15 bps",
+    "coupon": "5.000%",
+    "ratings": null,
+    "cik": "1393311"
+  },
+  {
+    "date": "2026-04-07",
+    "issuer": "Marvell Technology, Inc. Anticipated",
+    "size": "$1 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.300%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1835632"
+  },
+  {
+    "date": "2026-04-10",
+    "issuer": "calling BMO Capital Markets Corp.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.050%",
+    "ratings": {
+      "sp": "AA-",
+      "fitch": "AA-"
+    },
+    "cik": "74615"
+  },
+  {
+    "date": "2026-04-10",
+    "issuer": "General Mills, Inc. Issuer",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "40704"
+  },
+  {
+    "date": "2026-04-13",
+    "issuer": "Berkshire Hathaway Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "2.077%",
+    "ratings": null,
+    "cik": "1067983"
+  },
+  {
+    "date": "2026-04-13",
+    "issuer": "merger to AmeriCredit Service Center Ltd.",
+    "size": "$71 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "3.923%",
+    "ratings": null,
+    "cik": "1347185"
+  },
+  {
+    "date": "2026-04-14",
+    "issuer": "Blue Owl Capital Corporation",
+    "size": "$400 million",
+    "tenor": null,
+    "spread": "T+270 bps",
+    "coupon": "6.450%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1655888"
+  },
+  {
+    "date": "2026-04-14",
+    "issuer": "Asian Infrastructure Investment Bank",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1733112"
+  },
+  {
+    "date": "2026-04-15",
+    "issuer": "T1 Energy Inc.",
+    "size": "$125.0 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1992243"
+  },
+  {
+    "date": "2026-04-15",
+    "issuer": "Federative Republic of Brazil. Title of",
+    "size": "$74.1 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "9.13%",
+    "ratings": {
+      "fitch": "have"
+    },
+    "cik": "205317"
+  },
+  {
+    "date": "2026-04-15",
+    "issuer": "Berkshire Hathaway Inc. LEI 5493000C01ZX7D35SD85",
+    "size": "$22.7 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "2.077%",
+    "ratings": null,
+    "cik": "1067983"
+  },
+  {
+    "date": "2026-04-15",
+    "issuer": "Brookfield Asset Management Ltd.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.832%",
+    "ratings": {
+      "sp": "Globa",
+      "fitch": "Ratin"
+    },
+    "cik": "1937926"
+  },
+  {
+    "date": "2026-04-16",
+    "issuer": "calling Citigroup Global Markets Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "6.125%",
+    "ratings": null,
+    "cik": "99070"
+  },
+  {
+    "date": "2026-04-16",
+    "issuer": "Federative Republic Of Brazil",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.875%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "205317"
+  },
+  {
+    "date": "2026-04-16",
+    "issuer": "shall select the United States Treasury",
+    "size": "$1.5 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1000275"
+  },
+  {
+    "date": "2026-04-17",
+    "issuer": "European Investment Bank Issuer",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "3.750%",
+    "ratings": null,
+    "cik": "33745"
+  },
+  {
+    "date": "2026-04-17",
+    "issuer": "calling BMO Capital Markets Corp.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.050%",
+    "ratings": {
+      "fitch": "AA-"
+    },
+    "cik": "836136"
+  },
+  {
+    "date": "2026-04-17",
+    "issuer": "rating acceptable to the",
+    "size": "$1.75 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "1.00%",
+    "ratings": null,
+    "cik": "1126530"
+  },
+  {
+    "date": "2026-04-20",
+    "issuer": "Federative Republic of Brazil. Title of",
+    "size": "$74.1 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.000%",
+    "ratings": {
+      "fitch": "have"
+    },
+    "cik": "205317"
+  },
+  {
+    "date": "2026-04-20",
+    "issuer": "Asian Infrastructure Investment Bank",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "3.875%",
+    "ratings": null,
+    "cik": "1733112"
+  },
+  {
+    "date": "2026-04-20",
+    "issuer": "Bank of America Corporation",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.489%",
+    "ratings": null,
+    "cik": "70858"
+  },
+  {
+    "date": "2026-04-20",
+    "issuer": "Toronto Dominion Bank",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.866%",
+    "ratings": {
+      "fitch": "Ratin"
+    },
+    "cik": "947263"
+  },
+  {
+    "date": "2026-04-20",
+    "issuer": "THE BANK OF NEW YORK MELLON CORPORATION",
+    "size": "$750 million",
+    "tenor": null,
+    "spread": "T+78 bps",
+    "coupon": "5.085%",
+    "ratings": {
+      "sp": "FITCH",
+      "fitch": "DBRS"
+    },
+    "cik": "1390777"
+  },
+  {
+    "date": "2026-04-20",
+    "issuer": "M&T Bank Corporation Issuer",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+138 bps",
+    "coupon": "5.295%",
+    "ratings": {
+      "sp": "Fitch",
+      "fitch": "DBRS"
+    },
+    "cik": "36270"
+  },
+  {
+    "date": "2026-04-21",
+    "issuer": "Prologis, L.P. Expected",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+57 bps",
+    "coupon": "4.250%",
+    "ratings": null,
+    "cik": "1045610"
+  },
+  {
+    "date": "2026-04-22",
+    "issuer": "Prologis, L.P.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.250%",
+    "ratings": null,
+    "cik": "1045610"
+  },
+  {
+    "date": "2026-04-23",
+    "issuer": "Blackstone Private Credit Fund",
+    "size": "$850 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.950%",
+    "ratings": null,
+    "cik": "1803498"
+  },
+  {
+    "date": "2026-04-23",
+    "issuer": "State Street Corporation",
+    "size": "$700 million",
+    "tenor": null,
+    "spread": "T+80 bps",
+    "coupon": "5.094%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "93751"
+  },
+  {
+    "date": "2026-04-24",
+    "issuer": "AT&T Inc.",
+    "size": "$750 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.750%",
+    "ratings": {
+      "sp": "BBB",
+      "fitch": "BBB+"
+    },
+    "cik": "732717"
+  },
+  {
+    "date": "2026-04-24",
+    "issuer": "John Deere Capital Corporation Expected",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+45 bps",
+    "coupon": "4.375%",
+    "ratings": {
+      "fitch": "Ratin"
+    },
+    "cik": "27673"
+  },
+  {
+    "date": "2026-04-24",
+    "issuer": "Jefferies Financial Group Inc.",
+    "size": "$1.1 billion",
+    "tenor": null,
+    "spread": "T+135 bps",
+    "coupon": "5.125%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "96223"
+  },
+  {
+    "date": "2026-04-29",
+    "issuer": "Intel Corporation",
+    "size": null,
+    "tenor": null,
+    "spread": "T+75 bps",
+    "coupon": "4.650%",
+    "ratings": null,
+    "cik": "50863"
+  },
+  {
+    "date": "2026-04-29",
+    "issuer": "Philip Morris International Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.125%",
+    "ratings": null,
+    "cik": "1413329"
+  },
+  {
+    "date": "2026-04-29",
+    "issuer": "HCA Inc. Aggregate",
+    "size": "$1 billion",
+    "tenor": null,
+    "spread": "T+78 bps",
+    "coupon": "4.700%",
+    "ratings": null,
+    "cik": "860730"
+  },
+  {
+    "date": "2026-04-29",
+    "issuer": "Walmart Inc.",
+    "size": "$350 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.000%",
+    "ratings": null,
+    "cik": "104169"
+  },
+  {
+    "date": "2026-04-29",
+    "issuer": "HCA Inc. Aggregate",
+    "size": "$1 billion",
+    "tenor": null,
+    "spread": "T+78 bps",
+    "coupon": "4.700%",
+    "ratings": null,
+    "cik": "1526688"
+  },
+  {
+    "date": "2026-05-01",
+    "issuer": "Meta Platforms, Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.550%",
+    "ratings": null,
+    "cik": "1326801"
+  },
+  {
+    "date": "2026-05-01",
+    "issuer": "contacting J.P. Morgan Securities LLC",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+55 bps",
+    "coupon": "4.550%",
+    "ratings": null,
+    "cik": "87347"
+  },
+  {
+    "date": "2026-05-01",
+    "issuer": "Ford Credit Floorplan Corporation Ford Credit Floorplan LLC",
+    "size": "$600 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1061198"
+  },
+  {
+    "date": "2026-05-01",
+    "issuer": "Ford Credit Floorplan Corporation Ford Credit Floorplan LLC",
+    "size": "$600 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "872471"
+  },
+  {
+    "date": "2026-05-01",
+    "issuer": "Ford Credit Floorplan Corporation Ford Credit Floorplan LLC",
+    "size": "$600 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1159408"
+  },
+  {
+    "date": "2026-05-04",
+    "issuer": "Equinix Canada Financing Ltd.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "3.950%",
+    "ratings": {
+      "sp": "BBB+"
+    },
+    "cik": "2096003"
+  },
+  {
+    "date": "2026-05-04",
+    "issuer": "Equinix Canada Financing Ltd.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "3.950%",
+    "ratings": {
+      "sp": "BBB+"
+    },
+    "cik": "1101239"
+  },
+  {
+    "date": "2026-05-05",
+    "issuer": "Automatic Data Processing, Inc. Title of",
+    "size": "$1 billion",
+    "tenor": null,
+    "spread": "T+65 bps",
+    "coupon": "5.000%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "8670"
+  },
+  {
+    "date": "2026-05-05",
+    "issuer": "Otis Worldwide Corporation",
+    "size": "$700 million",
+    "tenor": null,
+    "spread": "T+50 bps",
+    "coupon": "4.488%",
+    "ratings": null,
+    "cik": "1781335"
+  },
+  {
+    "date": "2026-05-05",
+    "issuer": "Southern California Edison Company",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.95%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "92103"
+  },
+  {
+    "date": "2026-05-05",
+    "issuer": "Constellation Brands, Inc.",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.850%",
+    "ratings": null,
+    "cik": "16918"
+  },
+  {
+    "date": "2026-05-05",
+    "issuer": "Broadridge Financial Solutions, Inc.",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+135 bps",
+    "coupon": "5.750%",
+    "ratings": {
+      "sp": "BBB",
+      "fitch": "BBB+"
+    },
+    "cik": "1383312"
+  },
+  {
+    "date": "2026-05-06",
+    "issuer": "Flowserve Corporation",
+    "size": null,
+    "tenor": null,
+    "spread": "T+130 bps",
+    "coupon": "5.700%",
+    "ratings": {
+      "sp": "BBB-",
+      "fitch": "BBB"
+    },
+    "cik": "30625"
+  },
+  {
+    "date": "2026-05-06",
+    "issuer": "Patterson Uti Energy Inc",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+165 bps",
+    "coupon": "6.050%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "889900"
   }
 ]
