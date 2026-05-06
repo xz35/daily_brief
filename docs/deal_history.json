@@ -826,5 +826,30 @@
       "fitch": "BBB+"
     },
     "cik": "1383312"
+  },
+  {
+    "date": "2026-05-06",
+    "issuer": "Flowserve Corporation",
+    "size": null,
+    "tenor": null,
+    "spread": "T+130 bps",
+    "coupon": "5.700%",
+    "ratings": {
+      "sp": "BBB-",
+      "fitch": "BBB"
+    },
+    "cik": "30625"
+  },
+  {
+    "date": "2026-05-06",
+    "issuer": "Patterson Uti Energy Inc",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+165 bps",
+    "coupon": "6.050%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "889900"
   }
 ]
