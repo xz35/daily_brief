@@ -269,9 +269,17 @@ def _episode_url(filename):
 
 
 def _rfc2822_date(date_str):
-    """Convert YYYY-MM-DD to RFC 2822 date string required by RSS spec."""
-    dt = datetime.strptime(date_str, "%Y-%m-%d")
-    return dt.strftime("%a, %d %b %Y 12:00:00 +0000")
+    """Return an RFC 2822 date string for the episode pubDate.
+
+    We use the *actual* current UTC time (i.e. when the episode is published)
+    rather than a hardcoded noon-UTC timestamp.  Apple Podcasts will not surface
+    an episode until its pubDate has passed, and then polls with a 30–90 min lag.
+    Hardcoding 12:00:00 +0000 (= 5am PT) was causing delivery at ~6:30am even
+    though the episode was ready by ~4:20am PT.  Using the real publish time lets
+    Apple start polling immediately after the feed is committed.
+    """
+    dt = datetime.utcnow()
+    return dt.strftime("%a, %d %b %Y %H:%M:%S +0000")
 
 
 def _format_duration(seconds):
