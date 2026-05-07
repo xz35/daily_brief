@@ -851,5 +851,17 @@
       "sp": "Fitch"
     },
     "cik": "889900"
+  },
+  {
+    "date": "2026-05-07",
+    "issuer": "Eli Lilly and Company",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.150%",
+    "ratings": {
+      "sp": "Settl"
+    },
+    "cik": "59478"
   }
 ]
