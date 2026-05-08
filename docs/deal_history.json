@@ -863,5 +863,47 @@
       "sp": "Settl"
     },
     "cik": "59478"
+  },
+  {
+    "date": "2026-05-08",
+    "issuer": "Sixth Street Specialty Lending, Inc.",
+    "size": "$300 million",
+    "tenor": null,
+    "spread": "T+180 bps",
+    "coupon": "5.650%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1508655"
+  },
+  {
+    "date": "2026-05-08",
+    "issuer": "Commonwealth Edison Company",
+    "size": "$600 million",
+    "tenor": null,
+    "spread": "T+55 bps",
+    "coupon": "4.550%",
+    "ratings": null,
+    "cik": "22606"
+  },
+  {
+    "date": "2026-05-08",
+    "issuer": "Canadian National Railway Company Expected",
+    "size": null,
+    "tenor": null,
+    "spread": "T+43 bps",
+    "coupon": "4.350%",
+    "ratings": null,
+    "cik": "16868"
+  },
+  {
+    "date": "2026-05-08",
+    "issuer": "Wells Fargo Bank, N.A.",
+    "size": "$31.9 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "1.00%",
+    "ratings": null,
+    "cik": "1631055"
   }
 ]
