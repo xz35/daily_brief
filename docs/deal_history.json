@@ -905,5 +905,60 @@
     "coupon": "1.00%",
     "ratings": null,
     "cik": "1631055"
+  },
+  {
+    "date": "2026-05-13",
+    "issuer": "ServiceNow, Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": "T+45 bps",
+    "coupon": "4.250%",
+    "ratings": {
+      "sp": "Globa"
+    },
+    "cik": "1373715"
+  },
+  {
+    "date": "2026-05-13",
+    "issuer": "Constellation Energy Generation, LLC",
+    "size": "$750 million",
+    "tenor": null,
+    "spread": "T+55 bps",
+    "coupon": "4.550%",
+    "ratings": null,
+    "cik": "1168165"
+  },
+  {
+    "date": "2026-05-13",
+    "issuer": "contacting J.P. Morgan Securities LLC",
+    "size": null,
+    "tenor": null,
+    "spread": "T+102 bps",
+    "coupon": "5.375%",
+    "ratings": null,
+    "cik": "1243429"
+  },
+  {
+    "date": "2026-05-13",
+    "issuer": "PayPal Holdings, Inc.",
+    "size": "$650 million",
+    "tenor": null,
+    "spread": "T+60 bps",
+    "coupon": "4.550%",
+    "ratings": null,
+    "cik": "1633917"
+  },
+  {
+    "date": "2026-05-13",
+    "issuer": "Toyota Motor Credit Corporation",
+    "size": "$800 million",
+    "tenor": null,
+    "spread": "T+35 bps",
+    "coupon": "4.250%",
+    "ratings": {
+      "sp": "Globa",
+      "fitch": "Ratin"
+    },
+    "cik": "834071"
   }
 ]

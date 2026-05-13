@@ -114,8 +114,20 @@
       <url>https://xz35.github.io/daily_brief/logo.png</url>
       <title>Morning Audio Brief</title>
       <link>https://xz35.github.io/daily_brief</link>
+      <url>https://xz35.github.io/daily_brief/logo.png</url>
+      <title>Morning Audio Brief</title>
+      <link>https://xz35.github.io/daily_brief</link>
     </image>
     <itunes:image href="https://xz35.github.io/daily_brief/logo.png" />
+    <item>
+      <title>Morning Brief — 2026-05-13</title>
+      <description>Daily market briefing for 2026-05-13. Macro, rates, credit, and IG new issues.</description>
+      <pubDate>Wed, 13 May 2026 13:40:51 +0000</pubDate>
+      <guid isPermaLink="false">https://xz35.github.io/daily_brief/episodes/2026-05-13.mp3</guid>
+      <enclosure url="https://xz35.github.io/daily_brief/episodes/2026-05-13.mp3" length="8267565" type="audio/mpeg" />
+      <itunes:duration>00:08:36</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
     <item>
       <title>Morning Brief — 2026-05-06</title>
       <description>Daily market briefing for 2026-05-06. Macro, rates, credit, and IG new issues.</description>
@@ -132,15 +144,6 @@
       <guid isPermaLink="false">https://xz35.github.io/daily_brief/episodes/2026-05-12.mp3</guid>
       <enclosure url="https://xz35.github.io/daily_brief/episodes/2026-05-12.mp3" length="8273325" type="audio/mpeg" />
       <itunes:duration>00:08:37</itunes:duration>
-      <itunes:explicit>no</itunes:explicit>
-    </item>
-    <item>
-      <title>Morning Brief — 2026-05-05</title>
-      <description>Daily market briefing for 2026-05-05. Macro, rates, credit, and IG new issues.</description>
-      <pubDate>Tue, 05 May 2026 12:00:00 +0000</pubDate>
-      <guid isPermaLink="false">https://xz35.github.io/daily_brief/episodes/2026-05-05.mp3</guid>
-      <enclosure url="https://xz35.github.io/daily_brief/episodes/2026-05-05.mp3" length="4255149" type="audio/mpeg" />
-      <itunes:duration>00:04:25</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
     </item>
     <item>
