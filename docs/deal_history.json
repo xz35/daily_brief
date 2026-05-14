@@ -960,5 +960,57 @@
       "fitch": "Ratin"
     },
     "cik": "834071"
+  },
+  {
+    "date": "2026-05-14",
+    "issuer": "European Investment Bank.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "0.270%",
+    "ratings": null,
+    "cik": "33745"
+  },
+  {
+    "date": "2026-05-14",
+    "issuer": "Kfw",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.125%",
+    "ratings": {
+      "sp": "Globa"
+    },
+    "cik": "821533"
+  },
+  {
+    "date": "2026-05-14",
+    "issuer": "Council of Europe Development Bank",
+    "size": "$1.0 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.000%",
+    "ratings": null,
+    "cik": "1472246"
+  },
+  {
+    "date": "2026-05-14",
+    "issuer": "Fortive Corporation Expected",
+    "size": "$900 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.750%",
+    "ratings": null,
+    "cik": "1659166"
+  },
+  {
+    "date": "2026-05-14",
+    "issuer": "contacting U.S. Bancorp Investments, Inc.",
+    "size": "$1.25 billion",
+    "tenor": null,
+    "spread": "T+125 bps",
+    "coupon": "5.723%",
+    "ratings": null,
+    "cik": "36104"
   }
 ]
