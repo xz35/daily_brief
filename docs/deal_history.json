@@ -1012,5 +1012,15 @@
     "coupon": "5.723%",
     "ratings": null,
     "cik": "36104"
+  },
+  {
+    "date": "2026-05-15",
+    "issuer": "Gilead Sciences, Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": "T+5 bps",
+    "coupon": "4.250%",
+    "ratings": null,
+    "cik": "882095"
   }
 ]
