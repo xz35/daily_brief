@@ -123,6 +123,9 @@
       <url>https://xz35.github.io/daily_brief/logo.png</url>
       <title>Morning Audio Brief</title>
       <link>https://xz35.github.io/daily_brief</link>
+      <url>https://xz35.github.io/daily_brief/logo.png</url>
+      <title>Morning Audio Brief</title>
+      <link>https://xz35.github.io/daily_brief</link>
     </image>
     <itunes:image href="https://xz35.github.io/daily_brief/logo.png" />
     <item>
@@ -153,6 +156,15 @@
       <itunes:explicit>no</itunes:explicit>
     </item>
     <item>
+      <title>Morning Brief — 2026-05-18</title>
+      <description>Daily market briefing for 2026-05-18. Macro, rates, credit, and IG new issues.</description>
+      <pubDate>Mon, 18 May 2026 14:43:58 +0000</pubDate>
+      <guid isPermaLink="false">https://xz35.github.io/daily_brief/episodes/2026-05-18.mp3</guid>
+      <enclosure url="https://xz35.github.io/daily_brief/episodes/2026-05-18.mp3" length="5559213" type="audio/mpeg" />
+      <itunes:duration>00:05:47</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
       <title>Morning Brief — 2026-05-11</title>
       <description>Daily market briefing for 2026-05-11. Macro, rates, credit, and IG new issues.</description>
       <pubDate>Mon, 11 May 2026 14:07:44 +0000</pubDate>
@@ -168,15 +180,6 @@
       <guid isPermaLink="false">https://xz35.github.io/daily_brief/episodes/2026-05-15.mp3</guid>
       <enclosure url="https://xz35.github.io/daily_brief/episodes/2026-05-15.mp3" length="6667437" type="audio/mpeg" />
       <itunes:duration>00:06:56</itunes:duration>
-      <itunes:explicit>no</itunes:explicit>
-    </item>
-    <item>
-      <title>Morning Brief — 2026-05-08</title>
-      <description>Daily market briefing for 2026-05-08. Macro, rates, credit, and IG new issues.</description>
-      <pubDate>Fri, 08 May 2026 12:58:48 +0000</pubDate>
-      <guid isPermaLink="false">https://xz35.github.io/daily_brief/episodes/2026-05-08.mp3</guid>
-      <enclosure url="https://xz35.github.io/daily_brief/episodes/2026-05-08.mp3" length="12943917" type="audio/mpeg" />
-      <itunes:duration>00:13:28</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
     </item>
   </channel>
