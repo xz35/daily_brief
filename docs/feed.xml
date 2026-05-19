@@ -126,6 +126,9 @@
       <url>https://xz35.github.io/daily_brief/logo.png</url>
       <title>Morning Audio Brief</title>
       <link>https://xz35.github.io/daily_brief</link>
+      <url>https://xz35.github.io/daily_brief/logo.png</url>
+      <title>Morning Audio Brief</title>
+      <link>https://xz35.github.io/daily_brief</link>
     </image>
     <itunes:image href="https://xz35.github.io/daily_brief/logo.png" />
     <item>
@@ -135,6 +138,15 @@
       <guid isPermaLink="false">https://xz35.github.io/daily_brief/episodes/2026-05-13.mp3</guid>
       <enclosure url="https://xz35.github.io/daily_brief/episodes/2026-05-13.mp3" length="8267565" type="audio/mpeg" />
       <itunes:duration>00:08:36</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
+      <title>Morning Brief — 2026-05-19</title>
+      <description>Daily market briefing for 2026-05-19. Macro, rates, credit, and IG new issues.</description>
+      <pubDate>Tue, 19 May 2026 14:14:46 +0000</pubDate>
+      <guid isPermaLink="false">https://xz35.github.io/daily_brief/episodes/2026-05-19.mp3</guid>
+      <enclosure url="https://xz35.github.io/daily_brief/episodes/2026-05-19.mp3" length="2620845" type="audio/mpeg" />
+      <itunes:duration>00:02:43</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
     </item>
     <item>
@@ -162,15 +174,6 @@
       <guid isPermaLink="false">https://xz35.github.io/daily_brief/episodes/2026-05-18.mp3</guid>
       <enclosure url="https://xz35.github.io/daily_brief/episodes/2026-05-18.mp3" length="5559213" type="audio/mpeg" />
       <itunes:duration>00:05:47</itunes:duration>
-      <itunes:explicit>no</itunes:explicit>
-    </item>
-    <item>
-      <title>Morning Brief — 2026-05-11</title>
-      <description>Daily market briefing for 2026-05-11. Macro, rates, credit, and IG new issues.</description>
-      <pubDate>Mon, 11 May 2026 14:07:44 +0000</pubDate>
-      <guid isPermaLink="false">https://xz35.github.io/daily_brief/episodes/2026-05-11.mp3</guid>
-      <enclosure url="https://xz35.github.io/daily_brief/episodes/2026-05-11.mp3" length="5275821" type="audio/mpeg" />
-      <itunes:duration>00:05:29</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
     </item>
     <item>

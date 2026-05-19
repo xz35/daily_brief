@@ -1022,5 +1022,41 @@
     "coupon": "4.250%",
     "ratings": null,
     "cik": "882095"
+  },
+  {
+    "date": "2026-05-19",
+    "issuer": "Blue Owl Capital Corporation",
+    "size": "$400 million",
+    "tenor": null,
+    "spread": "T+230 bps",
+    "coupon": "6.300%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1655888"
+  },
+  {
+    "date": "2026-05-19",
+    "issuer": "Chubb INA Holdings LLC",
+    "size": "$1 billion",
+    "tenor": null,
+    "spread": "T+72 bps",
+    "coupon": "5.300%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "896159"
+  },
+  {
+    "date": "2026-05-19",
+    "issuer": "Chubb INA Holdings LLC",
+    "size": "$1 billion",
+    "tenor": null,
+    "spread": "T+72 bps",
+    "coupon": "5.300%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1086754"
   }
 ]
