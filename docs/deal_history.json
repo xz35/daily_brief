@@ -1058,5 +1058,93 @@
       "sp": "Fitch"
     },
     "cik": "1086754"
+  },
+  {
+    "date": "2026-05-20",
+    "issuer": "Georgia Power Company",
+    "size": "$550 million",
+    "tenor": null,
+    "spread": "T+42 bps",
+    "coupon": "4.60%",
+    "ratings": null,
+    "cik": "41091"
+  },
+  {
+    "date": "2026-05-20",
+    "issuer": "Trinity Capital Inc. Issuer",
+    "size": "$300 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "7.000%",
+    "ratings": null,
+    "cik": "1786108"
+  },
+  {
+    "date": "2026-05-20",
+    "issuer": "Golub Capital BDC, Inc.",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+220 bps",
+    "coupon": "6.250%",
+    "ratings": {
+      "fitch": "Moody"
+    },
+    "cik": "1476765"
+  },
+  {
+    "date": "2026-05-20",
+    "issuer": "Oesterreichische Kontrollbank Aktiengesellschaft",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.125%",
+    "ratings": {
+      "moodys": "Aa1"
+    },
+    "cik": "202811"
+  },
+  {
+    "date": "2026-05-20",
+    "issuer": "Kennametal Inc.",
+    "size": "$300 million",
+    "tenor": null,
+    "spread": "T+120 bps",
+    "coupon": "5.800%",
+    "ratings": {
+      "fitch": "Ratin"
+    },
+    "cik": "55242"
+  },
+  {
+    "date": "2026-05-20",
+    "issuer": "Xylem Inc.",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+75 bps",
+    "coupon": "5.200%",
+    "ratings": null,
+    "cik": "1524472"
+  },
+  {
+    "date": "2026-05-20",
+    "issuer": "Baltimore Gas and Electric Company",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.150%",
+    "ratings": null,
+    "cik": "9466"
+  },
+  {
+    "date": "2026-05-20",
+    "issuer": "calling Citigroup Global Markets Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": "T+25 bps",
+    "coupon": "4.300%",
+    "ratings": {
+      "sp": "Trade"
+    },
+    "cik": "310158"
   }
 ]
