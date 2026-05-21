@@ -1146,5 +1146,57 @@
       "sp": "Trade"
     },
     "cik": "310158"
+  },
+  {
+    "date": "2026-05-21",
+    "issuer": "Linklaters Singapore Pte. Ltd.",
+    "size": "$10 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.030%",
+    "ratings": {
+      "fitch": "Ratin"
+    },
+    "cik": "1719614"
+  },
+  {
+    "date": "2026-05-21",
+    "issuer": "Oesterreichische Kontrollbank Aktiengesellschaft",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.125%",
+    "ratings": null,
+    "cik": "202811"
+  },
+  {
+    "date": "2026-05-21",
+    "issuer": "Southern Company Gas Capital Corporation",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "6.05%",
+    "ratings": null,
+    "cik": "1130891"
+  },
+  {
+    "date": "2026-05-21",
+    "issuer": "Citibank, N.A.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "230098"
+  },
+  {
+    "date": "2026-05-21",
+    "issuer": "Hydro One Inc. Expected",
+    "size": "$1.8 billion",
+    "tenor": null,
+    "spread": "T+10 bps",
+    "coupon": "4.750%",
+    "ratings": null,
+    "cik": "1114445"
   }
 ]
