@@ -1198,5 +1198,90 @@
     "coupon": "4.750%",
     "ratings": null,
     "cik": "1114445"
+  },
+  {
+    "date": "2026-05-22",
+    "issuer": "Molson Coors Beverage Company",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+70 bps",
+    "coupon": "4.900%",
+    "ratings": null,
+    "cik": "1175590"
+  },
+  {
+    "date": "2026-05-22",
+    "issuer": "Molson Coors Beverage Company",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+70 bps",
+    "coupon": "4.900%",
+    "ratings": null,
+    "cik": "1401814"
+  },
+  {
+    "date": "2026-05-22",
+    "issuer": "Molson Coors Beverage Company",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+70 bps",
+    "coupon": "4.900%",
+    "ratings": null,
+    "cik": "1698679"
+  },
+  {
+    "date": "2026-05-22",
+    "issuer": "Molson Coors Beverage Company",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+70 bps",
+    "coupon": "4.900%",
+    "ratings": null,
+    "cik": "1718808"
+  },
+  {
+    "date": "2026-05-22",
+    "issuer": "Florida Power & Light Company",
+    "size": "$255 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": {
+      "sp": "Globa"
+    },
+    "cik": "37634"
+  },
+  {
+    "date": "2026-05-22",
+    "issuer": "calling Barclays Bank PLC",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.850%",
+    "ratings": {
+      "sp": "AA-",
+      "fitch": "AA-"
+    },
+    "cik": "74615"
+  },
+  {
+    "date": "2026-05-22",
+    "issuer": "Molson Coors Beverage Company",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+70 bps",
+    "coupon": "4.900%",
+    "ratings": null,
+    "cik": "1841975"
+  },
+  {
+    "date": "2026-05-22",
+    "issuer": "Molson Coors Beverage Company",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+70 bps",
+    "coupon": "4.900%",
+    "ratings": null,
+    "cik": "1548108"
   }
 ]
