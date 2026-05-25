@@ -1283,5 +1283,15 @@
     "coupon": "4.900%",
     "ratings": null,
     "cik": "1548108"
+  },
+  {
+    "date": "2026-05-25",
+    "issuer": "Citibank, N.A.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.250%",
+    "ratings": null,
+    "cik": "230098"
   }
 ]
