@@ -12,7 +12,8 @@ For local testing, call publish() and then commit manually.
 
 import logging
 import os
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
+from email.utils import format_datetime, parsedate_to_datetime
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
@@ -178,17 +179,22 @@ def _upsert_channel_image(channel):
     image = channel.find("image")
     if image is None:
         image    = ET.Element("image")
-        url_el   = ET.SubElement(image, "url")
-        title_el = ET.SubElement(image, "title")
-        link_el  = ET.SubElement(image, "link")
         channel.insert(insert_at, image)
+    _set_single_child_text(image, "url", image_url)
+    _set_single_child_text(image, "title", PODCAST_TITLE)
+    _set_single_child_text(image, "link", GITHUB_PAGES_BASE_URL or "https://github.com")
+
+
+def _set_single_child_text(parent, tag, text):
+    """Set one child tag and remove duplicates from older feed writes."""
+    children = parent.findall(tag)
+    if children:
+        child = children[0]
+        for duplicate in children[1:]:
+            parent.remove(duplicate)
     else:
-        url_el   = image.find("url")   or ET.SubElement(image, "url")
-        title_el = image.find("title") or ET.SubElement(image, "title")
-        link_el  = image.find("link")  or ET.SubElement(image, "link")
-    url_el.text   = image_url
-    title_el.text = PODCAST_TITLE
-    link_el.text  = GITHUB_PAGES_BASE_URL or "https://github.com"
+        child = ET.SubElement(parent, tag)
+    child.text = text
 
 
 def _sort_items_newest_first(channel):
@@ -196,9 +202,21 @@ def _sort_items_newest_first(channel):
     items = channel.findall("item")
     for item in items:
         channel.remove(item)
-    items.sort(key=lambda el: el.findtext("pubDate") or "", reverse=True)
+    items.sort(key=_item_pubdate, reverse=True)
     for item in items:
         channel.append(item)
+
+
+def _item_pubdate(item):
+    """Parse an item pubDate for chronological feed ordering."""
+    pub_date = item.findtext("pubDate") or ""
+    try:
+        dt = parsedate_to_datetime(pub_date)
+    except (TypeError, ValueError, IndexError, OverflowError):
+        return datetime.min.replace(tzinfo=timezone.utc)
+    if dt.tzinfo is None:
+        return dt.replace(tzinfo=timezone.utc)
+    return dt
 
 
 def _write_feed(tree, path):
@@ -278,8 +296,7 @@ def _rfc2822_date(date_str):
     though the episode was ready by ~4:20am PT.  Using the real publish time lets
     Apple start polling immediately after the feed is committed.
     """
-    dt = datetime.utcnow()
-    return dt.strftime("%a, %d %b %Y %H:%M:%S +0000")
+    return format_datetime(datetime.now(timezone.utc))
 
 
 def _format_duration(seconds):

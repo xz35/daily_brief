@@ -2,10 +2,18 @@ name: Morning Audio Brief
 
 on:
   schedule:
-    # 4:30am PT (11:30 UTC) — daylight saving time (March–November)
-    # Change to '30 12 * * 1-5' during standard time (November–March)
-    - cron: '30 11 * * 1-5'
+    # Primary early run: leaves room for GitHub Actions cron delays before 5:30am PT.
+    - cron: '15 2 * * 1-5'
+      timezone: "America/Los_Angeles"
+    # Backup run: covers delayed or dropped scheduled events. Scheduled reruns skip if
+    # today's episode is already committed.
+    - cron: '15 3 * * 1-5'
+      timezone: "America/Los_Angeles"
   workflow_dispatch:   # Allow manual trigger from GitHub Actions tab for testing
+
+concurrency:
+  group: morning-brief-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   generate-brief:
@@ -21,18 +29,33 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Check for existing episode
+        id: existing_episode
+        run: |
+          today=$(TZ=America/Los_Angeles date +%F)
+          if [ "${{ github.event_name }}" = "schedule" ] && [ -f "docs/episodes/${today}.mp3" ]; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "Episode already exists for ${today}; skipping scheduled backup run."
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Set up Python 3.11
+        if: steps.existing_episode.outputs.exists != 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Install dependencies
+        if: steps.existing_episode.outputs.exists != 'true'
         run: pip install -r requirements.txt
 
       - name: Install ffmpeg (required by pydub for MP3 handling)
+        if: steps.existing_episode.outputs.exists != 'true'
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
 
       - name: Run pipeline
+        if: steps.existing_episode.outputs.exists != 'true'
         env:
           TZ: America/Los_Angeles
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -48,6 +71,7 @@ jobs:
         run: python main.py
 
       - name: Commit and push episode files
+        if: steps.existing_episode.outputs.exists != 'true'
         run: |
           git config user.name "Morning Brief Bot"
           git config user.email "action@github.com"
