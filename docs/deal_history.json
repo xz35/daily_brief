@@ -1293,5 +1293,49 @@
     "coupon": "4.250%",
     "ratings": null,
     "cik": "230098"
+  },
+  {
+    "date": "2026-05-27",
+    "issuer": "Nutrien Ltd. Title of",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.850%",
+    "ratings": null,
+    "cik": "1725964"
+  },
+  {
+    "date": "2026-05-27",
+    "issuer": "Landwirtschaftliche Rentenbank",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1144797"
+  },
+  {
+    "date": "2026-05-27",
+    "issuer": "AEP Transmission Company, LLC Expected",
+    "size": "$650 million",
+    "tenor": null,
+    "spread": "T+75 bps",
+    "coupon": "5.25%",
+    "ratings": {
+      "moodys": "A2",
+      "sp": "BBB+",
+      "fitch": "A"
+    },
+    "cik": "1702494"
+  },
+  {
+    "date": "2026-05-27",
+    "issuer": "Navient Corporation",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+519 bps",
+    "coupon": "9.375%",
+    "ratings": null,
+    "cik": "1593538"
   }
 ]
