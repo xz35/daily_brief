@@ -1337,5 +1337,62 @@
     "coupon": "9.375%",
     "ratings": null,
     "cik": "1593538"
+  },
+  {
+    "date": "2026-05-28",
+    "issuer": "Florida Power & Light Company",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": {
+      "sp": "Globa",
+      "fitch": "Ratin"
+    },
+    "cik": "37634"
+  },
+  {
+    "date": "2026-05-28",
+    "issuer": "Landwirtschaftliche Rentenbank Title of",
+    "size": "$1.5 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.125%",
+    "ratings": {
+      "fitch": "Ratin"
+    },
+    "cik": "1144797"
+  },
+  {
+    "date": "2026-05-28",
+    "issuer": "PennantPark Floating Rate Capital Ltd.",
+    "size": "$100 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "7.375%",
+    "ratings": null,
+    "cik": "1504619"
+  },
+  {
+    "date": "2026-05-28",
+    "issuer": "Constellation Energy Generation, LLC",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.625%",
+    "ratings": null,
+    "cik": "1168165"
+  },
+  {
+    "date": "2026-05-28",
+    "issuer": "Principal Financial Group, Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.300%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1094589"
   }
 ]
