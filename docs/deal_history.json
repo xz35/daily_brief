@@ -1394,5 +1394,51 @@
       "sp": "Fitch"
     },
     "cik": "1094589"
+  },
+  {
+    "date": "2026-05-29",
+    "issuer": "Landwirtschaftliche Rentenbank",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.125%",
+    "ratings": null,
+    "cik": "1144797"
+  },
+  {
+    "date": "2026-05-29",
+    "issuer": "BCE Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": "T+98 bps",
+    "coupon": "5.450%",
+    "ratings": {
+      "sp": "DBRS"
+    },
+    "cik": "225090"
+  },
+  {
+    "date": "2026-05-29",
+    "issuer": "BCE Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": "T+98 bps",
+    "coupon": "5.450%",
+    "ratings": {
+      "sp": "DBRS"
+    },
+    "cik": "718940"
+  },
+  {
+    "date": "2026-05-29",
+    "issuer": "Bank Of Nova Scotia",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.578%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "9631"
   }
 ]
