@@ -1440,5 +1440,17 @@
       "sp": "Fitch"
     },
     "cik": "9631"
+  },
+  {
+    "date": "2026-06-05",
+    "issuer": "ESSENTIAL PROPERTIES REALTY TRUST, INC.",
+    "size": "$400 million",
+    "tenor": null,
+    "spread": "T+115 bps",
+    "coupon": "5.375%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1688954"
   }
 ]
