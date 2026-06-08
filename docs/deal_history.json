@@ -1452,5 +1452,15 @@
       "sp": "Fitch"
     },
     "cik": "1688954"
+  },
+  {
+    "date": "2026-06-08",
+    "issuer": "Village Farms International, Inc.",
+    "size": "$13.9 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1584549"
   }
 ]
