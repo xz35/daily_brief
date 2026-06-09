@@ -1462,5 +1462,71 @@
     "coupon": null,
     "ratings": null,
     "cik": "1584549"
+  },
+  {
+    "date": "2026-06-09",
+    "issuer": "Intuit Inc.",
+    "size": "$750 million",
+    "tenor": null,
+    "spread": "T+70 bps",
+    "coupon": "4.950%",
+    "ratings": null,
+    "cik": "896878"
+  },
+  {
+    "date": "2026-06-09",
+    "issuer": "Dominion Energy, Inc",
+    "size": "$1 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "715957"
+  },
+  {
+    "date": "2026-06-09",
+    "issuer": "Amazon.com, Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "3.400%",
+    "ratings": {
+      "fitch": "Ratin"
+    },
+    "cik": "1018724"
+  },
+  {
+    "date": "2026-06-09",
+    "issuer": "Canadian Imperial Bank of Commerce",
+    "size": null,
+    "tenor": null,
+    "spread": "T+57 bps",
+    "coupon": "4.723%",
+    "ratings": null,
+    "cik": "1045520"
+  },
+  {
+    "date": "2026-06-09",
+    "issuer": "General Motors Financial Company, Inc.",
+    "size": "$1 billion",
+    "tenor": null,
+    "spread": "T+85 bps",
+    "coupon": "5.100%",
+    "ratings": null,
+    "cik": "804269"
+  },
+  {
+    "date": "2026-06-09",
+    "issuer": "Jackson Financial Inc.",
+    "size": "$750 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "6.150%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1822993"
   }
 ]
