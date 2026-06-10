@@ -1528,5 +1528,27 @@
       "sp": "Fitch"
     },
     "cik": "1822993"
+  },
+  {
+    "date": "2026-06-10",
+    "issuer": "DTE Energy Company",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "6.200%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "936340"
+  },
+  {
+    "date": "2026-06-10",
+    "issuer": "Mercury General Corporation",
+    "size": "$525 million",
+    "tenor": null,
+    "spread": "T+175 bps",
+    "coupon": "6.250%",
+    "ratings": null,
+    "cik": "64996"
   }
 ]
