@@ -15,6 +15,15 @@
     </image>
     <itunes:image href="https://xz35.github.io/daily_brief/logo.png" />
     <item>
+      <title>Morning Brief — 2026-06-12</title>
+      <description>Daily market briefing for 2026-06-12. Macro, rates, credit, and IG new issues.</description>
+      <pubDate>Fri, 12 Jun 2026 12:34:27 +0000</pubDate>
+      <guid isPermaLink="false">https://xz35.github.io/daily_brief/episodes/2026-06-12.mp3</guid>
+      <enclosure url="https://xz35.github.io/daily_brief/episodes/2026-06-12.mp3" length="5121069" type="audio/mpeg" />
+      <itunes:duration>00:05:19</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    <item>
       <title>Morning Brief — 2026-06-11</title>
       <description>Daily market briefing for 2026-06-11. Macro, rates, credit, and IG new issues.</description>
       <pubDate>Thu, 11 Jun 2026 12:56:50 +0000</pubDate>
@@ -57,15 +66,6 @@
       <guid isPermaLink="false">https://xz35.github.io/daily_brief/episodes/2026-06-05.mp3</guid>
       <enclosure url="https://xz35.github.io/daily_brief/episodes/2026-06-05.mp3" length="7335213" type="audio/mpeg" />
       <itunes:duration>00:07:38</itunes:duration>
-      <itunes:explicit>no</itunes:explicit>
-    </item>
-    <item>
-      <title>Morning Brief — 2026-06-04</title>
-      <description>Daily market briefing for 2026-06-04. Macro, rates, credit, and IG new issues.</description>
-      <pubDate>Thu, 04 Jun 2026 12:26:13 +0000</pubDate>
-      <guid isPermaLink="false">https://xz35.github.io/daily_brief/episodes/2026-06-04.mp3</guid>
-      <enclosure url="https://xz35.github.io/daily_brief/episodes/2026-06-04.mp3" length="9593133" type="audio/mpeg" />
-      <itunes:duration>00:09:59</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
     </item>
   </channel>
