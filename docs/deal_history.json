@@ -1550,5 +1550,75 @@
     "coupon": "6.250%",
     "ratings": null,
     "cik": "64996"
+  },
+  {
+    "date": "2026-06-12",
+    "issuer": "calling Barclays Capital Inc.",
+    "size": "$1 billion",
+    "tenor": null,
+    "spread": "T+65 bps",
+    "coupon": "4.750%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1658093"
+  },
+  {
+    "date": "2026-06-12",
+    "issuer": "calling Barclays Capital Inc.",
+    "size": "$1 billion",
+    "tenor": null,
+    "spread": "T+65 bps",
+    "coupon": "4.750%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "790070"
+  },
+  {
+    "date": "2026-06-12",
+    "issuer": "calling Barclays Capital Inc.",
+    "size": "$1 billion",
+    "tenor": null,
+    "spread": "T+65 bps",
+    "coupon": "4.750%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1476297"
+  },
+  {
+    "date": "2026-06-12",
+    "issuer": "calling Barclays Capital Inc.",
+    "size": "$1 billion",
+    "tenor": null,
+    "spread": "T+65 bps",
+    "coupon": "4.750%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "826083"
+  },
+  {
+    "date": "2026-06-12",
+    "issuer": "calling Barclays Capital Inc.",
+    "size": "$1 billion",
+    "tenor": null,
+    "spread": "T+65 bps",
+    "coupon": "4.750%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1571996"
+  },
+  {
+    "date": "2026-06-12",
+    "issuer": "European Investment Bank.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.375%",
+    "ratings": null,
+    "cik": "33745"
   }
 ]
