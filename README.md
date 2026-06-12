@@ -10,12 +10,22 @@ Runs on GitHub Actions. Hosted on GitHub Pages. Cost: $0.
 
 ## Production Schedule
 
-GitHub Actions runs two weekday schedules in the `America/Los_Angeles` timezone:
+GitHub's `schedule` events are best-effort (routinely 15-60+ min late, occasionally dropped), so the primary trigger is external:
 
-- Primary run: 2:15am PT, Monday-Friday
-- Backup run: 3:15am PT, Monday-Friday
+- **Primary: cron-job.org** fires `workflow_dispatch` via the GitHub API at 4:00am PT, Monday-Friday — exact-time triggering.
+- **Backups: GitHub Actions schedules** at 4:30am PT and 5:00am PT, Monday-Friday, in the `America/Los_Angeles` timezone. These only generate when the primary run failed (e.g. sustained Gemini overload) — otherwise they see the committed episode and skip.
 
-The early primary run leaves room for GitHub Actions scheduled-workflow delays and Apple Podcasts polling before the 5:30am PT listening target. The backup run is harmless if the primary run already published: scheduled runs check for `docs/episodes/YYYY-MM-DD.mp3` and skip generation when today's episode is already committed.
+All runs check for `docs/episodes/YYYY-MM-DD.mp3` and skip when today's episode is already committed, so the backups are harmless when the primary succeeded. A failed synthesis aborts before publishing (no junk MP3 is committed), which lets the next backup run retry. To force a regeneration, dispatch the workflow manually with `force: true`.
+
+### cron-job.org trigger setup
+
+1. Create a fine-grained GitHub PAT (Settings → Developer settings → Fine-grained tokens) scoped to the `daily_brief` repo only, with **Actions: Read and write** permission.
+2. On cron-job.org, create a job with schedule `Mon-Fri 4:00am` (America/Los_Angeles):
+   - URL: `https://api.github.com/repos/xz35/daily_brief/actions/workflows/morning_brief.yml/dispatches`
+   - Method: `POST`
+   - Headers: `Authorization: Bearer <PAT>`, `Accept: application/vnd.github+json`
+   - Body: `{"ref": "main"}`
+3. A successful trigger returns HTTP 204 with an empty body.
 
 Apple Podcasts background downloads still depend on the phone being charged, connected to Wi-Fi unless cellular downloads are allowed, and not in Low Power Mode.
 

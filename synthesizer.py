@@ -12,6 +12,7 @@ Edit the .txt files to iterate on tone, content, and style — no code changes n
 import json
 import logging
 import os
+import time
 from pathlib import Path
 
 from google import genai
@@ -98,24 +99,60 @@ def _call_research_digest(research_emails):
     return _generate(prompt, context="research_digest")
 
 
-def _generate(prompt, context=""):
-    """Call Gemini and return generated text. Returns fallback string on failure."""
+# Marker string embedded in the script when a Gemini call fails permanently.
+# main.py checks for this before publishing — a script containing it must
+# never be converted to audio or committed (it would block the backup run).
+SYNTHESIS_ERROR_MARKER = "[Content unavailable"
+
+# Substrings of error messages that indicate a transient condition worth retrying.
+_RETRYABLE_ERROR_SIGNALS = (
+    "503", "UNAVAILABLE", "overloaded", "high demand",
+    "429", "RESOURCE_EXHAUSTED", "rate limit",
+    "500", "INTERNAL", "DEADLINE_EXCEEDED", "timed out",
+    "empty response",
+)
+
+
+def _generate(prompt, context="", retries=5):
+    """Call Gemini and return generated text. Returns fallback string on failure.
+
+    Retries transient API errors (503 overload, 429 rate limit, 5xx, empty
+    responses) with exponential backoff: 30s, 60s, 120s, 240s between attempts
+    (~7.5 min total). Free-tier demand spikes are usually short-lived, but if
+    they outlast this window the run fails loudly and the backup schedule
+    retries an hour later.
+    """
     try:
         client = _get_client()
-        response = client.models.generate_content(
-            model=GEMINI_MODEL,
-            contents=prompt,
-            config=genai_types.GenerateContentConfig(
-                max_output_tokens=GEMINI_MAX_TOKENS,
-                temperature=0.7,
-            ),
-        )
-        text = response.text.strip()
-        logger.info(f"Gemini [{context}]: {len(text.split())} words returned")
-        return text
     except Exception as e:
-        logger.error(f"Gemini call failed [{context}]: {e}")
+        logger.error(f"Failed to initialize Gemini client [{context}]: {e}")
         return f"[Content unavailable for this segment due to synthesis error: {e}]"
+
+    for attempt in range(retries):
+        try:
+            response = client.models.generate_content(
+                model=GEMINI_MODEL,
+                contents=prompt,
+                config=genai_types.GenerateContentConfig(
+                    max_output_tokens=GEMINI_MAX_TOKENS,
+                    temperature=0.7,
+                ),
+            )
+            text = (response.text or "").strip()
+            if not text:
+                raise RuntimeError("Gemini returned an empty response")
+            logger.info(f"Gemini [{context}]: {len(text.split())} words returned")
+            return text
+        except Exception as e:
+            retryable = any(sig.lower() in str(e).lower() for sig in _RETRYABLE_ERROR_SIGNALS)
+            if retryable and attempt < retries - 1:
+                wait = 30 * (2 ** attempt)   # 30s, 60s, 120s, 240s
+                logger.warning(f"Gemini transient error [{context}], retrying in {wait}s "
+                               f"(attempt {attempt + 1}/{retries}): {e}")
+                time.sleep(wait)
+            else:
+                logger.error(f"Gemini call failed [{context}]: {e}")
+                return f"[Content unavailable for this segment due to synthesis error: {e}]"
 
 
 # ── Script assembly ───────────────────────────────────────────────────────
@@ -300,10 +337,6 @@ def _format_deals(deals, deal_history=None):
             lines.append(f"  Ratings: {ratings_str}")
         if d.get("use_of_proceeds"):
             lines.append(f"  Use of Proceeds: {d['use_of_proceeds']}")
-        if d.get("bookrunners"):
-            bk = d["bookrunners"]
-            bk_str = ", ".join(bk) if isinstance(bk, list) else bk
-            lines.append(f"  Bookrunners: {bk_str}")
         if d.get("call_structure"):
             lines.append(f"  Call Structure: {d['call_structure']}")
 

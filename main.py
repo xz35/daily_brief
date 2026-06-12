@@ -119,6 +119,24 @@ def main():
         run_log.set("script_word_count", word_count)
         logger.info(f"  → {word_count} words")
 
+        # ── Step 4a: Validate synthesis before any side effects ───────
+        # A script with failed segments must never be published: the committed
+        # MP3 would make the backup scheduled run skip, locking in a junk
+        # episode for the day. Fail loudly instead so the backup run retries.
+        from config import MIN_SCRIPT_WORDS
+        from synthesizer import SYNTHESIS_ERROR_MARKER
+        problems = []
+        if SYNTHESIS_ERROR_MARKER in script:
+            problems.append("script contains synthesis error placeholders")
+        if word_count < MIN_SCRIPT_WORDS:
+            problems.append(f"script too short ({word_count} words < {MIN_SCRIPT_WORDS} minimum)")
+        if problems:
+            for p in problems:
+                run_log.add_error(f"Synthesis validation failed: {p}")
+            logger.error("Aborting before email/TTS/publish — backup run will retry")
+            run_log.write()
+            return 1
+
         # ── Step 4b: Save persistent memory ───────────────────────────
         logger.info("Step 4b: Saving deal history, market context, and curve snapshot")
         updated_history = append_deals(all_deals, deal_history, date_str=today_str())

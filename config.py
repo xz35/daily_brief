@@ -12,6 +12,7 @@ AUDIO_RETENTION_DAYS = 5     # How many days of MP3s to keep
 # ── Content limits ────────────────────────────────────────────────────────
 MAX_RSS_ARTICLES = 20        # Max articles to pass to LLM
 MAX_DEALS_PER_EPISODE = 8    # Cap deal entries on very heavy issuance days
+MIN_SCRIPT_WORDS = 400       # Below this, synthesis is considered failed — abort before publish
 
 # ── RSS Sources ───────────────────────────────────────────────────────────
 # Last validated: March 2026
