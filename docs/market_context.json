@@ -1,13 +1,5 @@
 [
   {
-    "date": "2026-05-28",
-    "summary": "Stepping back, this continues the theme we have tracked all week: the collision of regimes. We have a stark divergence between a rates market that is pricing in a persistent, energy-driven inflation shock and credit and equity markets that remain priced for absolute perfection. The key takeaway here is that the carry buffer in credit is getting dangerously thin."
-  },
-  {
-    "date": "2026-05-29",
-    "summary": "Before we close, a look at some research that came across the desk."
-  },
-  {
     "date": "2026-06-01",
     "summary": "Now, depending on where we are in the calendar, this quiet stretch isn't all that unusual. If we are in the dog days of August, the dead of winter around the holidays, or just sitting quietly ahead of a major macro catalyst like a C.P.I. print or a Federal Reserve meeting, the syndicate desks tend to pack up early and issuers sit on their hands."
   },
@@ -46,5 +38,9 @@
   {
     "date": "2026-06-12",
     "summary": "Turning now to the new issues desk. Here is the prior day investment grade bond market report."
+  },
+  {
+    "date": "2026-06-15",
+    "summary": "Stepping back to synthesize the picture, we are staring at a classic cross-asset divergence. Equities are eager to price in a Goldilocks scenario on the back of cheaper crude, but the rates market is refusing to let go of its hawkish posture."
   }
 ]

@@ -1620,5 +1620,27 @@
     "coupon": "4.375%",
     "ratings": null,
     "cik": "33745"
+  },
+  {
+    "date": "2026-06-15",
+    "issuer": "The AES Corporation",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.200%",
+    "ratings": null,
+    "cik": "874761"
+  },
+  {
+    "date": "2026-06-15",
+    "issuer": "Viatris Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.250%",
+    "ratings": {
+      "sp": "unsol"
+    },
+    "cik": "1792044"
   }
 ]
