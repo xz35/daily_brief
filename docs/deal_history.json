@@ -1642,5 +1642,25 @@
       "sp": "unsol"
     },
     "cik": "1792044"
+  },
+  {
+    "date": "2026-06-17",
+    "issuer": "Fiserv, Inc.",
+    "size": "$750.0 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "3.750%",
+    "ratings": null,
+    "cik": "798354"
+  },
+  {
+    "date": "2026-06-17",
+    "issuer": "Atmos Energy Corporation Expected",
+    "size": "$700 million",
+    "tenor": null,
+    "spread": "T+57 bps",
+    "coupon": "4.750%",
+    "ratings": null,
+    "cik": "731802"
   }
 ]
