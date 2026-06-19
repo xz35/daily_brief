@@ -1,13 +1,5 @@
 [
   {
-    "date": "2026-06-02",
-    "summary": "Stepping back, today's developments reinforce the theme we have tracked all week: the collision of regimes. The most striking tension is the divergence between the equity market's secular A.I. optimism and the cold reality of corporate finance and monetary policy. Alphabet's eighty-billion-dollar equity raise is a watershed moment. It proves that the A.I."
-  },
-  {
-    "date": "2026-06-03",
-    "summary": "If we look at the calendar, this kind of lull is actually pretty typical for this time of year. We often see the market take a collective breath after a heavy issuance window, or simply wait out the macro noise ahead of the next big policy meeting or C.P.I. print."
-  },
-  {
     "date": "2026-06-04",
     "summary": "Stepping back, today's developments reinforce the theme we have tracked all week: the collision of regimes. We are seeing a stark divergence between a rates market that is pricing in a persistent, energy-driven inflation shock and credit and equity markets that remain priced for absolute perfection. Think about the tension here."
   },
@@ -46,5 +38,9 @@
   {
     "date": "2026-06-17",
     "summary": "Stepping back, today\u2019s action continues the theme we have been tracking all week: a stark cross-asset divergence. Equities are eager to price in a Goldilocks scenario on the back of cheaper crude, but the rates market is refusing to let go of its hawkish posture. This tension is particularly acute given the regime shift under way at the Fed."
+  },
+  {
+    "date": "2026-06-19",
+    "summary": "Stepping back, today\u2019s action deepens the cross-asset divergence we have been tracking all week. This continues the theme from earlier this week where equities and credit want to believe in a supply-side miracle driven by cheaper crude, but the rates market has been forced to accept the reality of the Warsh Fed. This is a classic policy-regime tension."
   }
 ]
