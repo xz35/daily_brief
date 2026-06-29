@@ -1,13 +1,5 @@
 [
   {
-    "date": "2026-06-11",
-    "summary": "Before we close, a look at some research that came across the desk."
-  },
-  {
-    "date": "2026-06-12",
-    "summary": "Turning now to the new issues desk. Here is the prior day investment grade bond market report."
-  },
-  {
     "date": "2026-06-15",
     "summary": "Stepping back to synthesize the picture, we are staring at a classic cross-asset divergence. Equities are eager to price in a Goldilocks scenario on the back of cheaper crude, but the rates market is refusing to let go of its hawkish posture."
   },
@@ -30,5 +22,9 @@
   {
     "date": "2026-06-26",
     "summary": "Stepping back to synthesize the picture, today's action deepens the stark cross-asset divergence we have been tracking all month. Equities and credit are desperately clinging to a goldilocks narrative, hoping that a supply-side miracle or cheaper domestic energy can bail them out. But the rates market is refusing to play along. This is a classic policy-regime tension."
+  },
+  {
+    "date": "2026-06-29",
+    "summary": "Stepping back to synthesize the picture, today's action deepens the stark cross-asset divergence we have been tracking all month. Equities and credit are desperately clinging to a goldilocks narrative, hoping that a supply-side miracle or cheaper domestic energy can bail them out. But the rates market is refusing to play along. The tension is real."
   }
 ]
