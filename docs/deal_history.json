@@ -1662,5 +1662,51 @@
     "coupon": "4.750%",
     "ratings": null,
     "cik": "731802"
+  },
+  {
+    "date": "2026-06-30",
+    "issuer": "Morgan Stanley Direct Lending Fund",
+    "size": "$350 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "6.100%",
+    "ratings": {
+      "fitch": "BBB-"
+    },
+    "cik": "1782524"
+  },
+  {
+    "date": "2026-06-30",
+    "issuer": "AerCap Funding Designated Activity Company",
+    "size": "$900 million",
+    "tenor": null,
+    "spread": "T+83 bps",
+    "coupon": "4.875%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1378789"
+  },
+  {
+    "date": "2026-06-30",
+    "issuer": "W. P. Carey Inc. Expected",
+    "size": "$350 million",
+    "tenor": null,
+    "spread": "T+95 bps",
+    "coupon": "5.200%",
+    "ratings": null,
+    "cik": "1025378"
+  },
+  {
+    "date": "2026-06-30",
+    "issuer": "Realty Income Corporation",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "3.625%",
+    "ratings": {
+      "sp": "Globa"
+    },
+    "cik": "726728"
   }
 ]
