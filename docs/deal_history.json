@@ -1708,5 +1708,40 @@
       "sp": "Globa"
     },
     "cik": "726728"
+  },
+  {
+    "date": "2026-07-08",
+    "issuer": "AutoZone, Inc.",
+    "size": "$850 million",
+    "tenor": null,
+    "spread": "T+72 bps",
+    "coupon": "4.950%",
+    "ratings": null,
+    "cik": "866787"
+  },
+  {
+    "date": "2026-07-08",
+    "issuer": "Amazon.com, Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.600%",
+    "ratings": {
+      "fitch": "Ratin"
+    },
+    "cik": "1018724"
+  },
+  {
+    "date": "2026-07-08",
+    "issuer": "Toyota Motor Credit Corporation",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+68 bps",
+    "coupon": "5.000%",
+    "ratings": {
+      "sp": "Globa",
+      "fitch": "Ratin"
+    },
+    "cik": "834071"
   }
 ]
