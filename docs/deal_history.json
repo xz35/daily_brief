@@ -1743,5 +1743,75 @@
       "fitch": "Ratin"
     },
     "cik": "834071"
+  },
+  {
+    "date": "2026-07-09",
+    "issuer": "Nuveen Churchill Direct Lending Corp.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "6.650%",
+    "ratings": {
+      "moodys": "Baa3",
+      "fitch": "BBB-"
+    },
+    "cik": "1737924"
+  },
+  {
+    "date": "2026-07-09",
+    "issuer": "Accenture Capital Inc.",
+    "size": "$300 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.750%",
+    "ratings": null,
+    "cik": "1467373"
+  },
+  {
+    "date": "2026-07-09",
+    "issuer": "Accenture Capital Inc.",
+    "size": "$300 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.750%",
+    "ratings": null,
+    "cik": "2028780"
+  },
+  {
+    "date": "2026-07-09",
+    "issuer": "Bank of Montreal Europe plc",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.375%",
+    "ratings": {
+      "sp": "Globa"
+    },
+    "cik": "821533"
+  },
+  {
+    "date": "2026-07-09",
+    "issuer": "shall select the United States Treasury",
+    "size": "$1 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": {
+      "sp": "Fitch",
+      "fitch": "DBRS"
+    },
+    "cik": "1000275"
+  },
+  {
+    "date": "2026-07-09",
+    "issuer": "Jefferies Financial Group Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.500%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "96223"
   }
 ]
