@@ -1813,5 +1813,25 @@
       "sp": "Fitch"
     },
     "cik": "96223"
+  },
+  {
+    "date": "2026-07-10",
+    "issuer": "Public Storage Ope",
+    "size": null,
+    "tenor": null,
+    "spread": "T+10 bps",
+    "coupon": "4.700%",
+    "ratings": null,
+    "cik": "1989278"
+  },
+  {
+    "date": "2026-07-10",
+    "issuer": "Public Storage Ope",
+    "size": null,
+    "tenor": null,
+    "spread": "T+10 bps",
+    "coupon": "4.700%",
+    "ratings": null,
+    "cik": "1393311"
   }
 ]
