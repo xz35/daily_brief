@@ -1833,5 +1833,28 @@
     "coupon": "4.700%",
     "ratings": null,
     "cik": "1393311"
+  },
+  {
+    "date": "2026-07-14",
+    "issuer": "HEICO Corporation",
+    "size": null,
+    "tenor": null,
+    "spread": "T+60 bps",
+    "coupon": "4.950%",
+    "ratings": {
+      "moodys": "Baa1",
+      "fitch": "BBB+"
+    },
+    "cik": "46619"
+  },
+  {
+    "date": "2026-07-14",
+    "issuer": "Services. Citibank, N.A.",
+    "size": "$68 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.019%",
+    "ratings": null,
+    "cik": "1347185"
   }
 ]
