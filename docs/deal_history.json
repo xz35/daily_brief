@@ -1856,5 +1856,17 @@
     "coupon": "4.019%",
     "ratings": null,
     "cik": "1347185"
+  },
+  {
+    "date": "2026-07-16",
+    "issuer": "SBA Communications Corporation Expected",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.875%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1034054"
   }
 ]
