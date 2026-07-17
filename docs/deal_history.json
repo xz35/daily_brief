@@ -1868,5 +1868,30 @@
       "sp": "Fitch"
     },
     "cik": "1034054"
+  },
+  {
+    "date": "2026-07-17",
+    "issuer": "The PNC Financial Services Group, Inc.",
+    "size": "$1 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.463%",
+    "ratings": {
+      "sp": "Fitch",
+      "fitch": "Morni"
+    },
+    "cik": "713676"
+  },
+  {
+    "date": "2026-07-17",
+    "issuer": "of a note pays the fees charged by the hired NRSRO for its",
+    "size": "$31.4 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "2.332%",
+    "ratings": {
+      "fitch": "has"
+    },
+    "cik": "1762590"
   }
 ]
