@@ -1893,5 +1893,38 @@
       "fitch": "has"
     },
     "cik": "1762590"
+  },
+  {
+    "date": "2026-07-21",
+    "issuer": "Netflix, Inc.",
+    "size": "$1 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.250%",
+    "ratings": null,
+    "cik": "1065280"
+  },
+  {
+    "date": "2026-07-21",
+    "issuer": "contacting U.S. Bancorp Investments, Inc.",
+    "size": "$1 billion",
+    "tenor": null,
+    "spread": "T+87 bps",
+    "coupon": "5.470%",
+    "ratings": null,
+    "cik": "36104"
+  },
+  {
+    "date": "2026-07-21",
+    "issuer": "credit",
+    "size": "$118 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.034%",
+    "ratings": {
+      "sp": "or",
+      "fitch": "and"
+    },
+    "cik": "1083199"
   }
 ]
