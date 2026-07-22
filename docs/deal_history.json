@@ -1926,5 +1926,47 @@
       "fitch": "and"
     },
     "cik": "1083199"
+  },
+  {
+    "date": "2026-07-22",
+    "issuer": "Hercules Capital, Inc. Issuer Ticker HTGC",
+    "size": "$325 million",
+    "tenor": null,
+    "spread": "T+220 bps",
+    "coupon": "6.300%",
+    "ratings": null,
+    "cik": "1280784"
+  },
+  {
+    "date": "2026-07-22",
+    "issuer": "Conagra Brands, Inc.",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+107 bps",
+    "coupon": "5.400%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "23217"
+  },
+  {
+    "date": "2026-07-22",
+    "issuer": "The Travelers Companies, Inc. Title of",
+    "size": "$750 million",
+    "tenor": null,
+    "spread": "T+58 bps",
+    "coupon": "4.950%",
+    "ratings": null,
+    "cik": "86312"
+  },
+  {
+    "date": "2026-07-22",
+    "issuer": "Toronto Dominion Bank",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "947263"
   }
 ]
