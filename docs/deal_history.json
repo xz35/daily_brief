@@ -1968,5 +1968,27 @@
     "coupon": null,
     "ratings": null,
     "cik": "947263"
+  },
+  {
+    "date": "2026-07-23",
+    "issuer": "Equifax Inc.",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+75 bps",
+    "coupon": "5.000%",
+    "ratings": null,
+    "cik": "33185"
+  },
+  {
+    "date": "2026-07-23",
+    "issuer": "Toronto Dominion Bank",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.847%",
+    "ratings": {
+      "fitch": "Ratin"
+    },
+    "cik": "947263"
   }
 ]
