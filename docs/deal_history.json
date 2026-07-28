@@ -1990,5 +1990,41 @@
       "fitch": "Ratin"
     },
     "cik": "947263"
+  },
+  {
+    "date": "2026-07-28",
+    "issuer": "AT&T Inc. TITLE OF",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "3.600%",
+    "ratings": {
+      "sp": "BBB",
+      "fitch": "BBB+"
+    },
+    "cik": "732717"
+  },
+  {
+    "date": "2026-07-28",
+    "issuer": "Waste Connections, Inc.",
+    "size": "$37.4 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "2033%",
+    "ratings": {
+      "sp": "cease",
+      "fitch": "Ratin"
+    },
+    "cik": "1318220"
+  },
+  {
+    "date": "2026-07-28",
+    "issuer": "Atlantic Union Bankshares Corporation",
+    "size": "$250 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "6.25%",
+    "ratings": null,
+    "cik": "883948"
   }
 ]
