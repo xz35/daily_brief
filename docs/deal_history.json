@@ -2026,5 +2026,83 @@
     "coupon": "6.25%",
     "ratings": null,
     "cik": "883948"
+  },
+  {
+    "date": "2026-07-29",
+    "issuer": "Uruguay Republic Of",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "102385"
+  },
+  {
+    "date": "2026-07-29",
+    "issuer": "Pacific Gas and Electric Company",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "3.30%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "75488"
+  },
+  {
+    "date": "2026-07-29",
+    "issuer": "Booz Allen Hamilton Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.375%",
+    "ratings": null,
+    "cik": "13222"
+  },
+  {
+    "date": "2026-07-29",
+    "issuer": "Booz Allen Hamilton Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.375%",
+    "ratings": null,
+    "cik": "1443646"
+  },
+  {
+    "date": "2026-07-29",
+    "issuer": "Kinder Morgan, Inc. Expected",
+    "size": "$1.15 billion",
+    "tenor": null,
+    "spread": "T+95 bps",
+    "coupon": "5.550%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1506307"
+  },
+  {
+    "date": "2026-07-29",
+    "issuer": "Waste Connections, Inc. Title of",
+    "size": null,
+    "tenor": null,
+    "spread": "T+85 bps",
+    "coupon": "4.200%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1318220"
+  },
+  {
+    "date": "2026-07-29",
+    "issuer": "SYNCHRONY FINANCIAL Title of",
+    "size": "$1.1 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.450%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1601712"
   }
 ]
