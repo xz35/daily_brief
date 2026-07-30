@@ -2104,5 +2104,18 @@
       "sp": "Fitch"
     },
     "cik": "1601712"
+  },
+  {
+    "date": "2026-07-30",
+    "issuer": "Waste Connections, Inc.",
+    "size": "$7,549 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.200%",
+    "ratings": {
+      "sp": "cease",
+      "fitch": "Ratin"
+    },
+    "cik": "1318220"
   }
 ]
