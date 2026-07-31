@@ -2117,5 +2117,39 @@
       "fitch": "Ratin"
     },
     "cik": "1318220"
+  },
+  {
+    "date": "2026-07-31",
+    "issuer": "Uruguay Republic Of",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.442%",
+    "ratings": null,
+    "cik": "102385"
+  },
+  {
+    "date": "2026-07-31",
+    "issuer": "CenterPoint Energy, Inc.",
+    "size": "$700 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.25%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1130310"
+  },
+  {
+    "date": "2026-07-31",
+    "issuer": "Consumers Energy Company",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "201533"
   }
 ]
