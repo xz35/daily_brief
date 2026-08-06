@@ -2151,5 +2151,41 @@
       "sp": "Fitch"
     },
     "cik": "201533"
+  },
+  {
+    "date": "2026-08-06",
+    "issuer": "Fitch Ratings, Inc.",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+50 bps",
+    "coupon": "4.829%",
+    "ratings": {
+      "moodys": "A2",
+      "sp": "A",
+      "fitch": "A"
+    },
+    "cik": "7084"
+  },
+  {
+    "date": "2026-08-06",
+    "issuer": "Franklin Resources, Inc.",
+    "size": "$750 million",
+    "tenor": null,
+    "spread": "T+100 bps",
+    "coupon": "5.500%",
+    "ratings": null,
+    "cik": "38777"
+  },
+  {
+    "date": "2026-08-06",
+    "issuer": "Athene Holding Ltd.",
+    "size": "$1 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "6.150%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1527469"
   }
 ]
