@@ -2187,5 +2187,67 @@
       "sp": "Fitch"
     },
     "cik": "1527469"
+  },
+  {
+    "date": "2026-08-07",
+    "issuer": "Motorola Solutions, Inc. Title of",
+    "size": null,
+    "tenor": null,
+    "spread": "T+55 bps",
+    "coupon": "4.850%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "68505"
+  },
+  {
+    "date": "2026-08-07",
+    "issuer": "MasTec, Inc.",
+    "size": "$650 million",
+    "tenor": null,
+    "spread": "T+122 bps",
+    "coupon": "5.850%",
+    "ratings": null,
+    "cik": "15615"
+  },
+  {
+    "date": "2026-08-07",
+    "issuer": "Public Service Electric and Gas Company",
+    "size": "$350 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "6.050%",
+    "ratings": null,
+    "cik": "81033"
+  },
+  {
+    "date": "2026-08-07",
+    "issuer": "Royal Caribbean Cruises Ltd.",
+    "size": "$1.25 billion",
+    "tenor": null,
+    "spread": "T+105 bps",
+    "coupon": "5.550%",
+    "ratings": null,
+    "cik": "884887"
+  },
+  {
+    "date": "2026-08-07",
+    "issuer": "Celestica Inc.",
+    "size": "$15.6 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1030894"
+  },
+  {
+    "date": "2026-08-07",
+    "issuer": "Wells Fargo Bank, N.A.",
+    "size": "$31.5 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "1.00%",
+    "ratings": null,
+    "cik": "1631055"
   }
 ]
