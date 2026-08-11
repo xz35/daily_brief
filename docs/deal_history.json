@@ -2294,5 +2294,104 @@
     "coupon": "6.050%",
     "ratings": null,
     "cik": "1291157"
+  },
+  {
+    "date": "2026-08-11",
+    "issuer": "Virginia Electric & Power Co",
+    "size": "$1.25 billion",
+    "tenor": null,
+    "spread": "T+95 bps",
+    "coupon": "5.65%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "103682"
+  },
+  {
+    "date": "2026-08-11",
+    "issuer": "Verizon Communications Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "6.600%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "732712"
+  },
+  {
+    "date": "2026-08-11",
+    "issuer": "MPLX LP Expected",
+    "size": "$1.25 billion",
+    "tenor": null,
+    "spread": "T+62 bps",
+    "coupon": "4.700%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1552000"
+  },
+  {
+    "date": "2026-08-11",
+    "issuer": "The Mosaic Company",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.350%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "1285785"
+  },
+  {
+    "date": "2026-08-11",
+    "issuer": "Illumina, Inc.",
+    "size": "$300 million",
+    "tenor": null,
+    "spread": "T+65 bps",
+    "coupon": "4.950%",
+    "ratings": {
+      "sp": "BBB",
+      "fitch": "BBB"
+    },
+    "cik": "1110803"
+  },
+  {
+    "date": "2026-08-11",
+    "issuer": "Entergy Louisiana, LLC",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": {
+      "moodys": "A2",
+      "sp": "A"
+    },
+    "cik": "1348952"
+  },
+  {
+    "date": "2026-08-11",
+    "issuer": "AT&T Inc.",
+    "size": "$3.0 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": {
+      "sp": "BBB",
+      "fitch": "BBB+"
+    },
+    "cik": "732717"
+  },
+  {
+    "date": "2026-08-11",
+    "issuer": "Tyson Foods, Inc.",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+70 bps",
+    "coupon": "5.100%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "100493"
   }
 ]
