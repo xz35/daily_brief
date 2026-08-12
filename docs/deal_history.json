@@ -2393,5 +2393,77 @@
       "sp": "Fitch"
     },
     "cik": "100493"
+  },
+  {
+    "date": "2026-08-12",
+    "issuer": "Martin Marietta Materials, Inc.",
+    "size": "$750 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.850%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "916076"
+  },
+  {
+    "date": "2026-08-12",
+    "issuer": "Marriott International, Inc.",
+    "size": "$750 million",
+    "tenor": null,
+    "spread": "T+50 bps",
+    "coupon": "4.875%",
+    "ratings": null,
+    "cik": "1048286"
+  },
+  {
+    "date": "2026-08-12",
+    "issuer": "Illinois Tool Works Inc. Expected",
+    "size": null,
+    "tenor": null,
+    "spread": "T+45 bps",
+    "coupon": null,
+    "ratings": null,
+    "cik": "49826"
+  },
+  {
+    "date": "2026-08-12",
+    "issuer": "Abcellera Biologics Inc.",
+    "size": "$811.7 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1703057"
+  },
+  {
+    "date": "2026-08-12",
+    "issuer": "ONE Gas, Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": "T+80 bps",
+    "coupon": "5.45%",
+    "ratings": null,
+    "cik": "1587732"
+  },
+  {
+    "date": "2026-08-12",
+    "issuer": "Ferguson Enterprises Inc.",
+    "size": "$700 million",
+    "tenor": null,
+    "spread": "T+55 bps",
+    "coupon": "4.800%",
+    "ratings": null,
+    "cik": "2038501"
+  },
+  {
+    "date": "2026-08-12",
+    "issuer": "Ferguson Enterprises Inc.",
+    "size": "$700 million",
+    "tenor": null,
+    "spread": "T+55 bps",
+    "coupon": "4.800%",
+    "ratings": null,
+    "cik": "2011641"
   }
 ]
