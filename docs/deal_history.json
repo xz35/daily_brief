@@ -2465,5 +2465,48 @@
     "coupon": "4.800%",
     "ratings": null,
     "cik": "2011641"
+  },
+  {
+    "date": "2026-08-13",
+    "issuer": "Cabot Corporation",
+    "size": "$350 million",
+    "tenor": null,
+    "spread": "T+70 bps",
+    "coupon": "4.950%",
+    "ratings": null,
+    "cik": "16040"
+  },
+  {
+    "date": "2026-08-13",
+    "issuer": "Illinois Tool Works Inc.",
+    "size": "$1.489 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.650%",
+    "ratings": null,
+    "cik": "49826"
+  },
+  {
+    "date": "2026-08-13",
+    "issuer": "Universal Health Services, Inc.",
+    "size": "$600 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.500%",
+    "ratings": {
+      "sp": "BBB-",
+      "fitch": "BBB-"
+    },
+    "cik": "352915"
+  },
+  {
+    "date": "2026-08-13",
+    "issuer": "Intercontinental Exchange, Inc. Expected",
+    "size": "$3.75 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.700%",
+    "ratings": null,
+    "cik": "1571949"
   }
 ]
