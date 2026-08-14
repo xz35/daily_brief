@@ -2508,5 +2508,65 @@
     "coupon": "4.700%",
     "ratings": null,
     "cik": "1571949"
+  },
+  {
+    "date": "2026-08-14",
+    "issuer": "Advanced Micro Devices, Inc. Anticipated",
+    "size": "$1.25 billion",
+    "tenor": null,
+    "spread": "T+43 bps",
+    "coupon": "4.600%",
+    "ratings": null,
+    "cik": "2488"
+  },
+  {
+    "date": "2026-08-14",
+    "issuer": "NiSource Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "6.250%",
+    "ratings": null,
+    "cik": "1111711"
+  },
+  {
+    "date": "2026-08-14",
+    "issuer": "Abcellera Biologics Inc.",
+    "size": "$187.0 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1703057"
+  },
+  {
+    "date": "2026-08-14",
+    "issuer": "enCore Energy Corp.",
+    "size": "$221.9 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1500881"
+  },
+  {
+    "date": "2026-08-14",
+    "issuer": "Haleon US Capital LLC",
+    "size": null,
+    "tenor": null,
+    "spread": "T+48 bps",
+    "coupon": null,
+    "ratings": null,
+    "cik": "2149389"
+  },
+  {
+    "date": "2026-08-14",
+    "issuer": "Caterpillar Financial Services Corporation Title of",
+    "size": "$50 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.650%",
+    "ratings": null,
+    "cik": "764764"
   }
 ]
