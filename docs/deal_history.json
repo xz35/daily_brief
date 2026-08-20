@@ -2568,5 +2568,39 @@
     "coupon": "4.650%",
     "ratings": null,
     "cik": "764764"
+  },
+  {
+    "date": "2026-08-20",
+    "issuer": "Tractor Supply Company",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.200%",
+    "ratings": null,
+    "cik": "916365"
+  },
+  {
+    "date": "2026-08-20",
+    "issuer": "Avnet, Inc.",
+    "size": "$550 million",
+    "tenor": null,
+    "spread": "T+132 bps",
+    "coupon": "5.650%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "8858"
+  },
+  {
+    "date": "2026-08-20",
+    "issuer": "Wisconsin Electric Power Company",
+    "size": "$300 million",
+    "tenor": null,
+    "spread": "T+75 bps",
+    "coupon": "5.10%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "107815"
   }
 ]
