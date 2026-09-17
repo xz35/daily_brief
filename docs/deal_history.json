@@ -2602,5 +2602,25 @@
       "sp": "Fitch"
     },
     "cik": "107815"
+  },
+  {
+    "date": "2026-09-17",
+    "issuer": "Analog Devices, Inc. Expected",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.100%",
+    "ratings": null,
+    "cik": "6281"
+  },
+  {
+    "date": "2026-09-17",
+    "issuer": "Landwirtschaftliche Rentenbank",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.000%",
+    "ratings": null,
+    "cik": "1144797"
   }
 ]
