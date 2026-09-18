@@ -2622,5 +2622,15 @@
     "coupon": "5.000%",
     "ratings": null,
     "cik": "1144797"
+  },
+  {
+    "date": "2026-09-18",
+    "issuer": "calling Barclays Capital Inc.",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+60 bps",
+    "coupon": "5.375%",
+    "ratings": null,
+    "cik": "14693"
   }
 ]
