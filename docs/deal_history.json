@@ -2644,5 +2644,29 @@
       "sp": "Fitch"
     },
     "cik": "831001"
+  },
+  {
+    "date": "2026-09-25",
+    "issuer": "Kyndryl Holdings, Inc.",
+    "size": "$700 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "7.800%",
+    "ratings": {
+      "sp": "or"
+    },
+    "cik": "1867072"
+  },
+  {
+    "date": "2026-09-25",
+    "issuer": "Services. Citibank, N.A.",
+    "size": "$14.8 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.520%",
+    "ratings": {
+      "fitch": "Ratin"
+    },
+    "cik": "1654238"
   }
 ]
