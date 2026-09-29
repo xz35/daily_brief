@@ -18,7 +18,13 @@ from pathlib import Path
 from google import genai
 from google.genai import types as genai_types
 
-from config import GEMINI_API_KEY, GEMINI_MAX_TOKENS, GEMINI_MODEL, PROMPTS_DIR
+from config import (
+    GEMINI_API_KEY,
+    GEMINI_FALLBACK_MODELS,
+    GEMINI_MAX_TOKENS,
+    GEMINI_MODEL,
+    PROMPTS_DIR,
+)
 from utils import today_str
 
 logger = logging.getLogger(__name__)
@@ -128,10 +134,32 @@ def _generate(prompt, context="", retries=5):
         logger.error(f"Failed to initialize Gemini client [{context}]: {e}")
         return f"[Content unavailable for this segment due to synthesis error: {e}]"
 
+    model_sequence = _model_sequence()
+    last_error = None
+
+    for model in model_sequence:
+        if model != model_sequence[0]:
+            logger.info(f"Gemini [{context}]: trying fallback model {model}")
+
+        # Primary model gets the full backoff window; fallbacks get 2 quick
+        # attempts each so the worst case stays within the morning deadline
+        # (~7.5 min + ~1 min per fallback, not ~7.5 min per model).
+        attempts = retries if model == model_sequence[0] else 2
+        result, last_error = _generate_with_model(client, prompt, model, context, attempts)
+        if result is not None:
+            return result
+
+    return f"[Content unavailable for this segment due to synthesis error: {last_error}]"
+
+
+def _generate_with_model(client, prompt, model, context, retries):
+    """Call a specific Gemini model. Returns (text, error)."""
+    last_error = None
+
     for attempt in range(retries):
         try:
             response = client.models.generate_content(
-                model=GEMINI_MODEL,
+                model=model,
                 contents=prompt,
                 config=genai_types.GenerateContentConfig(
                     max_output_tokens=GEMINI_MAX_TOKENS,
@@ -142,17 +170,30 @@ def _generate(prompt, context="", retries=5):
             if not text:
                 raise RuntimeError("Gemini returned an empty response")
             logger.info(f"Gemini [{context}]: {len(text.split())} words returned")
-            return text
+            return text, None
         except Exception as e:
+            last_error = e
             retryable = any(sig.lower() in str(e).lower() for sig in _RETRYABLE_ERROR_SIGNALS)
             if retryable and attempt < retries - 1:
                 wait = 30 * (2 ** attempt)   # 30s, 60s, 120s, 240s
-                logger.warning(f"Gemini transient error [{context}], retrying in {wait}s "
+                logger.warning(f"Gemini transient error [{context}] on {model}, retrying in {wait}s "
                                f"(attempt {attempt + 1}/{retries}): {e}")
                 time.sleep(wait)
             else:
-                logger.error(f"Gemini call failed [{context}]: {e}")
-                return f"[Content unavailable for this segment due to synthesis error: {e}]"
+                logger.error(f"Gemini call failed [{context}] on {model}: {e}")
+                return None, e
+
+    return None, last_error
+
+
+def _model_sequence():
+    """Primary Gemini model plus configured fallbacks, with duplicates removed."""
+    models = [GEMINI_MODEL] + list(GEMINI_FALLBACK_MODELS)
+    sequence = []
+    for model in models:
+        if model and model not in sequence:
+            sequence.append(model)
+    return sequence
 
 
 # ── Script assembly ───────────────────────────────────────────────────────

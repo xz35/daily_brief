@@ -27,12 +27,10 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -52,7 +50,7 @@ jobs:
 
       - name: Set up Python 3.11
         if: steps.existing_episode.outputs.exists != 'true'
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
@@ -69,6 +67,11 @@ jobs:
         env:
           TZ: America/Los_Angeles
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # Optional repo Variables (Settings → Secrets and variables → Actions
+          # → Variables) to change Gemini models without a code push. Empty
+          # when unset — config.py then uses its built-in defaults.
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          GEMINI_FALLBACK_MODELS: ${{ vars.GEMINI_FALLBACK_MODELS }}
           GOOGLE_APPLICATION_CREDENTIALS_JSON: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_JSON }}
           GITHUB_PAGES_BASE_URL: ${{ secrets.PAGES_BASE_URL }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}

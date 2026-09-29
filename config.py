@@ -115,7 +115,20 @@ GMAIL_ADDRESS = os.getenv("GMAIL_ADDRESS")
 GMAIL_APP_PASSWORD = os.getenv("GMAIL_APP_PASSWORD")
 
 # ── Gemini ────────────────────────────────────────────────────────────────
-GEMINI_MODEL = "gemini-flash-latest"
+# `or` (not a getenv default): GitHub Actions passes unset Variables as empty
+# strings, which must still fall through to the built-in default.
+GEMINI_MODEL = os.getenv("GEMINI_MODEL") or "gemini-flash-latest"
+# Tried in order when the primary model fails all retries. Chosen for capacity
+# diversity: gemini-flash-latest aliases the 2.5-generation flash pool (which is
+# what overloads at 4am), so fall back to the newest-generation flash first,
+# then the lite tier as a last resort — a weaker voice for one episode beats
+# no episode. Override via GEMINI_MODEL / GEMINI_FALLBACK_MODELS env vars
+# (exposed as repo Variables in the GitHub Actions workflow).
+GEMINI_FALLBACK_MODELS = [
+    model.strip()
+    for model in (os.getenv("GEMINI_FALLBACK_MODELS") or "gemini-3.8-flash,gemini-flash-lite-latest").split(",")
+    if model.strip()
+]
 GEMINI_MAX_TOKENS = 8192
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 

@@ -35,7 +35,7 @@ Add these in repo Settings → Secrets and variables → Actions:
 
 | Secret | Description |
 |--------|-------------|
-| `GEMINI_API_KEY` | From billing-free Google AI Studio (aistudio.google.com) |
+| `GEMINI_API_KEY` | From Google AI Studio (aistudio.google.com); use a project with Gemini API billing enabled for paid-tier quota |
 | `GOOGLE_APPLICATION_CREDENTIALS_JSON` | Full JSON of TTS service account key |
 | `PAGES_BASE_URL` | `https://xz35.github.io/daily_brief` |
 | `FRED_API_KEY` | Free key from fred.stlouisfed.org |
@@ -66,6 +66,7 @@ python main.py
 
 ## Notes
 
-- Two Google accounts required: billing-free AI Studio for Gemini, billing-enabled GCP for TTS
+- Gemini can run on a paid AI Studio project. Keep the TTS service account in a billing-enabled GCP project, and verify the `GEMINI_API_KEY` secret belongs to the intended AI Studio project.
+- Optional: set `GEMINI_MODEL` or `GEMINI_FALLBACK_MODELS` in Actions variables/secrets to override the default Gemini model sequence without changing code.
 - Prompts are gitignored and stored as GitHub Secrets — update the Secrets when changing prompts
 - See PROGRESS.md and IDEAS.md (parent directory) for full project context
