@@ -2668,5 +2668,15 @@
       "fitch": "Ratin"
     },
     "cik": "1654238"
+  },
+  {
+    "date": "2026-10-06",
+    "issuer": "Hercules Capital, Inc. Issuer Ticker HTGC",
+    "size": "$400 million",
+    "tenor": null,
+    "spread": "T+195 bps",
+    "coupon": "6.700%",
+    "ratings": null,
+    "cik": "1280784"
   }
 ]
