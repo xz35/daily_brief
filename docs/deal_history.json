@@ -2678,5 +2678,15 @@
     "coupon": "6.700%",
     "ratings": null,
     "cik": "1280784"
+  },
+  {
+    "date": "2026-10-07",
+    "issuer": "Atmos Energy Corporation Expected",
+    "size": "$700 million",
+    "tenor": null,
+    "spread": "T+78 bps",
+    "coupon": "6.000%",
+    "ratings": null,
+    "cik": "731802"
   }
 ]
