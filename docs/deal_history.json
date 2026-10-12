@@ -2688,5 +2688,27 @@
     "coupon": "6.000%",
     "ratings": null,
     "cik": "731802"
+  },
+  {
+    "date": "2026-10-12",
+    "issuer": "PepsiCo, Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "3.750%",
+    "ratings": {
+      "sp": "Moody"
+    },
+    "cik": "77476"
+  },
+  {
+    "date": "2026-10-12",
+    "issuer": "rating acceptable to the",
+    "size": "$1.75 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "1.00%",
+    "ratings": null,
+    "cik": "1126530"
   }
 ]
