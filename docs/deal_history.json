@@ -2710,5 +2710,15 @@
     "coupon": "1.00%",
     "ratings": null,
     "cik": "1126530"
+  },
+  {
+    "date": "2026-10-14",
+    "issuer": "Lennar Corporation",
+    "size": "$300 million",
+    "tenor": null,
+    "spread": "T+80 bps",
+    "coupon": "5.700%",
+    "ratings": null,
+    "cik": "920760"
   }
 ]
