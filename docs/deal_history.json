@@ -2720,5 +2720,17 @@
     "coupon": "5.700%",
     "ratings": null,
     "cik": "920760"
+  },
+  {
+    "date": "2026-10-15",
+    "issuer": "Bank Of Nova Scotia",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.407%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "9631"
   }
 ]
