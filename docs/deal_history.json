@@ -2732,5 +2732,17 @@
       "sp": "Fitch"
     },
     "cik": "9631"
+  },
+  {
+    "date": "2026-10-16",
+    "issuer": "State Street Corporation",
+    "size": "$750 million",
+    "tenor": null,
+    "spread": "T+88 bps",
+    "coupon": "5.963%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "93751"
   }
 ]
