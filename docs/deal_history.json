@@ -2744,5 +2744,42 @@
       "sp": "Fitch"
     },
     "cik": "93751"
+  },
+  {
+    "date": "2026-10-21",
+    "issuer": "Walmart Inc.",
+    "size": "$750 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.150%",
+    "ratings": {
+      "fitch": "and"
+    },
+    "cik": "104169"
+  },
+  {
+    "date": "2026-10-21",
+    "issuer": "The PNC Financial Services Group, Inc.",
+    "size": "$1.2 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.463%",
+    "ratings": {
+      "sp": "Fitch",
+      "fitch": "Morni"
+    },
+    "cik": "713676"
+  },
+  {
+    "date": "2026-10-21",
+    "issuer": "Marsh & McLennan Companies, Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.250%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "62709"
   }
 ]
