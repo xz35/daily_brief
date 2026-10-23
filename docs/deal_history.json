@@ -2781,5 +2781,15 @@
       "sp": "Fitch"
     },
     "cik": "62709"
+  },
+  {
+    "date": "2026-10-23",
+    "issuer": "Workday, Inc.",
+    "size": "$750 million",
+    "tenor": null,
+    "spread": "T+82 bps",
+    "coupon": "5.700%",
+    "ratings": null,
+    "cik": "1327811"
   }
 ]
