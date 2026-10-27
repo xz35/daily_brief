@@ -2791,5 +2791,73 @@
     "coupon": "5.700%",
     "ratings": null,
     "cik": "1327811"
+  },
+  {
+    "date": "2026-10-27",
+    "issuer": "The Procter & Gamble Company Aggregate",
+    "size": "$750 million",
+    "tenor": null,
+    "spread": "T+30 bps",
+    "coupon": "5.125%",
+    "ratings": {
+      "sp": "AA-"
+    },
+    "cik": "80424"
+  },
+  {
+    "date": "2026-10-27",
+    "issuer": "Southwest Airlines Co.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.750%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "92380"
+  },
+  {
+    "date": "2026-10-27",
+    "issuer": "calling J.P. Morgan Securities LLC",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.000%",
+    "ratings": {
+      "sp": "A+"
+    },
+    "cik": "97476"
+  },
+  {
+    "date": "2026-10-27",
+    "issuer": "Dover Corporation Title of",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.350%",
+    "ratings": null,
+    "cik": "29905"
+  },
+  {
+    "date": "2026-10-27",
+    "issuer": "contacting BofA Securities, Inc.",
+    "size": "$2.5 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.550%",
+    "ratings": null,
+    "cik": "1047166"
+  },
+  {
+    "date": "2026-10-27",
+    "issuer": "American Express Company Expected",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.447%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "4962"
   }
 ]
