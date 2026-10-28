@@ -2859,5 +2859,86 @@
       "sp": "Fitch"
     },
     "cik": "4962"
+  },
+  {
+    "date": "2026-10-28",
+    "issuer": "The Procter & Gamble Company Aggregate",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "3.750%",
+    "ratings": {
+      "sp": "AA-"
+    },
+    "cik": "80424"
+  },
+  {
+    "date": "2026-10-28",
+    "issuer": "Main Street Capital Corporation",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "6.550%",
+    "ratings": null,
+    "cik": "1396440"
+  },
+  {
+    "date": "2026-10-28",
+    "issuer": "calling BBVA Securities Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "8.125%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "917142"
+  },
+  {
+    "date": "2026-10-28",
+    "issuer": "KeyCorp",
+    "size": "$1 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.889%",
+    "ratings": {
+      "sp": "BBB",
+      "fitch": "A-"
+    },
+    "cik": "91576"
+  },
+  {
+    "date": "2026-10-28",
+    "issuer": "Fitch Ratings, Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.650%",
+    "ratings": {
+      "fitch": "A+"
+    },
+    "cik": "1393818"
+  },
+  {
+    "date": "2026-10-28",
+    "issuer": "CBRE Services, Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": "T+15 bps",
+    "coupon": "5.650%",
+    "ratings": {
+      "sp": "Fitch"
+    },
+    "cik": "852203"
+  },
+  {
+    "date": "2026-10-28",
+    "issuer": "General Motors Financial Company, Inc.",
+    "size": "$1.25 billion",
+    "tenor": null,
+    "spread": "T+83 bps",
+    "coupon": "5.600%",
+    "ratings": null,
+    "cik": "804269"
   }
 ]
