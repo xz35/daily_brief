@@ -39,6 +39,8 @@ Add these in repo Settings → Secrets and variables → Actions:
 | `GOOGLE_APPLICATION_CREDENTIALS_JSON` | Full JSON of TTS service account key |
 | `PAGES_BASE_URL` | `https://xz35.github.io/daily_brief` |
 | `FRED_API_KEY` | Free key from fred.stlouisfed.org |
+| `FINRA_API_CLIENT_ID` | Optional — free Individual account at developer.finra.org (API Console → create credential). Enables TRACE supplemental deals incl. 144A |
+| `FINRA_API_CLIENT_SECRET` | Secret paired with the FINRA client ID. Validate access with `python finra_fetcher.py --validate` |
 | `GMAIL_ADDRESS` | xdailybrief@gmail.com |
 | `GMAIL_APP_PASSWORD` | 16-char Gmail app password |
 | `MARKET_NEWS_PROMPT` | Full text of market news prompt (kept private) |

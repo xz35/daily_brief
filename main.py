@@ -4,7 +4,7 @@ main.py — master orchestration script for the Morning Audio Brief pipeline.
 Run order:
   1. rss_scraper      → articles (list of dicts)
   2. edgar_fetcher    → edgar_deals (list of dicts)
-  3. pr_scraper       → pr_deals (list of dicts), deduplicated against edgar
+  3. finra_fetcher    → trace_deals (list of dicts), deduplicated against edgar
   4. synthesizer      → script (str), word_count (int)
   5. tts_converter    → mp3_path (str), duration (float)
   6. podcast_publisher → feed.xml updated, retention enforced
@@ -84,13 +84,15 @@ def main():
         edgar_deals = fetch_deals(date=args.date)
         logger.info(f"  → {len(edgar_deals)} EDGAR deals")
 
-        # ── Step 3: Fetch supplemental PR deals ───────────────────────
-        logger.info("Step 3: Fetching supplemental PR deals")
-        from pr_scraper import fetch_supplemental_deals
-        pr_deals = fetch_supplemental_deals(edgar_deals=edgar_deals)
-        logger.info(f"  → {len(pr_deals)} supplemental PR deals")
+        # ── Step 3: Fetch supplemental TRACE deals ────────────────────
+        # Replaces the dead Business Wire / GlobeNewswire scraper. Main win:
+        # 144A deals, which never appear in EDGAR.
+        logger.info("Step 3: Fetching supplemental FINRA TRACE deals")
+        from finra_fetcher import fetch_trace_deals, save_seen_cusips
+        trace_deals, trace_seen = fetch_trace_deals(edgar_deals=edgar_deals)
+        logger.info(f"  → {len(trace_deals)} supplemental TRACE deals")
 
-        all_deals = edgar_deals + pr_deals
+        all_deals = edgar_deals + trace_deals
         run_log.set("deals_found", len(all_deals))
         logger.info(f"  → {len(all_deals)} total deals")
 
@@ -148,6 +150,9 @@ def main():
         save_market_context(today_str(), context_summary, context_entries)
         if market_data and market_data.get("full_curve"):
             save_curve_snapshot(today_str(), market_data["full_curve"], curve_history_data)
+        # Saved only after synthesis validation, so an aborted run never
+        # marks a TRACE deal as already-surfaced without it airing.
+        save_seen_cusips(trace_seen)
 
         # ── Step 4c: Email script archive ─────────────────────────────
         logger.info("Step 4c: Sending script to email archive")

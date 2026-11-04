@@ -365,6 +365,15 @@ def _format_deals(deals, deal_history=None):
             lines.append("  Status: ANNOUNCED — preliminary prospectus filed, terms not yet "
                          "priced. Cover it as a deal in the market (expect pricing details "
                          "in tomorrow's brief); do not invent size/coupon/spread.")
+        if d.get("source", "").startswith("FINRA TRACE"):
+            note = ("  Note: sourced from FINRA TRACE reference data (not an SEC filing). "
+                    "Deal size and spread are not published in this feed — do not invent them.")
+            if d.get("is_144a"):
+                note += (" This is a Rule 144A private placement — worth noting on air, since "
+                         "144A deals never appear in public SEC filings.")
+            lines.append(note)
+            if d.get("industry"):
+                lines.append(f"  Industry (TRACE classification): {d['industry']}")
 
         if d.get("size"):
             lines.append(f"  Size: {d['size']}")

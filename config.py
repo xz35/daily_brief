@@ -101,6 +101,14 @@ PR_BOND_KEYWORDS = [
     "bookrunners", "joint book", "pricing supplement",
 ]
 
+# ── FINRA (TRACE supplemental new-issue data) ─────────────────────────────
+# Free Individual account at developer.finra.org (non-commercial use).
+# Optional — pipeline degrades gracefully if not set (EDGAR-only coverage).
+FINRA_API_CLIENT_ID = os.getenv("FINRA_API_CLIENT_ID")
+FINRA_API_CLIENT_SECRET = os.getenv("FINRA_API_CLIENT_SECRET")
+MAX_TRACE_DEALS = 5          # Cap supplemental TRACE deals per episode
+FINRA_SEEN_CUSIPS_PATH = "docs/finra_seen_cusips.json"
+
 # ── FRED ──────────────────────────────────────────────────────────────────
 # Free API key from https://fred.stlouisfed.org/docs/api/api_key.html
 # Optional — pipeline degrades gracefully if not set (no market data numbers)

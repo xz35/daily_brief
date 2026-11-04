@@ -75,6 +75,10 @@ jobs:
           GOOGLE_APPLICATION_CREDENTIALS_JSON: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_JSON }}
           GITHUB_PAGES_BASE_URL: ${{ secrets.PAGES_BASE_URL }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          # Optional: FINRA TRACE supplemental new-issue data (144A coverage).
+          # Pipeline skips the TRACE step gracefully while these are unset.
+          FINRA_API_CLIENT_ID: ${{ secrets.FINRA_API_CLIENT_ID }}
+          FINRA_API_CLIENT_SECRET: ${{ secrets.FINRA_API_CLIENT_SECRET }}
           GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           MARKET_NEWS_PROMPT: ${{ secrets.MARKET_NEWS_PROMPT }}
