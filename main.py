@@ -139,7 +139,10 @@ def main():
 
         # ── Step 4b: Save persistent memory ───────────────────────────
         logger.info("Step 4b: Saving deal history, market context, and curve snapshot")
-        updated_history = append_deals(all_deals, deal_history, date_str=today_str())
+        # Preliminary (unpriced) deals stay out of history — the final priced
+        # filing lands a day later and gets recorded with real terms.
+        priced_deals = [d for d in all_deals if not d.get("preliminary")]
+        updated_history = append_deals(priced_deals, deal_history, date_str=today_str())
         save_deal_history(updated_history)
         context_summary = extract_context_summary(script)
         save_market_context(today_str(), context_summary, context_entries)

@@ -52,7 +52,7 @@ def fetch_deals(date=None):
         logger.info(f"No FWP filings found for {target_date}")
         return []
 
-    logger.info(f"Found {len(filings)} FWP filings — pre-filtering")
+    logger.info(f"Found {len(filings)} new-issue filings — pre-filtering")
     filings = _prefilter_filings(filings)
     logger.info(f"After pre-filter: {len(filings)} candidate bond filings to fetch")
 
@@ -63,52 +63,181 @@ def fetch_deals(date=None):
             break
         try:
             deal = _process_filing(filing)
+            if deal and not _passes_sanity(deal):
+                deal = None
             if deal:
-                deals.append(deal)
+                _merge_or_append(deals, deal)
             time.sleep(REQUEST_DELAY)
         except Exception as e:
             accession = filing.get("adsh", "unknown")
             logger.warning(f"Failed to process filing {accession}: {e}")
 
     ig_deals = [d for d in deals if _is_investment_grade(d)]
-    logger.info(f"EDGAR: {len(deals)} deals parsed → {len(ig_deals)} IG deals")
+    logger.info(f"EDGAR: {len(deals)} unique deals parsed → {len(ig_deals)} IG deals")
     return ig_deals
+
+
+# ── Deal-level sanity + dedup ─────────────────────────────────────────────
+
+_PARSED_FIELDS = ("size", "tenor", "maturity", "coupon", "spread",
+                  "ratings", "use_of_proceeds", "bookrunners", "call_structure")
+MIN_DEAL_SIZE_MM = 250    # USD millions — below this it isn't an IG benchmark deal
+MAX_IG_COUPON = 9.5       # % — above this it's distressed/HY/convert junk, not IG
+
+
+def _passes_sanity(deal):
+    """Reject parse ghosts and obvious non-IG paper the text filters missed."""
+    # Preliminary filings have their economic terms deliberately nulled, so
+    # neither the minimum-fields rule nor the size floor can screen them.
+    # Gate on issuer scale instead: an unpriced announcement is only worth
+    # covering when the issuer has billion-scale financials (micro-cap shelf
+    # offerings file preliminaries too). The final priced filing of anything
+    # rejected here still gets picked up through the normal path.
+    if deal.get("preliminary"):
+        cf = deal.get("company_facts") or {}
+        if (cf.get("revenue_bn") or 0) >= 1.0 or (cf.get("total_debt_bn") or 0) >= 1.0:
+            return True
+        logger.info(f"Rejecting preliminary deal (issuer below IG scale): {deal.get('issuer')}")
+        return False
+
+    parsed = sum(1 for f in _PARSED_FIELDS if deal.get(f))
+    if parsed < 2:
+        logger.info(f"Rejecting deal (only {parsed} field(s) parsed): {deal.get('issuer')}")
+        return False
+
+    size_mm = _size_in_millions(deal.get("size"))
+    if size_mm is not None and size_mm < MIN_DEAL_SIZE_MM:
+        logger.info(f"Rejecting deal (size ${size_mm:.0f}M < ${MIN_DEAL_SIZE_MM}M): {deal.get('issuer')}")
+        return False
+
+    coupon = _coupon_pct(deal.get("coupon"))
+    if coupon is not None and coupon > MAX_IG_COUPON:
+        logger.info(f"Rejecting deal (coupon {coupon}% > {MAX_IG_COUPON}%): {deal.get('issuer')}")
+        return False
+
+    return True
+
+
+def _size_in_millions(size_str):
+    m = re.search(r"\$([\d,\.]+)\s*(billion|million)", size_str or "", re.IGNORECASE)
+    if not m:
+        return None
+    try:
+        val = float(m.group(1).replace(",", ""))
+    except ValueError:
+        return None
+    return val * 1000 if m.group(2).lower() == "billion" else val
+
+
+def _coupon_pct(coupon_str):
+    m = re.search(r"(\d+\.?\d*)", coupon_str or "")
+    try:
+        return float(m.group(1)) if m else None
+    except ValueError:
+        return None
+
+
+def _merge_or_append(deals, deal):
+    """Add a deal, collapsing duplicates of one already kept.
+
+    A single deal commonly produces several filings — preliminary + final
+    424B5, an FWP pricing term sheet, co-issuer subsidiaries with their own
+    CIKs and slightly different names ("HCA Healthcare, Inc." vs "HCA
+    Inc./DE"). Merging in-loop keeps duplicates from eating MAX_DEALS slots.
+    """
+    for i, kept in enumerate(deals):
+        if _same_deal(kept, deal):
+            kept_score = sum(1 for f in _PARSED_FIELDS if kept.get(f))
+            new_score  = sum(1 for f in _PARSED_FIELDS if deal.get(f))
+            if new_score > kept_score:
+                deals[i] = deal
+            return
+    deals.append(deal)
+
+
+def _same_deal(a, b):
+    """Heuristic: same issuer family (shared first name token) and either the
+    same normalized name or at least one matching term with no conflicts."""
+    from deal_memory import _normalize_name
+    na, nb = _normalize_name(a.get("issuer") or ""), _normalize_name(b.get("issuer") or "")
+    if not na or not nb or na.split()[0] != nb.split()[0]:
+        return False
+    if na == nb:
+        return True
+    # A preliminary filing has no terms to compare. Merge it with a same-day
+    # filing whose name it prefixes ("Equinix Inc" + "Equinix Europe 2
+    # Financing Corp LLC" = one deal, parent + financing subsidiary). The
+    # prefix requirement keeps distinct issuers that share a first word
+    # ("American Express" / "American Tower") apart.
+    if a.get("preliminary") or b.get("preliminary"):
+        shorter, longer = (na, nb) if len(na) <= len(nb) else (nb, na)
+        if longer.startswith(shorter):
+            return True
+    shared = 0
+    for f in ("coupon", "size", "spread", "maturity"):
+        va, vb = a.get(f), b.get(f)
+        if va and vb:
+            if va != vb:
+                return False
+            shared += 1
+    return shared >= 1
 
 
 # ── EDGAR search ──────────────────────────────────────────────────────────
 
 def _search_edgar(date):
-    """Query the EDGAR full-text search API for FWP filings on a given date.
+    """Query the EDGAR full-text search API for new-issue filings on a given date.
 
-    Returns all FWP filings for the date — structured product vehicles are
-    filtered out downstream by _prefilter_filings(). Keyword filtering in
-    the EFTS query is unreliable for FWP document content and returned 0
-    results in testing; we rely on the pre-filter instead.
+    Each form type is queried SEPARATELY, and FWP is paginated. The API caps
+    every response at 100 hits, and bank structured-note FWP volume grew past
+    100/day in late Oct 2026 — a single combined "FWP,424B5" query then returns
+    a page of 100 FWPs and silently drops every 424B5, which is where most real
+    IG deals (Meta, Equinix, GATX, utilities, etc.) are filed. That caused a
+    week of false "no new issues" episodes before being caught.
+
+    424B2 remains intentionally omitted — ~400 filings/day, overwhelmingly
+    structured products.
     """
-    params = {
-        # 424B5 = prospectus supplements for shelf-registered WKSIs (Novartis, ING, HPE, utilities, etc.)
-        # FWP  = free writing prospectus (bank structured note term sheets + some corporate term sheets)
-        # 424B2 intentionally omitted — 391 filings/day, overwhelmingly structured products from banks.
-        # If coverage gaps are found, add 424B2 in a future iteration.
-        "forms": "FWP,424B5",
-        "dateRange": "custom",
-        "startdt": date,
-        "enddt": date,
-    }
-    try:
-        resp = requests.get(
-            EDGAR_SEARCH_URL,
-            params=params,
-            headers=HEADERS,
-            timeout=REQUEST_TIMEOUT,
-        )
-        resp.raise_for_status()
-        data = resp.json()
-        hits = data.get("hits", {}).get("hits", [])
-        return [h["_source"] for h in hits if "_source" in h]
-    except Exception as e:
-        logger.error(f"EDGAR search API error: {e}")
-        return []
+    # 424B5 first: ~10-20/day, high signal (shelf takedowns by WKSIs).
+    # Listing them first also gives them priority through the pre-filter cap.
+    filings = _search_edgar_form(date, "424B5", max_pages=1)
+    # FWP: high volume, mostly bank structured notes, but some corporate term
+    # sheets. Paginate so corporate FWPs beyond the first 100 are still seen —
+    # the downstream name-based pre-filter is cheap (no HTTP per filing).
+    filings += _search_edgar_form(date, "FWP", max_pages=3)
+    return filings
+
+
+def _search_edgar_form(date, form, max_pages=1):
+    """Fetch up to max_pages × 100 hits for one form type on one date."""
+    results = []
+    for page in range(max_pages):
+        params = {
+            "forms": form,
+            "dateRange": "custom",
+            "startdt": date,
+            "enddt": date,
+        }
+        if page:
+            params["from"] = page * 100
+        try:
+            resp = requests.get(
+                EDGAR_SEARCH_URL,
+                params=params,
+                headers=HEADERS,
+                timeout=REQUEST_TIMEOUT,
+            )
+            resp.raise_for_status()
+            hits = resp.json().get("hits", {}).get("hits", [])
+        except Exception as e:
+            logger.error(f"EDGAR search API error ({form}, page {page + 1}): {e}")
+            break
+        results.extend(h["_source"] for h in hits if "_source" in h)
+        if len(hits) < 100:   # short page = no more results
+            break
+        time.sleep(REQUEST_DELAY)
+    logger.info(f"EDGAR search: {len(results)} {form} filings for {date}")
+    return results
 
 
 # ── Pre-filtering ─────────────────────────────────────────────────────────
@@ -211,7 +340,9 @@ def _process_filing(source):
 
     deal = _parse_deal_terms(content, content_type)
     if deal:
-        deal["issuer"] = deal.get("issuer") or entity_name
+        # Prefer EDGAR's official filer name — the regex-extracted issuer is
+        # noisy on long prospectuses ("us. In addition, GABX Leasing LLC").
+        deal["issuer"] = entity_name if entity_name != "Unknown" else deal.get("issuer")
         deal["accession_no"] = accession_no
         deal["filing_date"] = source.get("file_date", "")
         deal["source"] = "EDGAR FWP"
@@ -365,8 +496,17 @@ def _parse_deal_terms(content, content_type):
     # Normalize whitespace
     text = re.sub(r"\s+", " ", text)
 
-    # Exclude structured notes, preferred stock, and equity-linked products.
-    # These file as FWP too but are NOT traditional IG bond new issues.
+    # Hard exclusions: terms that are definitional of structured notes or
+    # convertibles and never appear in a vanilla IG bond document. Any hit
+    # vetoes the filing outright.
+    #
+    # NOTE: plain equity terms (common stock, preferred stock, depositary
+    # shares, ordinary shares) are deliberately NOT in this list. Long 424B5
+    # bond prospectuses (Meta, Nov 2026) mention them in capital-structure
+    # boilerplate, and the old any-mention veto silently rejected real deals.
+    # Pure equity/preferred offerings are instead rejected by the bond-signal
+    # requirement below — they never say "aggregate principal amount" or name
+    # bookrunning managers for notes.
     structured_note_signals = [
         # Structured notes / market-linked products
         "reference asset", "reference stock", "reference index",
@@ -379,22 +519,13 @@ def _parse_deal_terms(content, content_type):
         "per unit", "per note of $1,000",
         "optimization notes", "performance notes",
         "return linked", "return-linked",
-        # Preferred and common stock (not bonds)
-        "preferred stock", "term preferred",
-        "common stock", "ordinary shares",
-        "depositary shares",
-        # Equity-linked / hybrid
+        # Convertibles / hybrids (equity-linked debt — not what we cover)
         "mandatory convertible",
         "contingent convertible",
+        "conversion rate per", "initial conversion price",
     ]
-    text_lower = text.lower()
-    for sig in structured_note_signals:
-        if sig in text_lower:
-            logger.info(f"Skipping structured product filing (found '{sig}')")
-            return None
-
-    # Require at least one strong indicator of a traditional bond offering.
-    # Unlike the exclusion above, these signals rarely appear in structured products.
+    # Strong indicators of a traditional bond offering. These rarely appear
+    # in structured products or equity offerings.
     bond_signals = [
         "aggregate principal amount",
         "joint book-running manager",
@@ -406,11 +537,29 @@ def _parse_deal_terms(content, content_type):
         "re-offer spread",
         "spread to treasury",
     ]
-    if not any(sig in text_lower for sig in bond_signals):
+
+    text_lower = text.lower()
+    first_excl = min((text_lower.find(s) for s in structured_note_signals
+                      if s in text_lower), default=-1)
+    first_bond = min((text_lower.find(s) for s in bond_signals
+                      if s in text_lower), default=-1)
+
+    if first_bond == -1:
         logger.info("Filing lacks traditional bond new-issue signals — skipping")
         return None
 
-    return {
+    # Positional comparison, not an absolute veto: a document states what it
+    # is offering on its cover page. A structured-note term sheet says
+    # "autocallable" in its title; a bond prospectus says "senior notes due"
+    # at the top and only mentions convertibles 18k chars deep in the shelf
+    # boilerplate menu (observed: Meta's Nov 2026 424B5, which the old
+    # any-mention veto silently rejected).
+    if first_excl != -1 and first_excl < first_bond:
+        logger.info(f"Skipping structured product filing (exclusion signal at "
+                    f"char {first_excl} precedes bond signal at {first_bond})")
+        return None
+
+    deal = {
         "issuer":        _extract_issuer(text),
         "size":          _extract_size(text),
         "tenor":         _extract_tenor(text),
@@ -422,6 +571,19 @@ def _parse_deal_terms(content, content_type):
         "bookrunners":   _extract_bookrunners(text),
         "call_structure": _extract_call_structure(text),
     }
+
+    # Preliminary ("red herring") prospectus supplements are filed before
+    # pricing: the cover literally reads "$   aggregate principal amount of
+    #  % senior notes due 20  ". Any numbers the extractors found came from
+    # unrelated tables, so drop the economic terms and flag the deal as
+    # announced-not-priced — the final 424B5 lands a day later with real
+    # terms. (Observed: Meta's Nov 2026 jumbo, parsed with a spurious size.)
+    if "subject to completion" in text_lower[:3000]:
+        deal["preliminary"] = True
+        for field in ("size", "tenor", "maturity", "coupon", "spread"):
+            deal[field] = None
+
+    return deal
 
 
 # ── Field extractors (regex-based) ───────────────────────────────────────
@@ -449,21 +611,26 @@ def _extract_issuer(text):
 
 
 def _extract_size(text):
-    # Try labeled "Aggregate Principal Amount" field with full dollar number first
-    labeled = re.search(
+    # Try labeled "Aggregate Principal Amount" fields with full dollar numbers
+    # first. Multi-tranche prospectuses carry one row per tranche plus often a
+    # total — take the LARGEST match (total ≥ any tranche) rather than the
+    # first, which understates multi-tranche deals.
+    labeled = re.findall(
         r"Aggregate Principal Amount(?:\s+Offered)?[:\s]+\$([\d,]+)",
         text, re.IGNORECASE
     )
-    if labeled:
-        raw = labeled.group(1).replace(",", "")
+    values = []
+    for raw in labeled:
         try:
-            val = int(raw)
-            if val >= 1_000_000_000:
-                return f"${val / 1_000_000_000:.3g} billion"
-            elif val >= 1_000_000:
-                return f"${val / 1_000_000:.0f} million"
+            values.append(int(raw.replace(",", "")))
         except ValueError:
-            pass
+            continue
+    if values:
+        val = max(values)
+        if val >= 1_000_000_000:
+            return f"${val / 1_000_000_000:.3g} billion"
+        elif val >= 1_000_000:
+            return f"${val / 1_000_000:.0f} million"
 
     # Fall back to "Principal Amount: $1,300,000,000" or "$X billion/million" inline
     patterns = [
@@ -533,6 +700,14 @@ def _extract_spread(text):
     return f"T+{m} bps" if m and "T+" not in m else m
 
 
+# Real agency rating symbols only — extraction patterns occasionally capture a
+# stray word after "S&P" ("cease"), so every captured value is validated.
+_VALID_RATING = re.compile(
+    r"^(?:Aaa|Aa[123]|A[123]|Baa[123]|Ba[123]|B[123]|Caa[123]"      # Moody's
+    r"|AAA|AA[+-]?|A[+-]?|BBB[+-]?|BB[+-]?|B[+-]?|CCC[+-]?)$"       # S&P / Fitch
+)
+
+
 def _extract_ratings(text):
     """Extract credit ratings. Handles two common formats:
 
@@ -575,6 +750,8 @@ def _extract_ratings(text):
             if m:
                 ratings[label] = m.group(1).strip()
 
+    # Drop anything that isn't a real agency symbol ("cease", "may", etc.)
+    ratings = {k: v for k, v in ratings.items() if _VALID_RATING.match(v)}
     return ratings if ratings else None
 
 

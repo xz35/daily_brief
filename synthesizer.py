@@ -361,6 +361,10 @@ def _format_deals(deals, deal_history=None):
     for i, d in enumerate(deals, 1):
         lines.append(f"DEAL {i}: {d.get('issuer', 'Unknown Issuer')}")
         lines.append(f"  Source: {d.get('source', 'EDGAR FWP')}")
+        if d.get("preliminary"):
+            lines.append("  Status: ANNOUNCED — preliminary prospectus filed, terms not yet "
+                         "priced. Cover it as a deal in the market (expect pricing details "
+                         "in tomorrow's brief); do not invent size/coupon/spread.")
 
         if d.get("size"):
             lines.append(f"  Size: {d['size']}")
