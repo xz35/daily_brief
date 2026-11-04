@@ -2940,5 +2940,38 @@
     "coupon": "5.600%",
     "ratings": null,
     "cik": "804269"
+  },
+  {
+    "date": "2026-11-04",
+    "issuer": "Gatx Corp",
+    "size": "$2.86 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.950%",
+    "ratings": null,
+    "cik": "40211"
+  },
+  {
+    "date": "2026-11-04",
+    "issuer": "Hca Healthcare, Inc.",
+    "size": "$1.5 billion",
+    "tenor": null,
+    "spread": "T+65 bps",
+    "coupon": "5.200%",
+    "ratings": null,
+    "cik": "860730"
+  },
+  {
+    "date": "2026-11-04",
+    "issuer": "Equinix Europe 2 Financing Corp Llc",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.150%",
+    "ratings": {
+      "sp": "BBB+",
+      "fitch": "BBB+"
+    },
+    "cik": "2015000"
   }
 ]
