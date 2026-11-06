@@ -468,4 +468,9 @@ def _get_client():
             "GEMINI_API_KEY environment variable is not set. "
             "Set it in your .env file or GitHub Secrets."
         )
-    return genai.Client(api_key=api_key)
+    # Pin the API version: newer google-genai releases default to "v1", where
+    # the "-latest" model aliases do not exist (404). They live on "v1beta".
+    return genai.Client(
+        api_key=api_key,
+        http_options={"api_version": "v1beta"},
+    )

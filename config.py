@@ -134,7 +134,7 @@ GEMINI_MODEL = os.getenv("GEMINI_MODEL") or "gemini-flash-latest"
 # (exposed as repo Variables in the GitHub Actions workflow).
 GEMINI_FALLBACK_MODELS = [
     model.strip()
-    for model in (os.getenv("GEMINI_FALLBACK_MODELS") or "gemini-3.8-flash,gemini-flash-lite-latest").split(",")
+    for model in (os.getenv("GEMINI_FALLBACK_MODELS") or "gemini-3.8-flash,gemini-3.7-flash,gemini-3.5-flash,gemini-flash-lite-latest").split(",")
     if model.strip()
 ]
 GEMINI_MAX_TOKENS = 8192
