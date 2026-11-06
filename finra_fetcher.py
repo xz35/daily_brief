@@ -46,7 +46,7 @@ from utils import prior_business_day
 
 logger = logging.getLogger(__name__)
 
-TOKEN_URL = "https://ews.finra.org/fip/rest/ews/oauth2/access_token?grant_type=client_credentials"
+TOKEN_URL = "https://ews.fip.finra.org/fip/rest/ews/oauth2/access_token?grant_type=client_credentials"
 DATA_URL = "https://api.finra.org/data/group/FixedIncomeMarket/name/corporateAndAgencySecurities"
 REQUEST_TIMEOUT = 20
 LOOKBACK_BDAYS = 5          # systemControlDate window for "recently appeared"
