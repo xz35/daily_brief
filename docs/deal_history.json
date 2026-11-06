@@ -2973,5 +2973,58 @@
       "fitch": "BBB+"
     },
     "cik": "2015000"
+  },
+  {
+    "date": "2026-11-05",
+    "issuer": "Carrier Global Corp",
+    "size": "$10,751 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.000%",
+    "ratings": null,
+    "cik": "1783180"
+  },
+  {
+    "date": "2026-11-05",
+    "issuer": "Hca Healthcare, Inc.",
+    "size": "$49.050 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.200%",
+    "ratings": {
+      "moodys": "Baa3",
+      "sp": "BBB-"
+    },
+    "cik": "860730"
+  },
+  {
+    "date": "2026-11-05",
+    "issuer": "Oracle Corp",
+    "size": "$9.9 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "6.50%",
+    "ratings": null,
+    "cik": "1341439"
+  },
+  {
+    "date": "2026-11-05",
+    "issuer": "Eastman Chemical Co",
+    "size": "$5.2 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.500%",
+    "ratings": null,
+    "cik": "915389"
+  },
+  {
+    "date": "2026-11-05",
+    "issuer": "Wec Energy Group, Inc.",
+    "size": "$4.7 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "783325"
   }
 ]
