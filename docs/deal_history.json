@@ -3026,5 +3026,55 @@
     "coupon": null,
     "ratings": null,
     "cik": "783325"
+  },
+  {
+    "date": "2026-11-06",
+    "issuer": "Disc Medicine, Inc.",
+    "size": "$189,925,765 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1816736"
+  },
+  {
+    "date": "2026-11-06",
+    "issuer": "Cvr Energy Inc",
+    "size": "$1.0 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "7.500%",
+    "ratings": null,
+    "cik": "1376139"
+  },
+  {
+    "date": "2026-11-06",
+    "issuer": "Avalo Therapeutics, Inc.",
+    "size": "$250.0 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1534120"
+  },
+  {
+    "date": "2026-11-06",
+    "issuer": "Enterprise Products Partners L.P.",
+    "size": "$750 million",
+    "tenor": null,
+    "spread": "T+65 bps",
+    "coupon": "5.20%",
+    "ratings": null,
+    "cik": "1061219"
+  },
+  {
+    "date": "2026-11-06",
+    "issuer": "Crh America Finance, Inc.",
+    "size": "$1.35 billion",
+    "tenor": null,
+    "spread": "T+15 bps",
+    "coupon": "5.375%",
+    "ratings": null,
+    "cik": "1678261"
   }
 ]
