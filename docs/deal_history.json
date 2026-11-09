@@ -3076,5 +3076,60 @@
     "coupon": "5.375%",
     "ratings": null,
     "cik": "1678261"
+  },
+  {
+    "date": "2026-11-09",
+    "issuer": "Precision Biosciences Inc",
+    "size": "$250 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1357874"
+  },
+  {
+    "date": "2026-11-09",
+    "issuer": "Crh Public Ltd Co",
+    "size": "$1.0 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.375%",
+    "ratings": {
+      "moodys": "Baa3",
+      "sp": "BBB-"
+    },
+    "cik": "849395"
+  },
+  {
+    "date": "2026-11-09",
+    "issuer": "Meta Platforms, Inc.",
+    "size": "$1,869 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.300%",
+    "ratings": null,
+    "cik": "1326801"
+  },
+  {
+    "date": "2026-11-09",
+    "issuer": "Apple Inc.",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+22 bps",
+    "coupon": "4.650%",
+    "ratings": {
+      "moodys": "Aaa"
+    },
+    "cik": "320193"
+  },
+  {
+    "date": "2026-11-09",
+    "issuer": "Banco Bilbao Vizcaya Argentaria, S.A.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.609%",
+    "ratings": null,
+    "cik": "842180"
   }
 ]
