@@ -3131,5 +3131,65 @@
     "coupon": "5.609%",
     "ratings": null,
     "cik": "842180"
+  },
+  {
+    "date": "2026-11-10",
+    "issuer": "Enterprise Products Operating Llc",
+    "size": "$1.0 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.20%",
+    "ratings": null,
+    "cik": "1410664"
+  },
+  {
+    "date": "2026-11-10",
+    "issuer": "Zimmer Biomet Holdings, Inc.",
+    "size": "$7.5 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.850%",
+    "ratings": null,
+    "cik": "1136869"
+  },
+  {
+    "date": "2026-11-10",
+    "issuer": "Peru Republic Of",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "77694"
+  },
+  {
+    "date": "2026-11-10",
+    "issuer": "Steris Irish Finco Unlimited Co",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.650%",
+    "ratings": null,
+    "cik": "1850236"
+  },
+  {
+    "date": "2026-11-10",
+    "issuer": "Novartis Capital Corp",
+    "size": null,
+    "tenor": null,
+    "spread": "T+35 bps",
+    "coupon": "4.900%",
+    "ratings": null,
+    "cik": "1443411"
+  },
+  {
+    "date": "2026-11-10",
+    "issuer": "Qualcomm Inc/De",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.000%",
+    "ratings": null,
+    "cik": "804328"
   }
 ]
