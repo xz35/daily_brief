@@ -3191,5 +3191,65 @@
     "coupon": "5.000%",
     "ratings": null,
     "cik": "804328"
+  },
+  {
+    "date": "2026-11-11",
+    "issuer": "Novartis Ag",
+    "size": "$9 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.900%",
+    "ratings": null,
+    "cik": "1114448"
+  },
+  {
+    "date": "2026-11-11",
+    "issuer": "Envista Holdings Corp",
+    "size": "$430 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "6.250%",
+    "ratings": null,
+    "cik": "1757073"
+  },
+  {
+    "date": "2026-11-11",
+    "issuer": "Fox Corp",
+    "size": "$1.75 billion",
+    "tenor": null,
+    "spread": "T+85 bps",
+    "coupon": "5.625%",
+    "ratings": null,
+    "cik": "1754301"
+  },
+  {
+    "date": "2026-11-11",
+    "issuer": "Ecopetrol S.A.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "7.875%",
+    "ratings": null,
+    "cik": "1444406"
+  },
+  {
+    "date": "2026-11-11",
+    "issuer": "Apollo Global Management, Inc.",
+    "size": "$600 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "7.550%",
+    "ratings": null,
+    "cik": "1858681"
+  },
+  {
+    "date": "2026-11-11",
+    "issuer": "Schwab Charles Corp",
+    "size": "$300 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.334%",
+    "ratings": null,
+    "cik": "316709"
   }
 ]
