@@ -3251,5 +3251,75 @@
     "coupon": "5.334%",
     "ratings": null,
     "cik": "316709"
+  },
+  {
+    "date": "2026-11-13",
+    "issuer": "Fox Corp",
+    "size": "$12.0 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.625%",
+    "ratings": null,
+    "cik": "1754301"
+  },
+  {
+    "date": "2026-11-13",
+    "issuer": "Pepgen Inc.",
+    "size": "$1.235 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1835597"
+  },
+  {
+    "date": "2026-11-13",
+    "issuer": "Virgin Galactic Holdings, Inc",
+    "size": "$342.0 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1706946"
+  },
+  {
+    "date": "2026-11-13",
+    "issuer": "Candel Therapeutics, Inc.",
+    "size": "$1.235 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1841387"
+  },
+  {
+    "date": "2026-11-13",
+    "issuer": "Steris Plc",
+    "size": "$2.1 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.650%",
+    "ratings": null,
+    "cik": "1757898"
+  },
+  {
+    "date": "2026-11-13",
+    "issuer": "Neuronetics, Inc.",
+    "size": "$250.0 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1227636"
+  },
+  {
+    "date": "2026-11-13",
+    "issuer": "Emerson Electric Co",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.000%",
+    "ratings": null,
+    "cik": "32604"
   }
 ]
