@@ -3321,5 +3321,35 @@
     "coupon": "4.000%",
     "ratings": null,
     "cik": "32604"
+  },
+  {
+    "date": "2026-11-16",
+    "issuer": "Caretrust Reit, Inc.",
+    "size": "$1.1 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "0.35%",
+    "ratings": null,
+    "cik": "1590717"
+  },
+  {
+    "date": "2026-11-16",
+    "issuer": "Volkswagen Auto Lease/Loan Underwritten Funding, Llc",
+    "size": "$725 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "1.00%",
+    "ratings": null,
+    "cik": "1182534"
+  },
+  {
+    "date": "2026-11-16",
+    "issuer": "Berkshire Hathaway Inc",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "2.624%",
+    "ratings": null,
+    "cik": "1067983"
   }
 ]
