@@ -3351,5 +3351,75 @@
     "coupon": "2.624%",
     "ratings": null,
     "cik": "1067983"
+  },
+  {
+    "date": "2026-11-17",
+    "issuer": "Turn Therapeutics Inc.",
+    "size": "$1.235 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "2023016"
+  },
+  {
+    "date": "2026-11-17",
+    "issuer": "Dnp Select Income Fund Inc",
+    "size": "$1.5 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "806628"
+  },
+  {
+    "date": "2026-11-17",
+    "issuer": "Surrozen, Inc./De",
+    "size": "$700 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1824893"
+  },
+  {
+    "date": "2026-11-17",
+    "issuer": "Keurig Dr Pepper Inc.",
+    "size": "$2.0 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "6.625%",
+    "ratings": null,
+    "cik": "1418135"
+  },
+  {
+    "date": "2026-11-17",
+    "issuer": "International Business Machines Corp",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "2.869%",
+    "ratings": null,
+    "cik": "51143"
+  },
+  {
+    "date": "2026-11-17",
+    "issuer": "Connecticut Light & Power Co",
+    "size": "$500 million",
+    "tenor": null,
+    "spread": "T+78 bps",
+    "coupon": "5.85%",
+    "ratings": null,
+    "cik": "23426"
+  },
+  {
+    "date": "2026-11-17",
+    "issuer": "Ametek Inc/",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.500%",
+    "ratings": null,
+    "cik": "1037868"
   }
 ]
