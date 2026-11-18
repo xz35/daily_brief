@@ -3421,5 +3421,47 @@
     "coupon": "4.500%",
     "ratings": null,
     "cik": "1037868"
+  },
+  {
+    "date": "2026-11-18",
+    "issuer": "Atmos Energy Corp",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "731802"
+  },
+  {
+    "date": "2026-11-18",
+    "issuer": "S&P Global Inc.",
+    "size": "$13.1 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.600%",
+    "ratings": {
+      "moodys": "Baa3"
+    },
+    "cik": "64040"
+  },
+  {
+    "date": "2026-11-18",
+    "issuer": "Connecticut Light & Power Co",
+    "size": "$493.5 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "23426"
+  },
+  {
+    "date": "2026-11-18",
+    "issuer": "1011778 B.C. Unlimited Liability Co",
+    "size": null,
+    "tenor": null,
+    "spread": "T+115 bps",
+    "coupon": "6.000%",
+    "ratings": null,
+    "cik": "2152118"
   }
 ]
