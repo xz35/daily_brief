@@ -3463,5 +3463,25 @@
     "coupon": "6.000%",
     "ratings": null,
     "cik": "2152118"
+  },
+  {
+    "date": "2026-11-19",
+    "issuer": "Puget Sound Energy Inc",
+    "size": "$396.0 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.949%",
+    "ratings": null,
+    "cik": "81100"
+  },
+  {
+    "date": "2026-11-19",
+    "issuer": "Anthropic, Pbc",
+    "size": "$6.2 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.3%",
+    "ratings": null,
+    "cik": "2130357"
   }
 ]
