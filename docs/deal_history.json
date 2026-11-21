@@ -3483,5 +3483,45 @@
     "coupon": "4.3%",
     "ratings": null,
     "cik": "2130357"
+  },
+  {
+    "date": "2026-11-20",
+    "issuer": "Republic Of Turkey",
+    "size": "$49.2 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.850%",
+    "ratings": null,
+    "cik": "869687"
+  },
+  {
+    "date": "2026-11-20",
+    "issuer": "Nxp Semiconductors N.V.",
+    "size": "$12,176 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.625%",
+    "ratings": null,
+    "cik": "1413447"
+  },
+  {
+    "date": "2026-11-20",
+    "issuer": "Sellas Life Sciences Group, Inc.",
+    "size": "$250.0 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1390478"
+  },
+  {
+    "date": "2026-11-20",
+    "issuer": "Nevada Power Co",
+    "size": "$350.0 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.950%",
+    "ratings": null,
+    "cik": "71180"
   }
 ]
