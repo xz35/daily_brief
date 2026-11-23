@@ -3523,5 +3523,57 @@
     "coupon": "5.950%",
     "ratings": null,
     "cik": "71180"
+  },
+  {
+    "date": "2026-11-23",
+    "issuer": "Uruguay Republic Of",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.750%",
+    "ratings": null,
+    "cik": "102385"
+  },
+  {
+    "date": "2026-11-23",
+    "issuer": "Smurfit Westrock Plc",
+    "size": "$600.0 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "6.134%",
+    "ratings": null,
+    "cik": "2005951"
+  },
+  {
+    "date": "2026-11-23",
+    "issuer": "Alphabet Inc.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.100%",
+    "ratings": {
+      "sp": "AA+"
+    },
+    "cik": "1652044"
+  },
+  {
+    "date": "2026-11-23",
+    "issuer": "Nissan Auto Leasing Llc Ii",
+    "size": "$702 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "1.00%",
+    "ratings": null,
+    "cik": "1244832"
+  },
+  {
+    "date": "2026-11-23",
+    "issuer": "Citigroup Inc",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.967%",
+    "ratings": null,
+    "cik": "831001"
   }
 ]
