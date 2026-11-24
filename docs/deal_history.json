@@ -3575,5 +3575,45 @@
     "coupon": "5.967%",
     "ratings": null,
     "cik": "831001"
+  },
+  {
+    "date": "2026-11-24",
+    "issuer": "Guggenheim Taxable Municipal Bond & Investment Grade Debt Trust",
+    "size": "$248.3 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1495825"
+  },
+  {
+    "date": "2026-11-24",
+    "issuer": "Immunitybio, Inc.",
+    "size": "$5.0 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1326110"
+  },
+  {
+    "date": "2026-11-24",
+    "issuer": "Bank Of N.T. Butterfield & Son Ltd",
+    "size": "$600.0 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": "8.363%",
+    "ratings": null,
+    "cik": "1653242"
+  },
+  {
+    "date": "2026-11-24",
+    "issuer": "Carvana Receivables Depositor Llc",
+    "size": "$33.4 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.566%",
+    "ratings": null,
+    "cik": "1770373"
   }
 ]
