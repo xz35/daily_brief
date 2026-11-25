@@ -3615,5 +3615,35 @@
     "coupon": "4.566%",
     "ratings": null,
     "cik": "1770373"
+  },
+  {
+    "date": "2026-11-25",
+    "issuer": "Kymera Therapeutics, Inc.",
+    "size": "$280.1 million",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1815442"
+  },
+  {
+    "date": "2026-11-25",
+    "issuer": "Rockwell Automation Holdings B.V.",
+    "size": null,
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.250%",
+    "ratings": null,
+    "cik": "2165720"
+  },
+  {
+    "date": "2026-11-25",
+    "issuer": "Simon Property Group L P",
+    "size": "$7.4 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "5.650%",
+    "ratings": null,
+    "cik": "1022344"
   }
 ]
