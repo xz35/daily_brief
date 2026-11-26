@@ -3645,5 +3645,39 @@
     "coupon": "5.650%",
     "ratings": null,
     "cik": "1022344"
+  },
+  {
+    "date": "2026-11-26",
+    "issuer": "Rockwell Automation, Inc",
+    "size": "$1.5 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": "4.250%",
+    "ratings": {
+      "moodys": "Baa3",
+      "sp": "BBB-",
+      "fitch": "BBB-"
+    },
+    "cik": "1024478"
+  },
+  {
+    "date": "2026-11-26",
+    "issuer": "Firstenergy Corp",
+    "size": "$3 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1031296"
+  },
+  {
+    "date": "2026-11-26",
+    "issuer": "Monte Rosa Therapeutics, Inc.",
+    "size": "$1.235 billion",
+    "tenor": null,
+    "spread": null,
+    "coupon": null,
+    "ratings": null,
+    "cik": "1826457"
   }
 ]
